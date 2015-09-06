@@ -38,7 +38,8 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="title">Laravel 5 ciyee</div>
+                <div style="width:500px;height:100px;border:1px solid #000;">This is a rectangle!</div>
             </div>
         </div>
     </body>
