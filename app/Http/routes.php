@@ -16,3 +16,11 @@
 // });
 
 Route::get('/', 'HomeController@index');
+
+Route::get('round1/merah', 'Round1Controller@merah');
+Route::get('round1/biru', 'Round1Controller@biru');
+Route::get('round1/hijau', 'Round1Controller@hijau');
+Route::get('round1/kuning', 'Round1Controller@kuning');
+Route::get('round1/abuabu', 'Round1Controller@abuabu');
+
+Route::get('round2', 'Round2Controller@index');
