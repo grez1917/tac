@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  @include('includes.head-general')
+@include('includes.head-general')
+@yield('head')
 
 <body class="nav-md">
 
@@ -56,6 +57,7 @@
 
     <!-- footer script -->
         @include('includes.footer-script')
+        @yield('footer-script')
     <!-- /footer script -->    
 </body>
 

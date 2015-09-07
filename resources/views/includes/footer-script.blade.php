@@ -38,6 +38,16 @@
     <!-- skycons -->
     <script type="text/javascript" src="{{ URL::to('assets/gentelella/js/skycons/skycons.js') }}"></script>
 
->
+    <!-- flipclock -->
+    <script src="{{ URL::to('assets/gentelella/js/flipclock/flipclock.js') }}"></script>
+    <script src="{{ URL::to('assets/gentelella/js/flipclock/flipclock.min.js') }}"></script>
+    <link href="{{ URL::to('assets/gentelella/css/flipclock/flipclock.css') }}" rel="stylesheet" type="text/css" />
+
+    <!-- fancybox -->
+    <script type="text/javascript" src="{{ URL::to('assets/gentelella/js/fancybox/jquery.mousewheel-3.0.4.pack.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::to('assets/gentelella/js/fancybox/jquery.fancybox-1.3.4.pack.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ URL::to('assets/gentelella/css/fancybox/jquery.fancybox-1.3.4.css') }}" media="screen" />
+
+
     <!-- /datepicker -->
     <!-- /footer content -->

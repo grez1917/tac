@@ -23,6 +23,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="{{URL::to('round2')}}"><i class="fa fa-edit"></i> Babak Kedua</a>
+                                <li><a href="{{URL::to('round4')}}"><i class="fa fa-edit"></i> Babak Keempat</a>
                                 </li>
                                 <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu" style="display: none">

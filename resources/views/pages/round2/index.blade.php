@@ -44,14 +44,70 @@
                             <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
                         </div>
                     </div>
-
                 </div>
                 <!-- /top tiles -->
+                <div class="row tile_count" align="center">
+                    <div class="animated flipInY col-md-6 col-sm-2 col-xs-3 tile_stats_count">
+                        <div class="left"></div>
+                        <div class="right">
+
+                        </div>
+                    </div>
+                    <div class="animated flipInY col-md-6 col-sm-8 col-xs-8 tile_stats_count">
+                        <div class="left"></div>
+                        <div class="right">
+                            <div id="clock" style="margin:2em;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="message"><font color="#c0392b" size="24"><b>Ulala...</b></font></div>
 </section>
 
 
 <script type="text/javascript">
+var clock;
+        
+        $(document).ready(function() {
+        $('#message').click(function(){
+            var clock;
 
+            clock = $('#clock').FlipClock({
+                clockFace: 'MinuteCounter',
+                autoStart: false,
+                callbacks: {
+                    stop: function() {
+                        $('#message').hide();
+                    }
+                }
+            });
+                    
+            clock.setTime(4);
+            clock.setCountdown(true);
+            clock.start();
+            });
+        });
+
+        $(document).ready(function() {
+        $('#clock').click(function(){
+            $('#message').show();
+            var clock;
+
+            clock = $('#clock').FlipClock({
+                clockFace: 'MinuteCounter',
+                autoStart: false,
+                callbacks: {
+                    stop: function() {
+                        $('#message').hide();
+                    }
+                }
+            });
+                    
+            clock.setTime(4);
+            clock.setCountdown(true);
+            clock.start();
+            });
+        });
 </script>
 @stop
 @section('custom_foot')

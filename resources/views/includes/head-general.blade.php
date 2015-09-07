@@ -3,6 +3,7 @@
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="imagetoolbar" content="no" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>TAC | 2015 </title>
@@ -22,6 +23,8 @@
 
     <script src="{{ URL::to('assets/gentelella/js/jquery.min.js') }}"></script>
     <script src="{{ URL::to('assets/gentelella/js/nprogress.js') }}"></script>
+    
+
     
     <!--[if lt IE 9]>
         <script src="../assets/js/ie8-responsive-file-warning.js"></script>

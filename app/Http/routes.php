@@ -24,3 +24,5 @@ Route::get('round1/kuning', 'Round1Controller@kuning');
 Route::get('round1/abuabu', 'Round1Controller@abuabu');
 
 Route::get('round2', 'Round2Controller@index');
+
+Route::get('round4', 'Round4Controller@index');
