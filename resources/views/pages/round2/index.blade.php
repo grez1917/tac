@@ -50,7 +50,9 @@
                     <div class="animated flipInY col-md-6 col-sm-2 col-xs-3 tile_stats_count">
                         <div class="left"></div>
                         <div class="right">
-
+                            <button id='soal' type="submit" class="btn btn-primary">Tampilkan Soal</button>
+                            <button id='benar' type="submit" class="btn btn-success">Benar</button>
+                            <button id='salah' type="submit" class="btn btn-primary">Salah</button>
                         </div>
                     </div>
                     <div class="animated flipInY col-md-6 col-sm-8 col-xs-8 tile_stats_count">
@@ -61,12 +63,15 @@
                     </div>
                 </div>
 
-                <div id="message"><font color="#c0392b" size="24"><b>Ulala...</b></font></div>
+                <div id="message1"><font color="#c0392b" size="24"><b>.</b></font></div>
+                <div id="message2"><font color="#c0392b" size="12"><b>.</b></font></div>
 </section>
 
 
 <script type="text/javascript">
-var clock;
+        var clock;
+        $('#message1').hide();
+        $('#message2').hide();
         
         $(document).ready(function() {
         $('#message').click(function(){
@@ -89,23 +94,40 @@ var clock;
         });
 
         $(document).ready(function() {
-        $('#clock').click(function(){
-            $('#message').show();
-            var clock;
+        $('#soal').click(function(){
+            $('#message1').show();
+            $('#message2').show();
+            $.get("round2/soal", function(data, status){
+                //alert("Data: " + data + "\nStatus: " + status);
+                if(data.length == 2){
+                    alert('Soal Habis Gan...');
+                }
+                else{
+                    var data = JSON.parse(data);
+                    $.each(data, function(i, datas){
+                        $('#message1').html('<font color="#c0392b" size="24"><b>'+ datas.soal +'</b></font>');
+                        $('#message2').html('<font color="#c0392b" size="12"><b>'+ datas.keterangan +'</b></font>');
+                    });
+                    // $('#message').html('<font color="#c0392b" size="24"><b>'+ datas.soal +'</b></font>');
+                var clock;
 
-            clock = $('#clock').FlipClock({
-                clockFace: 'MinuteCounter',
-                autoStart: false,
-                callbacks: {
-                    stop: function() {
-                        $('#message').hide();
+                clock = $('#clock').FlipClock({
+                    clockFace: 'MinuteCounter',
+                    autoStart: false,
+                    callbacks: {
+                        stop: function() {
+                            $('#message1').hide();
+                            $('#message2').hide();
+                        }
                     }
+                });
+                        
+                clock.setTime(4);
+                clock.setCountdown(true);
+                clock.start();
                 }
             });
-                    
-            clock.setTime(4);
-            clock.setCountdown(true);
-            clock.start();
+            // $('#message').show();
             });
         });
 </script>

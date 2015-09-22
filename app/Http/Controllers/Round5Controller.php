@@ -2,15 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use DB;
-use View;
-use Request;
-use Input;
-use Hash;
-use Auth;
-use App\Models\Soal;
+use Illuminate\Http\Request;
 
-class Round2Controller extends Controller
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+
+class Round5Controller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,7 +16,7 @@ class Round2Controller extends Controller
      */
     public function index()
     {
-        return view('pages.round2.index');
+        return view('pages.round5.index');
     }
 
     /**
@@ -28,37 +25,11 @@ class Round2Controller extends Controller
      * @return Response
      */
 
-    public function getSoal()
+    public function test()
     {
-        if (Request::isMethod('get')) {
-            // $idSoal = Soal::orderByRaw("RAND()")->take(1)->get();
-            // foreach ($idSoal as $item) {
-            //     echo $item->id;
-            // }
-            //dd($test);
-            if (Request::ajax()) {
-                {
-                    $idSoal = Soal::orderByRaw("RAND()")->take(1)->where('enabled', '!=', 0)->get();
-                    foreach ($idSoal as $item) {
-                        $id = $item->id;
-
-                        $soalUpdate = Soal::where('id', $id)->update(array('enabled'=>0));
-                    }
-                    return json_encode($idSoal);
-
-                }
-            }
-        }
-        if (Request::isMethod('post')) {
-            if (Request::ajax()) {
-                {
-                    $idSoal = Soal::orderByRaw("RAND()")->take(1)->where('enabled', '!=', 0)->get();
-
-                    return json_encode($idSoal);
-                }
-            }
-        }
+        return view('pages.round5.test');
     }
+
     public function create()
     {
         //
