@@ -13,18 +13,12 @@ class Tac extends Migration
     public function up()
     {
 
-        Schema::create('password_resets', function (Blueprint $table) {
-            $table->string('email')->index();
-            $table->string('token')->index();
-            $table->timestamp('created_at');
-        });
-
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('peserta', function ($table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password', 60);
-            $table->rememberToken();
+            $table->string('score');
+            $table->boolean('enabled')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
 
@@ -47,8 +41,7 @@ class Tac extends Migration
      */
     public function down()
     {
-        Schema::drop('users');
-        Schema::drop('password_resets');
+        Schema::drop('peserta');
         Schema::drop('soal');
     }
 }

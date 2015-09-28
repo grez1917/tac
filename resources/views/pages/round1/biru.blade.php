@@ -1,52 +1,58 @@
 @extends('layouts.full')
 @section('content')
 <section>
-<!-- top tiles -->
+ <!-- top tiles -->
                 <div class="row tile_count" align="center">
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
                         <div class="left"></div>
                         <div class="right">
-                            <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
-                            <div class="count"><font color="#c0392b">2500</font></div>
-                            <span class="count_bottom"><i class="green">4% </i> From last Week</span>
+                            <span class="count_top"><i class="fa fa-user"></i> @foreach ($merah as $item){{ $item->name }}</span>
+                            <div class="count" id='scoreMerah'><font color="#c0392b" id='scoreBoardMerah' val='0'>  {{ $item->score }}@endforeach</font></div>
+                            <span class="count_bottom"><i class="green"></i></span>
                         </div>
                     </div>
                     
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
                         <div class="left"></div>
                         <div class="right">
-                            <span class="count_top"><i class="fa fa-user"></i> Total Males</span>
-                            <div class="count"><font color="#2980b9">2,500</font></div>
+                            <span class="count_top"><i class="fa fa-user"></i>@foreach ($biru as $item) {{ $item->name }}</span>
+                            <div class="count" id='scoreBiru'><font color="#2980b9" id='scoreBoardBiru'> {{ $item->score }} @endforeach</font></div>
                             <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
                         </div>
                     </div>
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
                         <div class="left"></div>
                         <div class="right">
-                            <span class="count_top"><i class="fa fa-user"></i> Total Females</span>
-                            <div class="count"><font color="#2ecc71">2500</font> </div>
+                            <span class="count_top"><i class="fa fa-user"></i> @foreach ($hijau as $item) {{ $item->name }}</span>
+                            <div class="count" id='scoreHijau'><font color="#2ecc71" id='scoreBoardHijau'>{{ $item->score }} @endforeach</font> </div>
                             <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
                         </div>
                     </div>
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
                         <div class="left"></div>
                         <div class="right">
-                            <span class="count_top"><i class="fa fa-user"></i> Total Collections</span>
-                            <div class="count"><font color="#f1c40f">2135</font></div>
+                            <span class="count_top"><i class="fa fa-user"></i> @foreach ($kuning as $item) {{ $item->name }}</span>
+                            <div class="count" id="scoreKuning"><font color="#f1c40f" id='scoreBoardKuning'>{{ $item->score }} @endforeach</font></div>
                             <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
                         </div>
                     </div>
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
                         <div class="left"></div>
                         <div class="right">
-                            <span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
-                            <div class="count"><font color="#7f8c8d">7,135</font></div>
+                            <span class="count_top"><i class="fa fa-user"></i> @foreach ($abuabu as $item) {{ $item->name }}</span>
+                            <div class="count" id='scoreAbuabu'><font color="#7f8c8d" id='scoreBoardAbuabu'> {{ $item->score }} @endforeach</font></div>
                             <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
                         </div>
                     </div>
 
                 </div>
                 <!-- /top tiles -->
+        <div class="animated flipInY col-md-6 col-sm-8 col-xs-8 tile_stats_count" id='jam'>
+            <div class="left"></div>
+            <div class="right">
+                <div id="clock1" style="margin:2em;"></div>
+            </div>
+        </div>                   
 
     <div id='round1Biru'>
     <table align="center" class="test">
@@ -321,6 +327,20 @@
             <h2>Meja dan Kursi Pegawai</h2></br>
             Meja & Kursi Pegawai termasuk aset tetap karena memenuhi 3 kriteria yang sesuai PSAK 16 tentang Aset Tetap. Spidol Boardmarker tidak memenuhi kriteria signifikan karena jumlah dan harga totalnya relatif kecil dibanding aset lainnya. Serta masa manfaat 1 Spidol Boardmarker yang kemungkinan tidak lebih dari 1 tahun. Oleh karena itu, Spidol Boardmarker lebih tepat digolongkan sebagai Persediaan Habis Pakai.
         </div>
+
+        <div id='simpanScore'>
+        <div class="form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12">Bonus poin</label>
+            <div class="col-md-9 col-sm-9 col-xs-12">
+                <input type="text" class="form-control" placeholder="Default Input" id='bonus'>
+            </div>
+            <button type="submit" class="btn btn-primary" id='btnBonus'>Bonus.. </button>
+            <button type="submit" class="btn btn-primary" id='btnMinPoin'>- point </button>
+            <button type="submit" class="btn btn-primary" id='btnPoinKembali'>kembali </button>
+        </div>
+        <form method="post" ><div id='scoreTotal'></div> {!! csrf_field() !!}<button type="submit" class="btn btn-success">Simpan</button></form>
+        </div>
+
     </div>
 </div>
 
@@ -357,20 +377,31 @@
     $('#jawabanBiru8').hide();
     $('#soalBiru9').hide();
     $('#jawabanBiru9').hide();
+    $('#simpanScore').hide();      
 
 // soal no 1
+      var soal1Clck = 0;
     $(document).ready(function(){
         $('#biru1').click(function(){
             alert('goJek');
             $('#round1Biru').hide();
             $('#soalBiru1').show();
+            soal1Clck++;
+            if(soal1Clck == 2){
+                $('#biru1').css('background-color','#ecf0f1');
+           }              
         });
     });
 
     $('#document').ready(function(){
         $('#benarSoalBiru1').click(function(){
             $('#jawabanBiru1').show();
+            $('#biru1').html('<img src="../assets/file/images/IMG_TAC.jpg" alt="" />');
             $('#biru1').css('background-color','#ecf0f1');
+            var scoreBoard = $('#scoreBiru').text();
+            scoreBoard = parseInt(scoreBoard)+10;
+            // alert(scoreBoard);
+            $('#scoreBiru').html('<font color="#2980b9" id="scoreBiru" val="'+scoreBoard+'">'+scoreBoard+'</font>');
         });
     });
 
@@ -391,18 +422,28 @@
     });
 
 // soal no 2
+      var soal2Clck = 0;
     $(document).ready(function(){
         $('#biru2').click(function(){
             alert('goJek');
             $('#round1Biru').hide();
             $('#soalBiru2').show();
+            soal1Clck++;
+            if(soal1Clck == 2){
+                $('#biru2').css('background-color','#ecf0f1');
+           }            
         });
     });
 
     $('#document').ready(function(){
         $('#benarSoalBiru2').click(function(){
             $('#jawabanBiru2').show();
+            $('#biru2').html('<img src="../assets/file/images/IMG_TAC.jpg" alt="" />');
             $('#biru2').css('background-color','#ecf0f1');
+            var scoreBoard = $('#scoreBiru').text();
+            scoreBoard = parseInt(scoreBoard)+10;
+            // alert(scoreBoard);
+            $('#scoreBiru').html('<font color="#2980b9" id="scoreBoardBiru" val="'+scoreBoard+'">'+scoreBoard+'</font>');
         });
     });
 
@@ -423,18 +464,28 @@
     });
 
 // soal no 3
+      var soal3Clck = 0;
     $(document).ready(function(){
         $('#biru3').click(function(){
             alert('goJek');
             $('#round1Biru').hide();
             $('#soalBiru3').show();
+            soal1Clck++;
+            if(soal1Clck == 2){
+                $('#biru3').css('background-color','#ecf0f1');
+           }            
         });
     });
 
     $('#document').ready(function(){
         $('#benarSoalBiru3').click(function(){
             $('#jawabanBiru3').show();
+            $('#biru3').html('<img src="../assets/file/images/IMG_TAC.jpg" alt="" />');
             $('#biru3').css('background-color','#ecf0f1');
+            var scoreBoard = $('#scoreBiru').text();
+            scoreBoard = parseInt(scoreBoard)+10;
+            // alert(scoreBoard);
+            $('#scoreBiru').html('<font color="#2980b9" id="scoreBoardBiru" val="'+scoreBoard+'">'+scoreBoard+'</font>');
         });
     });
 
@@ -455,18 +506,28 @@
     });
 
 // soal no 4
+      var soal4Clck = 0;
     $(document).ready(function(){
         $('#biru4').click(function(){
             alert('goJek');
             $('#round1Biru').hide();
             $('#soalBiru4').show();
+            soal1Clck++;
+            if(soal1Clck == 2){
+                $('#biru4').css('background-color','#ecf0f1');
+           }            
         });
     });
 
     $('#document').ready(function(){
         $('#benarSoalBiru4').click(function(){
             $('#jawabanBiru4').show();
+            $('#biru4').html('<img src="../assets/file/images/IMG_TAC.jpg" alt="" />');
             $('#biru4').css('background-color','#ecf0f1');
+            var scoreBoard = $('#scoreBiru').text();
+            scoreBoard = parseInt(scoreBoard)+10;
+            // alert(scoreBoard);
+            $('#scoreBiru').html('<font color="#2980b9" id="scoreBoardBiru" val="'+scoreBoard+'">'+scoreBoard+'</font>');
         });
     });
 
@@ -487,18 +548,28 @@
     });
 
 // soal no 5
+      var soal5Clck = 0;
     $(document).ready(function(){
         $('#biru5').click(function(){
             alert('goJek');
             $('#round1Biru').hide();
             $('#soalBiru5').show();
+            soal1Clck++;
+            if(soal1Clck == 2){
+                $('#biru5').css('background-color','#ecf0f1');
+           }            
         });
     });
 
     $('#document').ready(function(){
         $('#benarSoalBiru5').click(function(){
             $('#jawabanBiru5').show();
+            $('#biru5').html('<img src="../assets/file/images/IMG_TAC.jpg" alt="" />');
             $('#biru5').css('background-color','#ecf0f1');
+            var scoreBoard = $('#scoreBiru').text();
+            scoreBoard = parseInt(scoreBoard)+10;
+            // alert(scoreBoard);
+            $('#scoreBiru').html('<font color="#2980b9" id="scoreBoardBiru" val="'+scoreBoard+'">'+scoreBoard+'</font>');
         });
     });
 
@@ -519,18 +590,28 @@
     });
 
 // soal no 6
+      var soal6Clck = 0;
     $(document).ready(function(){
         $('#biru6').click(function(){
             alert('goJek');
             $('#round1Biru').hide();
             $('#soalBiru6').show();
+            soal1Clck++;
+            if(soal1Clck == 2){
+                $('#biru6').css('background-color','#ecf0f1');
+           }            
         });
     });
 
     $('#document').ready(function(){
         $('#benarSoalBiru6').click(function(){
             $('#jawabanBiru6').show();
+            $('#biru6').html('<img src="../assets/file/images/IMG_TAC.jpg" alt="" />');
             $('#biru6').css('background-color','#ecf0f1');
+            var scoreBoard = $('#scoreBiru').text();
+            scoreBoard = parseInt(scoreBoard)+10;
+            // alert(scoreBoard);
+            $('#scoreBiru').html('<font color="#2980b9" id="scoreBoardBiru" val="'+scoreBoard+'">'+scoreBoard+'</font>');
         });
     });
 
@@ -551,18 +632,28 @@
     });
 
 // soal no 7
+      var soal7Clck = 0;
     $(document).ready(function(){
         $('#biru7').click(function(){
             alert('goJek');
             $('#round1Biru').hide();
             $('#soalBiru7').show();
+            soal1Clck++;
+            if(soal1Clck == 2){
+                $('#biru7').css('background-color','#ecf0f1');
+           }            
         });
     });
 
     $('#document').ready(function(){
         $('#benarSoalBiru7').click(function(){
             $('#jawabanBiru7').show();
+            $('#biru7').html('<img src="../assets/file/images/IMG_TAC.jpg" alt="" />');
             $('#biru7').css('background-color','#ecf0f1');
+            var scoreBoard = $('#scoreBiru').text();
+            scoreBoard = parseInt(scoreBoard)+10;
+            // alert(scoreBoard);
+            $('#scoreBiru').html('<font color="#2980b9" id="scoreBoardBiru" val="'+scoreBoard+'">'+scoreBoard+'</font>');
         });
     });
 
@@ -583,18 +674,28 @@
     });
 
 // soal no 8
+      var soal8Clck = 0;
     $(document).ready(function(){
         $('#biru8').click(function(){
             alert('goJek');
             $('#round1Biru').hide();
             $('#soalBiru8').show();
+            soal1Clck++;
+            if(soal1Clck == 2){
+                $('#biru8').css('background-color','#ecf0f1');
+           }            
         });
     });
 
     $('#document').ready(function(){
         $('#benarSoalBiru8').click(function(){
             $('#jawabanBiru8').show();
+            $('#biru8').html('<img src="../assets/file/images/IMG_TAC.jpg" alt="" />');
             $('#biru8').css('background-color','#ecf0f1');
+            var scoreBoard = $('#scoreBiru').text();
+            scoreBoard = parseInt(scoreBoard)+10;
+            // alert(scoreBoard);
+            $('#scoreBiru').html('<font color="#2980b9" id="scoreBoardBiru" val="'+scoreBoard+'">'+scoreBoard+'</font>');
         });
     });
 
@@ -614,18 +715,28 @@
         });
     });
 // soal no 9
+      var soal9Clck = 0;
     $(document).ready(function(){
         $('#biru9').click(function(){
             alert('goJek');
             $('#round1Biru').hide();
             $('#soalBiru9').show();
+            soal1Clck++;
+            if(soal1Clck == 2){
+                $('#biru9').css('background-color','#ecf0f1');
+           }            
         });
     });
 
     $('#document').ready(function(){
         $('#benarSoalBiru9').click(function(){
             $('#jawabanBiru9').show();
+            $('#biru9').html('<img src="../assets/file/images/IMG_TAC.jpg" alt="" />');
             $('#biru9').css('background-color','#ecf0f1');
+            var scoreBoard = $('#scoreBiru').text();
+            scoreBoard = parseInt(scoreBoard)+10;
+            // alert(scoreBoard);
+            $('#scoreBiru').html('<font color="#2980b9" id="scoreBoardBiru" val="'+scoreBoard+'">'+scoreBoard+'</font>');
         });
     });
 
@@ -644,6 +755,71 @@
             $('#round1Biru').show();
         });
     });
+
+// post method
+    $('#document').ready(function(){
+        $('#scoreBiru').click(function(){
+            $('#jam').hide();
+            $('#round1Biru').hide();
+            $('#simpanScore').show();
+            var scoreBoard = $('#scoreBiru').text();
+            scoreBoard = parseInt(scoreBoard);
+            $('#scoreTotal').hide();
+            $('#scoreTotal').html('<input name="score" value='+scoreBoard+'>');
+            alert(scoreBoard);
+        });
+    });
+
+// tambah poin(bonus)
+     $('#document').ready(function(){
+        $('#btnBonus').click(function(){
+            var test = $('#bonus').val();
+            
+            var scoreBoard = $('#scoreBiru').text();
+            scoreBoard = parseInt(scoreBoard)+parseInt(test);
+            // alert(kotak2Benar);
+            $('#scoreBiru').html('<font color="#2980b9" id="scoreBiru" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#scoreTotal').html('<input name="score" value='+scoreBoard+'>');
+        });
+    });
+
+// kurangi poin
+     $('#document').ready(function(){
+        $('#btnMinPoin').click(function(){
+            var test = $('#bonus').val();
+            
+            var scoreBoard = $('#scoreBiru').text();
+            scoreBoard = parseInt(scoreBoard)-parseInt(test);
+            // alert(kotak2Benar);
+            $('#scoreBiru').html('<font color="#2980b9" id="scoreBiru" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#scoreTotal').html('<input name="score" value='+scoreBoard+'>');
+        });
+    });    
+
+// tombol kembali(dari ubah, tambah poin)
+     $('#document').ready(function(){
+        $('#btnPoinKembali').click(function(){
+            $('#jam').show();
+            $('#round1Biru').show();
+        });
+    });
+
+// counter/jam
+    var clock;
+
+    $(document).ready(function() {
+        var clock;
+
+        clock = $('#clock1').FlipClock({
+            clockFace: 'MinuteCounter',
+            autoStart: true,
+            callbacks: {
+            }
+        });
+                
+        clock.setTime(120);
+        clock.setCountdown(true);
+    });    
 </script>
 </section>
 @stop

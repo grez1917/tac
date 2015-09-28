@@ -19,6 +19,30 @@ class Round4Controller extends Controller
         return view('pages.round4.index');
     }
 
+    public function merah()
+    {
+        return view('pages.round4.merah');
+    }
+
+    public function biru()
+    {
+        return view('pages.round4.biru');
+    }
+
+    public function hijau()
+    {
+        return view('pages.round4.hijau');
+    }
+
+    public function kuning()
+    {
+        return view('pages.round4.kuning');
+    }
+
+    public function abuabu()
+    {
+        return view('pages.round4.abuabu');
+    }
     /**
      * Show the form for creating a new resource.
      *

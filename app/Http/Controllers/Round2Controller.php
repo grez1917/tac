@@ -9,6 +9,7 @@ use Input;
 use Hash;
 use Auth;
 use App\Models\Soal;
+use App\Models\Peserta;
 
 class Round2Controller extends Controller
 {
@@ -19,7 +20,28 @@ class Round2Controller extends Controller
      */
     public function index()
     {
-        return view('pages.round2.index');
+        if (Request::isMethod('get')) 
+            {
+                $this->data = array();
+                $this->data['merah'] = Peserta::where('name', '=', 'Tim Merah')->get();
+                $this->data['biru'] = Peserta::where('name', '=', 'Tim Biru')->get();
+                $this->data['hijau'] = Peserta::where('name', '=', 'Tim Hijau')->get();
+                $this->data['kuning'] = Peserta::where('name', '=', 'Tim Kuning')->get();
+                $this->data['abuabu'] = Peserta::where('name', '=', 'Tim Abu-abu')->get();        
+
+                return view('pages.round2.index', $this->data);
+            }
+        elseif (Request::isMethod('post')) 
+        {
+            $input = Input::all();
+
+            $id = $input['id'];
+
+            $contact = Peserta::find($id);
+            $contact->update(Input::all());
+
+            return redirect('round2');            
+        }
     }
 
     /**

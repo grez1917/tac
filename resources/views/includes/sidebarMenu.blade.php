@@ -23,6 +23,34 @@
                                     </ul>
                                 </li>
                                 <li><a href="{{URL::to('round2')}}"><i class="fa fa-edit"></i> Babak Kedua</a>
+                                <li><a><i class="fa fa-edit"></i> Babak Ketiga <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="{{URL::to('round3/merah')}}">Merah</a>
+                                        </li>
+                                        <li><a href="{{URL::to('round3/biru')}}">Biru</a>
+                                        </li>
+                                        <li><a href="{{URL::to('round3/hijau')}}">hijau</a>
+                                        </li>
+                                        <li><a href="{{URL::to('round3/kuning')}}">Kuning</a>
+                                        </li>
+                                        <li><a href="{{URL::to('round3/abuabu')}}">Abu-abu</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-edit"></i> Babak Keempat <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu" style="display: none">
+                                        <li><a href="{{URL::to('round4/merah')}}">Merah</a>
+                                        </li>
+                                        <li><a href="{{URL::to('round4/biru')}}">Biru</a>
+                                        </li>
+                                        <li><a href="{{URL::to('round4/hijau')}}">hijau</a>
+                                        </li>
+                                        <li><a href="{{URL::to('round4/kuning')}}">Kuning</a>
+                                        </li>
+                                        <li><a href="{{URL::to('round4/abuabu')}}">Abu-abu</a>
+                                        </li>
+                                    </ul>
+                                </li>                                
                                 <li><a href="{{URL::to('round4')}}"><i class="fa fa-edit"></i> Babak Keempat</a>
                                 <li><a href="{{URL::to('round5')}}"><i class="fa fa-edit"></i> Babak Kelima</a>
                                 </li>
