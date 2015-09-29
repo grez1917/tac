@@ -414,14 +414,18 @@
 //soal no1
       var soal1Clck = 0;
 	$(document).ready(function(){
-		$('#merah1').click(function(){
+		$('#merah1').click(function(){ 
 			alert('goJek');
 			$('#round1Merah').hide();
 			$('#soalMerah1').show();
             soal1Clck++;
             if(soal1Clck == 2){
-                $('#merah1').css('background-color','#ecf0f1');
-           }          
+                $('#merah1').css('background-color','#ecf0f1');                              
+           } 
+           else if (soal1Clck == 3)  {
+                $('#soalMerah1').remove();
+                $('#round1Merah').show(); 
+           }       
 		});
 	});
 
@@ -432,7 +436,6 @@
             $('#merah1').css('background-color','#ecf0f1');
             var scoreBoard = $('#scoreMerah').text();
             scoreBoard = parseInt(scoreBoard)+10;
-            // alert(kotak2Benar);
             $('#score').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
         });
     });
@@ -449,7 +452,8 @@
 		$('#pilihKembali1').click(function(){
 			$('#soalMerah1').hide();
             $('#jawabanMerah1').hide();
-			$('#round1Merah').show();
+                $('#soalMerah1').remove();
+                $('#round1Merah').show();
 		});
 	});
 
@@ -837,6 +841,12 @@
         });
     });
 
+// kembali
+ $(document).ready(function() { 
+    $('#clock1').click(function(){
+            $('#round1Merah').show();
+        });
+    });
 // counter/jam
     var clock;
 

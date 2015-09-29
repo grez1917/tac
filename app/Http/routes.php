@@ -34,10 +34,15 @@ Route::get('round2/soal', 'Round2Controller@getSoal');
 Route::post('round2/soal', 'Round2Controller@getSoal');
 
 Route::get('round3/merah', 'Round3Controller@merah');
+Route::post('round3/merah', array('before' => 'csrf', 'uses' =>'Round3Controller@merah'));
 Route::get('round3/biru', 'Round3Controller@biru');
+Route::post('round3/biru', array('before' => 'csrf', 'uses' =>'Round3Controller@biru'));
 Route::get('round3/hijau', 'Round3Controller@hijau');
+Route::post('round3/hijau', array('before' => 'csrf', 'uses' =>'Round3Controller@hijau'));
 Route::get('round3/kuning', 'Round3Controller@kuning');
+Route::post('round3/kuning', array('before' => 'csrf', 'uses' =>'Round3Controller@kuning'));
 Route::get('round3/abuabu', 'Round3Controller@abuabu');
+Route::post('round3/abuabu', array('before' => 'csrf', 'uses' =>'Round3Controller@abuabu'));
 
 Route::get('round4', 'Round4Controller@index');
 Route::get('round4/merah', 'Round4Controller@merah');
@@ -47,4 +52,5 @@ Route::get('round4/kuning', 'Round4Controller@kuning');
 Route::get('round4/abuabu', 'Round4Controller@abuabu');
 
 Route::get('round5', 'Round5Controller@index');
+Route::post('round5', 'Round5Controller@index');
 Route::get('round5/test', 'Round5Controller@test');

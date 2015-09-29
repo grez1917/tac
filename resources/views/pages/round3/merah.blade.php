@@ -6,47 +6,55 @@
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
                         <div class="left"></div>
                         <div class="right">
-                            <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
-                            <div class="count"><font color="#c0392b">2500</font></div>
-                            <span class="count_bottom"><i class="green">4% </i> From last Week</span>
+                            <span class="count_top"><i class="fa fa-user"></i> @foreach ($merah as $item){{ $item->name }}</span>
+                            <div class="count" id='score'><font color="#c0392b" id='scoreMerah' val='0'>  {{ $item->score }}@endforeach</font></div>
+                            <span class="count_bottom"><i class="green"></i></span>
                         </div>
                     </div>
                     
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
                         <div class="left"></div>
                         <div class="right">
-                            <span class="count_top"><i class="fa fa-user"></i> Total Males</span>
-                            <div class="count"><font color="#2980b9">2,500</font></div>
+                            <span class="count_top"><i class="fa fa-user"></i>@foreach ($biru as $item) {{ $item->name }}</span>
+                            <div class="count"><font color="#2980b9"> {{ $item->score }} @endforeach</font></div>
                             <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
                         </div>
                     </div>
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
                         <div class="left"></div>
                         <div class="right">
-                            <span class="count_top"><i class="fa fa-user"></i> Total Females</span>
-                            <div class="count"><font color="#2ecc71">2500</font> </div>
+                            <span class="count_top"><i class="fa fa-user"></i> @foreach ($hijau as $item) {{ $item->name }}</span>
+                            <div class="count"><font color="#2ecc71">{{ $item->score }} @endforeach</font> </div>
                             <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
                         </div>
                     </div>
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
                         <div class="left"></div>
                         <div class="right">
-                            <span class="count_top"><i class="fa fa-user"></i> Total Collections</span>
-                            <div class="count"><font color="#f1c40f">2135</font></div>
+                            <span class="count_top"><i class="fa fa-user"></i> @foreach ($kuning as $item) {{ $item->name }}</span>
+                            <div class="count"><font color="#f1c40f">{{ $item->score }} @endforeach</font></div>
                             <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
                         </div>
                     </div>
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
                         <div class="left"></div>
                         <div class="right">
-                            <span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
-                            <div class="count"><font color="#7f8c8d">7,135</font></div>
+                            <span class="count_top"><i class="fa fa-user"></i> @foreach ($abuabu as $item) {{ $item->name }}</span>
+                            <div class="count"><font color="#7f8c8d"> {{ $item->score }} @endforeach</font></div>
                             <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
                         </div>
                     </div>
 
                 </div>
                 <!-- /top tiles -->
+
+<!-- jam/counter -->
+        <div class="animated flipInY col-md-6 col-sm-8 col-xs-8 tile_stats_count" id='jam'>
+            <div class="left"></div>
+            <div class="right">
+                <div id="clock1" style="margin:2em;"></div>
+            </div>
+        </div>   
 
     <div id='round3Merah'>
     <table align="center" class="test">
@@ -320,6 +328,19 @@
             <h2>Akumulasi Penyusutan </h2>
         </div>
 
+        <div id='simpanScore'>
+        <div class="form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12">Bonus poin</label>
+            <div class="col-md-9 col-sm-9 col-xs-12">
+                <input type="text" class="form-control" placeholder="Default Input" id='bonus'>
+            </div>
+            <button type="submit" class="btn btn-primary" id='btnBonus'>Bonus.. </button>
+            <button type="submit" class="btn btn-primary" id='btnMinPoin'>- point </button>
+            <button type="submit" class="btn btn-primary" id='btnPoinKembali'>kembali </button>
+        </div>
+        <form method="post" ><div id='scoreTotal'></div> {!! csrf_field() !!}<button type="submit" class="btn btn-success">Simpan</button></form>
+        </div>
+
     </div>
 </div>
 
@@ -355,20 +376,31 @@
     $('#jawabanMerah8').hide();
     $('#soalMerah9').hide();
     $('#jawabanMerah9').hide();
+    $('#simpanScore').hide();      
 
 //soal no1
+    var soal1Clck = 0;
 	$(document).ready(function(){
 		$('#merah1').click(function(){
 			alert('goJek');
 			$('#round3Merah').hide();
 			$('#soalMerah1').show();
+            soal1Clck++;
+            if(soal1Clck == 2){
+                $('#merah1').css('background-color','#ecf0f1');
+           }               
 		});
 	});
 
     $('#document').ready(function(){
         $('#benarSoalMerah1').click(function(){
             $('#jawabanMerah1').show();
+            $('#merah1').html('<img src="../assets/file/images/IMG_TAC.jpg" alt="" />');
             $('#merah1').css('background-color','#ecf0f1');
+            var scoreBoard = $('#scoreMerah').text();
+            scoreBoard = parseInt(scoreBoard)+10;
+            // alert(kotak2Benar);
+            $('#score').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
         });
     });
 
@@ -389,19 +421,28 @@
 	});
 
 //soal no 2
-
+    var soal2Clck = 0;
     $(document).ready(function(){
         $('#merah2').click(function(){
             alert('goJek');
             $('#round3Merah').hide();
             $('#soalMerah2').show();
+            soal2Clck++;
+            if(soal2Clck == 2){
+                $('#merah2').css('background-color','#ecf0f1');
+           }               
         });
     });
 
     $('#document').ready(function(){
         $('#benarSoalMerah2').click(function(){
             $('#jawabanMerah2').show();
+            $('#merah2').html('<img src="../assets/file/images/IMG_TAC.jpg" alt="" />');
             $('#merah2').css('background-color','#ecf0f1');
+            var scoreBoard = $('#scoreMerah').text();
+            scoreBoard = parseInt(scoreBoard)+10;
+            // alert(kotak2Benar);
+            $('#score').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
         });
     });
 
@@ -422,18 +463,28 @@
     });
 
 //soal no3
+    var soal3Clck = 0;
     $(document).ready(function(){
         $('#merah3').click(function(){
             alert('goJek');
             $('#round3Merah').hide();
             $('#soalMerah3').show();
+            soal3Clck++;
+            if(soal3Clck == 2){
+                $('#merah3').css('background-color','#ecf0f1');
+           }               
         });
     });
 
     $('#document').ready(function(){
         $('#benarSoalMerah3').click(function(){
             $('#jawabanMerah3').show();
+            $('#merah3').html('<img src="../assets/file/images/IMG_TAC.jpg" alt="" />');
             $('#merah3').css('background-color','#ecf0f1');
+            var scoreBoard = $('#scoreMerah').text();
+            scoreBoard = parseInt(scoreBoard)+10;
+            // alert(kotak2Benar);
+            $('#score').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
         });
     });
 
@@ -453,18 +504,28 @@
         });
     });
 //soal no 4
+    var soal4Clck = 0;
     $(document).ready(function(){
         $('#merah4').click(function(){
             alert('goJek');
             $('#round3Merah').hide();
             $('#soalMerah4').show();
+            soal4Clck++;
+            if(soal4Clck == 2){
+                $('#merah4').css('background-color','#ecf0f1');
+           }               
         });
     });
 
     $('#document').ready(function(){
         $('#benarSoalMerah4').click(function(){
             $('#jawabanMerah4').show();
+            $('#merah4').html('<img src="../assets/file/images/IMG_TAC.jpg" alt="" />');
             $('#merah4').css('background-color','#ecf0f1');
+            var scoreBoard = $('#scoreMerah').text();
+            scoreBoard = parseInt(scoreBoard)+10;
+            // alert(kotak2Benar);
+            $('#score').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
         });
     });
 
@@ -485,18 +546,28 @@
     });
 
 //soal no 5
+    var soal5Clck = 0;
     $(document).ready(function(){
         $('#merah5').click(function(){
             alert('goJek');
             $('#round3Merah').hide();
             $('#soalMerah5').show();
+            soal5Clck++;
+            if(soal5Clck == 2){
+                $('#merah5').css('background-color','#ecf0f1');
+           }               
         });
     });
 
     $('#document').ready(function(){
         $('#benarSoalMerah5').click(function(){
             $('#jawabanMerah5').show();
+            $('#merah5').html('<img src="../assets/file/images/IMG_TAC.jpg" alt="" />');
             $('#merah5').css('background-color','#ecf0f1');
+            var scoreBoard = $('#scoreMerah').text();
+            scoreBoard = parseInt(scoreBoard)+10;
+            // alert(kotak2Benar);
+            $('#score').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
         });
     });
 
@@ -516,18 +587,28 @@
         });
     });
 //soal no 6
+    var soal6Clck = 0;
     $(document).ready(function(){
         $('#merah6').click(function(){
             alert('goJek');
             $('#round3Merah').hide();
             $('#soalMerah6').show();
+            soal6Clck++;
+            if(soal6Clck == 2){
+                $('#merah6').css('background-color','#ecf0f1');
+           }               
         });
     });
 
     $('#document').ready(function(){
         $('#benarSoalMerah6').click(function(){
             $('#jawabanMerah6').show();
+            $('#merah6').html('<img src="../assets/file/images/IMG_TAC.jpg" alt="" />');
             $('#merah6').css('background-color','#ecf0f1');
+            var scoreBoard = $('#scoreMerah').text();
+            scoreBoard = parseInt(scoreBoard)+10;
+            // alert(kotak2Benar);
+            $('#score').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
         });
     });
 
@@ -548,18 +629,28 @@
     });
 
 //Soal no 7
+    var soal7Clck = 0;
     $(document).ready(function(){
         $('#merah7').click(function(){
             alert('goJek');
             $('#round3Merah').hide();
             $('#soalMerah7').show();
+            soal7Clck++;
+            if(soal7Clck == 2){
+                $('#merah7').css('background-color','#ecf0f1');
+           }               
         });
     });
 
     $('#document').ready(function(){
         $('#benarSoalMerah7').click(function(){
             $('#jawabanMerah7').show();
+            $('#merah7').html('<img src="../assets/file/images/IMG_TAC.jpg" alt="" />');
             $('#merah7').css('background-color','#ecf0f1');
+            var scoreBoard = $('#scoreMerah').text();
+            scoreBoard = parseInt(scoreBoard)+10;
+            // alert(kotak2Benar);
+            $('#score').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
         });
     });
 
@@ -578,19 +669,30 @@
             $('#round3Merah').show();
         });
     });
+
 //soal no 8
+    var soal8Clck = 0;
     $(document).ready(function(){
         $('#merah8').click(function(){
             alert('goJek');
             $('#round3Merah').hide();
             $('#soalMerah8').show();
+            soal8Clck++;
+            if(soal8Clck == 2){
+                $('#merah8').css('background-color','#ecf0f1');
+           }               
         });
     });
 
     $('#document').ready(function(){
         $('#benarSoalMerah8').click(function(){
             $('#jawabanMerah8').show();
+            $('#merah8').html('<img src="../assets/file/images/IMG_TAC.jpg" alt="" />');
             $('#merah8').css('background-color','#ecf0f1');
+            var scoreBoard = $('#scoreMerah').text();
+            scoreBoard = parseInt(scoreBoard)+10;
+            // alert(kotak2Benar);
+            $('#score').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
         });
     });
 
@@ -611,18 +713,28 @@
     });
 
 // soal no 9
+    var soal9Clck = 0;
     $(document).ready(function(){
         $('#merah9').click(function(){
             alert('goJek');
             $('#round3Merah').hide();
             $('#soalMerah9').show();
+            soal9Clck++;
+            if(soal9Clck == 2){
+                $('#merah9').css('background-color','#ecf0f1');
+           }               
         });
     });
 
     $('#document').ready(function(){
         $('#benarSoalMerah9').click(function(){
             $('#jawabanMerah9').show();
+            $('#merah9').html('<img src="../assets/file/images/IMG_TAC.jpg" alt="" />');
             $('#merah9').css('background-color','#ecf0f1');
+            var scoreBoard = $('#scoreMerah').text();
+            scoreBoard = parseInt(scoreBoard)+10;
+            // alert(kotak2Benar);
+            $('#score').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
         });
     });
 
@@ -641,6 +753,72 @@
             $('#round3Merah').show();
         });
     });
+
+// post method
+    $('#document').ready(function(){
+        $('#score').click(function(){
+            $('#jam').hide();
+            $('#round3Merah').hide();
+            $('#simpanScore').show();
+            var scoreBoard = $('#scoreMerah').text();
+            scoreBoard = parseInt(scoreBoard);
+            $('#scoreTotal').hide();
+            $('#scoreTotal').html('<input name="score" value='+scoreBoard+'>');
+            alert(scoreBoard);
+        });
+    });
+
+// tambah poin(bonus)
+     $('#document').ready(function(){
+        $('#btnBonus').click(function(){
+            var test = $('#bonus').val();
+            
+            var scoreBoard = $('#scoreMerah').text();
+            scoreBoard = parseInt(scoreBoard)+parseInt(test);
+            // alert(kotak2Benar);
+            $('#score').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#scoreTotal').html('<input name="score" value='+scoreBoard+'>');
+        });
+    });
+
+// kurangi poin
+     $('#document').ready(function(){
+        $('#btnMinPoin').click(function(){
+            var test = $('#bonus').val();
+            
+            var scoreBoard = $('#scoreMerah').text();
+            scoreBoard = parseInt(scoreBoard)-parseInt(test);
+            // alert(kotak2Benar);
+            $('#score').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#scoreTotal').html('<input name="score" value='+scoreBoard+'>');
+        });
+    });    
+
+// tombol kembali(dari ubah, tambah poin)
+     $('#document').ready(function(){
+        $('#btnPoinKembali').click(function(){
+            $('#simpanScore').hide();
+            $('#jam').show();
+            $('#round3Merah').show();
+        });
+    });
+
+// counter/jam
+    var clock;
+
+    $(document).ready(function() {
+        var clock;
+
+        clock = $('#clock1').FlipClock({
+            clockFace: 'MinuteCounter',
+            autoStart: true,
+            callbacks: {
+            }
+        });
+                
+        clock.setTime(120);
+        clock.setCountdown(true);
+    });    
 </script>
 @stop
 

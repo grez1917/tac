@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use View;
+use Request;
+use Input;
+use Hash;
+use Auth;
+use App\Models\Peserta;
+use App\Models\Soal;
 
 class Round3Controller extends Controller
 {
@@ -18,30 +21,132 @@ class Round3Controller extends Controller
     {
         //
     }
-    public function merah()
+        public function merah()
     {
-        return view('pages.round3.merah');
+        if(Request::isMethod('get'))
+        {
+            $this->data = array();
+            $this->data['merah'] = Peserta::where('name', '=', 'Tim Merah')->get();
+            $this->data['biru'] = Peserta::where('name', '=', 'Tim Biru')->get();
+            $this->data['hijau'] = Peserta::where('name', '=', 'Tim Hijau')->get();
+            $this->data['kuning'] = Peserta::where('name', '=', 'Tim Kuning')->get();
+            $this->data['abuabu'] = Peserta::where('name', '=', 'Tim Abu-abu')->get();        
+
+            //dd($this->data);
+
+            return view('pages.round3.merah', $this->data);            
+        }
+        elseif (Request::isMethod('post')) 
+        {
+
+            $contact = Peserta::find(1);
+            $contact->update(Input::all());
+
+            return redirect('round3/merah');
+        }
+
     }
 
     public function biru()
     {
-        return view('pages.round3.biru');
+         if(Request::isMethod('get'))
+        {
+            $this->data = array();
+            $this->data['merah'] = Peserta::where('name', '=', 'Tim Merah')->get();
+            $this->data['biru'] = Peserta::where('name', '=', 'Tim Biru')->get();
+            $this->data['hijau'] = Peserta::where('name', '=', 'Tim Hijau')->get();
+            $this->data['kuning'] = Peserta::where('name', '=', 'Tim Kuning')->get();
+            $this->data['abuabu'] = Peserta::where('name', '=', 'Tim Abu-abu')->get();        
+
+            //dd($this->data);
+
+            return view('pages.round1.biru', $this->data);            
+        }
+        elseif (Request::isMethod('post')) 
+        {
+
+            $contact = Peserta::find(2);
+            $contact->update(Input::all());
+
+            return redirect('round3/biru');
+        }
     }
 
     public function hijau()
     {
-        return view('pages.round3.hijau');
+         if(Request::isMethod('get'))
+        {
+            $this->data = array();
+            $this->data['merah'] = Peserta::where('name', '=', 'Tim Merah')->get();
+            $this->data['biru'] = Peserta::where('name', '=', 'Tim Biru')->get();
+            $this->data['hijau'] = Peserta::where('name', '=', 'Tim Hijau')->get();
+            $this->data['kuning'] = Peserta::where('name', '=', 'Tim Kuning')->get();
+            $this->data['abuabu'] = Peserta::where('name', '=', 'Tim Abu-abu')->get();        
+
+            //dd($this->data);
+
+            return view('pages.round3.hijau', $this->data);            
+        }
+        elseif (Request::isMethod('post')) 
+        {
+
+            $contact = Peserta::find(3);
+            $contact->update(Input::all());
+
+            return redirect('round3/hijau');
+        }
     }
 
     public function kuning()
     {
-        return view('pages.round3.kuning');
+         if(Request::isMethod('get'))
+        {
+            $this->data = array();
+            $this->data['merah'] = Peserta::where('name', '=', 'Tim Merah')->get();
+            $this->data['biru'] = Peserta::where('name', '=', 'Tim Biru')->get();
+            $this->data['hijau'] = Peserta::where('name', '=', 'Tim Hijau')->get();
+            $this->data['kuning'] = Peserta::where('name', '=', 'Tim Kuning')->get();
+            $this->data['abuabu'] = Peserta::where('name', '=', 'Tim Abu-abu')->get();        
+
+            //dd($this->data);
+
+            return view('pages.round3.kuning', $this->data);            
+        }
+        elseif (Request::isMethod('post')) 
+        {
+
+            $contact = Peserta::find(4);
+            $contact->update(Input::all());
+            // dd($contact);
+            return redirect('round3/kuning');
+        }
     }
 
     public function abuabu()
     {
-        return view('pages.round3.abuabu');
+         if(Request::isMethod('get'))
+        {
+            $this->data = array();
+            $this->data['merah'] = Peserta::where('name', '=', 'Tim Merah')->get();
+            $this->data['biru'] = Peserta::where('name', '=', 'Tim Biru')->get();
+            $this->data['hijau'] = Peserta::where('name', '=', 'Tim Hijau')->get();
+            $this->data['kuning'] = Peserta::where('name', '=', 'Tim Kuning')->get();
+            $this->data['abuabu'] = Peserta::where('name', '=', 'Tim Abu-abu')->get();        
+
+            //dd($this->data);
+
+            return view('pages.round3.abuabu', $this->data);            
+        }
+        elseif (Request::isMethod('post')) 
+        {
+
+            $contact = Peserta::find(5);
+            $contact->update(Input::all());
+
+            return redirect('round3/abuabu');
+        }
     }
+
     /**
      * Show the form for creating a new resource.
      *
