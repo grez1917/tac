@@ -415,14 +415,16 @@
       var soal1Clck = 0;
 	$(document).ready(function(){
 		$('#merah1').click(function(){ 
-			alert('goJek');
+			// alert('goJek');
 			$('#round1Merah').hide();
 			$('#soalMerah1').show();
             soal1Clck++;
             if(soal1Clck == 2){
+            alert(soal1Clck);                
                 $('#merah1').css('background-color','#ecf0f1');                              
            } 
            else if (soal1Clck == 3)  {
+            alert(soal1Clck);
                 $('#soalMerah1').remove();
                 $('#round1Merah').show(); 
            }       
@@ -452,7 +454,7 @@
 		$('#pilihKembali1').click(function(){
 			$('#soalMerah1').hide();
             $('#jawabanMerah1').hide();
-                $('#soalMerah1').remove();
+                // $('#soalMerah1').remove();
                 $('#round1Merah').show();
 		});
 	});
@@ -461,13 +463,18 @@
     var soal2Clck = 0;
     $(document).ready(function(){
         $('#merah2').click(function(){
-            alert('goJek');
+            // alert('goJek');
             $('#round1Merah').hide();
             $('#soalMerah2').show();
             soal2Clck++;
             if(soal2Clck == 2){
                 $('#merah2').css('background-color','#ecf0f1');
-           }     
+           }
+           else if (soal1Clck == 3)  {
+            // alert(soal2Clck);
+                $('#soalMerah2').remove();
+                $('#round1Merah').show(); 
+           }                    
         });
     });
 
@@ -503,13 +510,18 @@
     var soal3Clck = 0;
     $(document).ready(function(){
         $('#merah3').click(function(){
-            alert('goJek');
+            // alert('goJek');
             $('#round1Merah').hide();
             $('#soalMerah3').show();
             soal3Clck++;
             if(soal3Clck == 2){
                 $('#merah3').css('background-color','#ecf0f1');
            }     
+           else if (soa31Clck == 3)  {
+            // alert(soal1Clck);
+                $('#soalMerah3').remove();
+                $('#round1Merah').show(); 
+           }               
         });
     });
 
@@ -545,13 +557,18 @@
      var soal4Clck = 0;
     $(document).ready(function(){
         $('#merah4').click(function(){
-            alert('goJek');
+            // alert('goJek');
             $('#round1Merah').hide();
             $('#soalMerah4').show();
             soal4Clck++;
             if(soal4Clck == 2){
                 $('#merah4').css('background-color','#ecf0f1');
            }     
+           else if (soal4Clck == 3)  {
+            // alert(soal1Clck);
+                $('#soalMerah4').remove();
+                $('#round1Merah').show(); 
+           }               
         });
     });
 
@@ -587,13 +604,18 @@
      var soal5Clck = 0;
     $(document).ready(function(){
         $('#merah5').click(function(){
-            alert('goJek');
+            // alert('goJek');
             $('#round1Merah').hide();
             $('#soalMerah5').show();
             soal5Clck++;
             if(soal5Clck == 2){
                 $('#merah5').css('background-color','#ecf0f1');
            }     
+           else if (soal5Clck == 3)  {
+            // alert(soal1Clck);
+                $('#soalMerah5').remove();
+                $('#round1Merah').show(); 
+           }               
         });
     });
 
@@ -629,13 +651,18 @@
      var soal6Clck = 0;
     $(document).ready(function(){
         $('#merah6').click(function(){
-            alert('goJek');
+            // alert('goJek');
             $('#round1Merah').hide();
             $('#soalMerah6').show();
             soal6Clck++;
             if(soal6Clck == 2){
                 $('#merah6').css('background-color','#ecf0f1');
            }     
+           else if (soal6Clck == 3)  {
+            // alert(soa6Clck);
+                $('#soalMerah6').remove();
+                $('#round1Merah').show(); 
+           }               
         });
     });
 
@@ -671,13 +698,18 @@
      var soal7Clck = 0;
     $(document).ready(function(){
         $('#merah7').click(function(){
-            alert('goJek');
+            // alert('goJek');
             $('#round1Merah').hide();
             $('#soalMerah7').show();
             soal7Clck++;
             if(soal7Clck == 2){
                 $('#merah7').css('background-color','#ecf0f1');
            }     
+           else if (soal7Clck == 3)  {
+            // alert(soal7Clck);
+                $('#soalMerah7').remove();
+                $('#round1Merah').show(); 
+           }               
         });
     });
 
@@ -713,13 +745,18 @@
     var soal8Clck = 0;
     $(document).ready(function(){
         $('#merah8').click(function(){
-            alert('goJek');
+            // alert('goJek');
             $('#round1Merah').hide();
             $('#soalMerah8').show();
             soal8Clck++;
             if(soal8Clck == 2){
                 $('#merah8').css('background-color','#ecf0f1');
            }     
+           else if (soal6Clck == 3)  {
+            // alert(soal6Clck);
+                $('#soalMerah6').remove();
+                $('#round1Merah').show(); 
+           }               
         });
     });
 

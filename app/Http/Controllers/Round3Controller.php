@@ -60,7 +60,7 @@ class Round3Controller extends Controller
 
             //dd($this->data);
 
-            return view('pages.round1.biru', $this->data);            
+            return view('pages.round3.biru', $this->data);            
         }
         elseif (Request::isMethod('post')) 
         {

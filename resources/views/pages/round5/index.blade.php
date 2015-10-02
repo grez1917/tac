@@ -204,165 +204,165 @@
 
     <div id='round5'>
     <table align="center" class="test">
-    	<tr bgcolor="#c0392b">
+    	<tr bgcolor="">
     		<td width="50" height="50" align="center" id="merah1" >
-    			<font color="#ecf0f1" size="18"><b>1</b></font>
+    			<font color="black" size="18"><b>1</b></font>
     		</td>
             <td width="50" height="50" align="center" id="merah2" >
-                <font color="#ecf0f1" size="18"><b>2</b></font>
+                <font color="black" size="18"><b>2</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah3" >
-                <font color="#ecf0f1" size="18"><b>3</b></font>
+                <font color="black" size="18"><b>3</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah4" >
-                <a id="example2" href="../resources/assets/images/2_b.jpg"><font color="#ecf0f1" size="18"><b>4</b></font></a>
+                <a id="example2" href="../resources/assets/images/2_b.jpg"><font color="black" size="18"><b>4</b></font></a>
             </td>
             <td width="50" height="50" align="center" id="merah5" >
-                <font color="#ecf0f1" size="18"><b>5</b></font>
+                <font color="black" size="18"><b>5</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah6" >
-                <font color="#ecf0f1" size="18"><b>6</b></font>
+                <font color="black" size="18"><b>6</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah7" >
-                <font color="#ecf0f1" size="18"><b>7</b></font>
+                <font color="black" size="18"><b>7</b></font>
             </td>
     	</tr>
-    	<tr bgcolor="#c0392b">
+    	<tr bgcolor="">
     		<td width="50" height="50" align="center" id="merah8" >
-    			<font color="#ecf0f1" size="18"><b>8</b></font>
+    			<font color="black" size="18"><b>8</b></font>
     		</td>
             <td width="50" height="50" align="center" id="merah9" >
-                <a id="example2" href="../resources/assets/images/megusta.png"><font color="#ecf0f1" size="18"><b>9</b></font></a>
+                <a id="example2" href="../resources/assets/images/megusta.png"><font color="black" size="18"><b>9</b></font></a>
             </td>
             <td width="50" height="50" align="center" id="merah10" >
-                <font color="#ecf0f1" size="18"><b>10</b></font>
+                <font color="black" size="18"><b>10</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah11" >
-                <font color="#ecf0f1" size="18"><b>11</b></font>
+                <font color="black" size="18"><b>11</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah12" >
-                <a id="example2" href="../resources/assets/images/megusta.png"><font color="#ecf0f1" size="18"><b>12</b></font></a>
+                <a id="example2" href="../resources/assets/images/megusta.png"><font color="black" size="18"><b>12</b></font></a>
             </td>
             <td width="50" height="50" align="center" id="merah13" >
-                <font color="#ecf0f1" size="18"><b>13</b></font>
+                <font color="black" size="18"><b>13</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah14" >
-                <font color="#ecf0f1" size="18"><b>14</b></font>
+                <font color="black" size="18"><b>14</b></font>
             </td>
     	</tr>
-        <tr bgcolor="#c0392b">
+        <tr bgcolor="">
             <td width="50" height="50" align="center" id="merah15" >
-                <font color="#ecf0f1" size="18"><b>15</b></font>
+                <font color="black" size="18"><b>15</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah16" >
-                <a id="example2" href="../resources/assets/images/megusta.png"><font color="#ecf0f1" size="18"><b>16</b></font></a>
+                <a id="example2" href="../resources/assets/images/megusta.png"><font color="black" size="18"><b>16</b></font></a>
             </td>
             <td width="50" height="50" align="center" id="merah17" >
-                <font color="#ecf0f1" size="18"><b>17</b></font>
+                <font color="black" size="18"><b>17</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah18" >
-                <font color="#ecf0f1" size="18"><b>18</b></font>
+                <font color="black" size="18"><b>18</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah19" >
-                <a id="example2" href="../resources/assets/images/megusta.png"><font color="#ecf0f1" size="18"><b>19</b></font></a>
+                <a id="example2" href="../resources/assets/images/megusta.png"><font color="black" size="18"><b>19</b></font></a>
             </td>
             <td width="50" height="50" align="center" id="merah20" >
-                <font color="#ecf0f1" size="18"><b>20</b></font>
+                <font color="black" size="18"><b>20</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah21" >
-                <font color="#ecf0f1" size="18"><b>21</b></font>
+                <font color="black" size="18"><b>21</b></font>
             </td>
         </tr>
-        <tr bgcolor="#c0392b">
+        <tr bgcolor="">
             <td width="50" height="50" align="center" id="merah22" >
-                <font color="#ecf0f1" size="18"><b>22</b></font>
+                <font color="black" size="18"><b>22</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah23" >
-                <a id="example2" href="../resources/assets/images/megusta.png"><font color="#ecf0f1" size="18"><b>23</b></font></a>
+                <a id="example2" href="../resources/assets/images/megusta.png"><font color="black" size="18"><b>23</b></font></a>
             </td>
             <td width="50" height="50" align="center" id="merah24" >
-                <font color="#ecf0f1" size="18"><b>24</b></font>
+                <font color="black" size="18"><b>24</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah25" >
-                <font color="#ecf0f1" size="18"><b>25</b></font>
+                <font color="black" size="18"><b>25</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah26" >
-                <a id="example2" href="../resources/assets/images/megusta.png"><font color="#ecf0f1" size="18"><b>26</b></font></a>
+                <a id="example2" href="../resources/assets/images/megusta.png"><font color="black" size="18"><b>26</b></font></a>
             </td>
             <td width="50" height="50" align="center" id="merah27" >
-                <font color="#ecf0f1" size="18"><b>27</b></font>
+                <font color="black" size="18"><b>27</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah28" >
-                <font color="#ecf0f1" size="18"><b>28</b></font>
+                <font color="black" size="18"><b>28</b></font>
             </td>
         </tr>
-        <tr bgcolor="#c0392b">
+        <tr bgcolor="">
             <td width="50" height="50" align="center" id="merah29" >
-                <font color="#ecf0f1" size="18"><b>29</b></font>
+                <font color="black" size="18"><b>29</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah30" >
-                <a id="example2" href="../resources/assets/images/megusta.png"><font color="#ecf0f1" size="18"><b>30</b></font></a>
+                <a id="example2" href="../resources/assets/images/megusta.png"><font color="black" size="18"><b>30</b></font></a>
             </td>
             <td width="50" height="50" align="center" id="merah31" >
-                <font color="#ecf0f1" size="18"><b>31</b></font>
+                <font color="black" size="18"><b>31</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah32" >
-                <font color="#ecf0f1" size="18"><b>32</b></font>
+                <font color="black" size="18"><b>32</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah33" >
-                <a id="example2" href="../resources/assets/images/megusta.png"><font color="#ecf0f1" size="18"><b>33</b></font></a>
+                <a id="example2" href="../resources/assets/images/megusta.png"><font color="black" size="18"><b>33</b></font></a>
             </td>
             <td width="50" height="50" align="center" id="merah34" >
-                <font color="#ecf0f1" size="18"><b>34</b></font>
+                <font color="black" size="18"><b>34</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah35" >
-                <font color="#ecf0f1" size="18"><b>35</b></font>
+                <font color="black" size="18"><b>35</b></font>
             </td>
         </tr>
-        <tr bgcolor="#c0392b">
+        <tr bgcolor="">
             <td width="50" height="50" align="center" id="merah36" >
-                <font color="#ecf0f1" size="18"><b>36</b></font>
+                <font color="black" size="18"><b>36</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah37" >
-                <a id="example2" href="../resources/assets/images/megusta.png"><font color="#ecf0f1" size="18"><b>37</b></font></a>
+                <a id="example2" href="../resources/assets/images/megusta.png"><font color="black" size="18"><b>37</b></font></a>
             </td>
             <td width="50" height="50" align="center" id="merah38" >
-                <font color="#ecf0f1" size="18"><b>38</b></font>
+                <font color="black" size="18"><b>38</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah39" >
-                <font color="#ecf0f1" size="18"><b>39</b></font>
+                <font color="black" size="18"><b>39</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah40" >
-                <a id="example2" href="../resources/assets/images/megusta.png"><font color="#ecf0f1" size="18"><b>40</b></font></a>
+                <a id="example2" href="../resources/assets/images/megusta.png"><font color="black" size="18"><b>40</b></font></a>
             </td>
             <td width="50" height="50" align="center" id="merah41" >
-                <font color="#ecf0f1" size="18"><b>41</b></font>
+                <font color="black" size="18"><b>41</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah42" >
-                <font color="#ecf0f1" size="18"><b>42</b></font>
+                <font color="black" size="18"><b>42</b></font>
             </td>
         </tr>
-        <tr bgcolor="#c0392b">
+        <tr bgcolor="">
             <td width="50" height="50" align="center" id="merah43" >
-                <font color="#ecf0f1" size="18"><b>43</b></font>
+                <font color="black" size="18"><b>43</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah44" >
-                <a id="example2" href="../resources/assets/images/megusta.png"><font color="#ecf0f1" size="18"><b>44</b></font></a>
+                <a id="example2" href="../resources/assets/images/megusta.png"><font color="black" size="18"><b>44</b></font></a>
             </td>
             <td width="50" height="50" align="center" id="merah45" >
-                <font color="#ecf0f1" size="18"><b>45</b></font>
+                <font color="black" size="18"><b>45</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah46" >
-                <font color="#ecf0f1" size="18"><b>46</b></font>
+                <font color="black" size="18"><b>46</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah47" >
-                <a id="example2" href="../resources/assets/images/megusta.png"><font color="#ecf0f1" size="18"><b>47</b></font></a>
+                <a id="example2" href="../resources/assets/images/megusta.png"><font color="black" size="18"><b>47</b></font></a>
             </td>
             <td width="50" height="50" align="center" id="merah48" >
-                <font color="#ecf0f1" size="18"><b>48</b></font>
+                <font color="black" size="18"><b>48</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah49" >
-                <font color="#ecf0f1" size="18"><b>49</b></font>
+                <font color="black" size="18"><b>49</b></font>
             </td>
         </tr>
     </table>
@@ -1361,11 +1361,13 @@
     $('#idKuning').hide();   
     $('#idAbuabu').hide();     
 
+
     $('#formMinPoint').hide();
 
 // memberi warna pada kotak
     $(document).ready(function(){
             $('#pilihWarna').click(function(){
+
                 // untuk memastikan tidak salah update
                 // Merah
                 var scoreBoard1 = $('#scoreMerah').text();
@@ -1378,29 +1380,35 @@
                 var scoreBoard2 = $('#scoreBiru').text();                    
                 scoreBoard2 = parseInt(scoreBoard2);
                 // alert(kotak2Benar);
-                $('#scoreBiru').html('<font color="#c0392b" id="scoreBiru" val="'+scoreBoard2+'">'+scoreBoard2+'</font>');
+                $('#scoreBiru').html('<font color="#2980b9" id="scoreBiru" val="'+scoreBoard2+'">'+scoreBoard2+'</font>');
                 $('#scoreTotalBiru').html('<input name="score2" value='+scoreBoard2+'>');
 
                 // Hijau
                 var scoreBoard3 = $('#scoreHijau').text();
                 scoreBoard3 = parseInt(scoreBoard3);
                 // alert(kotak2Benar);
-                $('#scoreHijau').html('<font color="#c0392b" id="scoreHijau" val="'+scoreBoard3+'">'+scoreBoard3+'</font>');
+                $('#scoreHijau').html('<font color="#2ecc71" id="scoreHijau" val="'+scoreBoard3+'">'+scoreBoard3+'</font>');
                 $('#scoreTotalHijau').html('<input name="score3" value='+scoreBoard3+'>');    
 
                 // Kuning 
                 var scoreBoard4 = $('#scoreKuning').text();
                 scoreBoard4 = parseInt(scoreBoard4);
                 // alert(kotak2Benar);
-                $('#scoreKuning').html('<font color="#c0392b" id="scoreKuning" val="'+scoreBoard4+'">'+scoreBoard4+'</font>');
+                $('#scoreKuning').html('<font color="#f1c40f" id="scoreKuning" val="'+scoreBoard4+'">'+scoreBoard4+'</font>');
                 $('#scoreTotalKuning').html('<input name="score4" value='+scoreBoard4+'>');
 
                 // Abuabu
                 var scoreBoard5 = $('#scoreAbuabu').text();
                 scoreBoard5 = parseInt(scoreBoard5);
                 // alert(scoreBoard5);
-                $('#scoreAbuabu').html('<font color="#c0392b" id="scoreAbuabu" val="'+scoreBoard5+'">'+scoreBoard5+'</font>');
+                $('#scoreAbuabu').html('<font color="#7f8c8d" id="scoreAbuabu" val="'+scoreBoard5+'">'+scoreBoard5+'</font>');
                 $('#scoreTotalAbuabu').html('<input name="score5" value='+scoreBoard5+'>'); 
+
+                $('#scoreTotalMerah').hide(); 
+                $('#scoreTotalBiru').hide();   
+                $('#scoreTotalHijau').hide();        
+                $('#scoreTotalKuning').hide();   
+                $('#scoreTotalAbuabu').hide();  
 
                 var kotak = $('#kotakId').val();
                 var warna = $('#warnaId').val();
@@ -1420,9 +1428,9 @@
                     var scoreBoard = $('#scoreBiru').text();                    
                     scoreBoard = parseInt(scoreBoard)+20;
                     // alert(kotak2Benar);
-                    $('#scoreBiru').html('<font color="#c0392b" id="scoreBiru" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+                    $('#scoreBiru').html('<font color="#2980b9" id="scoreBiru" val="'+scoreBoard+'">'+scoreBoard+'</font>');
                     $('#scoreTotalBiru').html('<input name="score2" id="score2" value='+scoreBoard+'>');                       
-                    $('#'+kotak).css('background-color', warna);                    
+                    $('#'+kotak).css('background-color', warna);                   
                 }
                 // hijau
                 else if ( warna == '#2ecc71'){
@@ -1430,16 +1438,16 @@
                     var scoreBoard = $('#scoreHijau').text();
                     scoreBoard = parseInt(scoreBoard)+20;
                     // alert(kotak2Benar);
-                    $('#scoreHijau').html('<font color="#c0392b" id="scoreHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+                    $('#scoreHijau').html('<font color="#2ecc71" id="scoreHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
                     $('#scoreTotalHijau').html('<input name="score3" id="score3" value='+scoreBoard+'>');                       
-                    $('#'+kotak).css('background-color', warna);                    
+                    $('#'+kotak).css('background-color', warna);                  
                 }
                 // kuning
                 else if ( warna == '#f1c40f'){                    
                     var scoreBoard = $('#scoreKuning').text();
                     scoreBoard = parseInt(scoreBoard)+20;
                     // alert(kotak2Benar);
-                    $('#scoreKuning').html('<font color="#c0392b" id="scoreKuning" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+                    $('#scoreKuning').html('<font color="#f1c40f" id="scoreKuning" val="'+scoreBoard+'">'+scoreBoard+'</font>');
                     $('#scoreTotalKuning').html('<input name="score4" id="score4" value='+scoreBoard+'>');                       
                     $('#'+kotak).css('background-color', warna);
                 }
@@ -1449,7 +1457,7 @@
                     var scoreBoard = $('#scoreAbuabu').text();
                     scoreBoard = parseInt(scoreBoard)+20;
                     // alert(scoreBoard);
-                    $('#scoreAbuabu').html('<font color="#c0392b" id="scoreAbuabu" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+                    $('#scoreAbuabu').html('<font color="#7f8c8d" id="scoreAbuabu" val="'+scoreBoard+'">'+scoreBoard+'</font>');
                     $('#scoreTotalAbuabu').html('<input name="score5" id="score5" value='+scoreBoard+'>');                       
                     $('#'+kotak).css('background-color', warna);                    
                 }                
@@ -1479,7 +1487,7 @@
                     var scoreBoard = $('#scoreBiru').text();                    
                     scoreBoard = parseInt(scoreBoard)-5;
                     // alert(kotak2Benar);
-                    $('#scoreBiru').html('<font color="#c0392b" id="scoreBiru" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+                    $('#scoreBiru').html('<font color="#2980b9" id="scoreBiru" val="'+scoreBoard+'">'+scoreBoard+'</font>');
                     $('#scoreTotalBiru').html('<input name="score2" id="score2" value='+scoreBoard+'>');
                     $('#score2').hide();                          
                     $('#formMinPoint').hide(); 
@@ -1492,7 +1500,7 @@
                     var scoreBoard = $('#scoreHijau').text();
                     scoreBoard = parseInt(scoreBoard)-5;
                     // alert(kotak2Benar);
-                    $('#scoreHijau').html('<font color="#c0392b" id="scoreHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+                    $('#scoreHijau').html('<font color="#2ecc71" id="scoreHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
                     $('#scoreTotalHijau').html('<input name="score3" id="score3" value='+scoreBoard+'>');
                     $('#score3').hide();                       
                     $('#formMinPoint').hide(); 
@@ -1504,7 +1512,7 @@
                     var scoreBoard = $('#scoreKuning').text();
                     scoreBoard = parseInt(scoreBoard)-5;
                     // alert(kotak2Benar);
-                    $('#scoreKuning').html('<font color="#c0392b" id="scoreKuning" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+                    $('#scoreKuning').html('<font color="#f1c40f" id="scoreKuning" val="'+scoreBoard+'">'+scoreBoard+'</font>');
                     $('#scoreTotalKuning').html('<input name="score4" id="score4" value='+scoreBoard+'>');
                     $('#score4').hide();                     
                     $('#formMinPoint').hide(); 
@@ -1517,7 +1525,7 @@
                     var scoreBoard = $('#scoreAbuabu').text();
                     scoreBoard = parseInt(scoreBoard)-5;
                     // alert(scoreBoard);
-                    $('#scoreAbuabu').html('<font color="#c0392b" id="scoreAbuabu" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+                    $('#scoreAbuabu').html('<font color="#7f8c8d" id="scoreAbuabu" val="'+scoreBoard+'">'+scoreBoard+'</font>');
                     $('#scoreTotalAbuabu').html('<input name="score5" id="score5" value='+scoreBoard+'>');
                     $('#score5').hide();                     
                     $('#formMinPoint').hide(); 

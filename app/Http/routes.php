@@ -46,10 +46,15 @@ Route::post('round3/abuabu', array('before' => 'csrf', 'uses' =>'Round3Controlle
 
 Route::get('round4', 'Round4Controller@index');
 Route::get('round4/merah', 'Round4Controller@merah');
+Route::post('round4/merah', array('before' => 'csrf', 'uses' =>'Round4Controller@merah'));
 Route::get('round4/biru', 'Round4Controller@biru');
+Route::post('round4/biru', array('before' => 'csrf', 'uses' =>'Round4Controller@biru'));
 Route::get('round4/hijau', 'Round4Controller@hijau');
+Route::post('round4/hijau', array('before' => 'csrf', 'uses' =>'Round4Controller@hijau'));
 Route::get('round4/kuning', 'Round4Controller@kuning');
+Route::post('round4/kuning', array('before' => 'csrf', 'uses' =>'Round4Controller@kuning'));
 Route::get('round4/abuabu', 'Round4Controller@abuabu');
+Route::post('round4/abuabu', array('before' => 'csrf', 'uses' =>'Round4Controller@abuabu'));
 
 Route::get('round5', 'Round5Controller@index');
 Route::post('round5', 'Round5Controller@index');

@@ -41,46 +41,46 @@
 
 @section('content')
 <section>
-                <!-- top tiles -->
+                 <!-- top tiles -->
                 <div class="row tile_count" align="center">
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
                         <div class="left"></div>
                         <div class="right">
-                            <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
-                            <div class="count"><font color="#2980b9">2500</font></div>
-                            <span class="count_bottom"><i class="green">4% </i> From last Week</span>
+                            <span class="count_top"><i class="fa fa-user"></i> @foreach ($merah as $item){{ $item->name }}</span>
+                            <div class="count" id='scoreMerah'><font color="#c0392b" id='scoreBoardMerah' val='0'>  {{ $item->score }}@endforeach</font></div>
+                            <span class="count_bottom"><i class="green"></i></span>
                         </div>
                     </div>
                     
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
                         <div class="left"></div>
                         <div class="right">
-                            <span class="count_top"><i class="fa fa-user"></i> Total Males</span>
-                            <div class="count"><font color="#2980b9">2,500</font></div>
+                            <span class="count_top"><i class="fa fa-user"></i>@foreach ($biru as $item) {{ $item->name }}</span>
+                            <div class="count" id='scoreBiru'><font color="#2980b9" id='scoreBoardBiru'> {{ $item->score }} @endforeach</font></div>
                             <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
                         </div>
                     </div>
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
                         <div class="left"></div>
                         <div class="right">
-                            <span class="count_top"><i class="fa fa-user"></i> Total Females</span>
-                            <div class="count"><font color="#2ecc71">2500</font> </div>
+                            <span class="count_top"><i class="fa fa-user"></i> @foreach ($hijau as $item) {{ $item->name }}</span>
+                            <div class="count" id='scoreHijau'><font color="#2ecc71" id='scoreBoardHijau'>{{ $item->score }} @endforeach</font> </div>
                             <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
                         </div>
                     </div>
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
                         <div class="left"></div>
                         <div class="right">
-                            <span class="count_top"><i class="fa fa-user"></i> Total Collections</span>
-                            <div class="count"><font color="#f1c40f">2135</font></div>
+                            <span class="count_top"><i class="fa fa-user"></i> @foreach ($kuning as $item) {{ $item->name }}</span>
+                            <div class="count" id="scoreKuning"><font color="#f1c40f" id='scoreBoardKuning'>{{ $item->score }} @endforeach</font></div>
                             <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
                         </div>
                     </div>
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
                         <div class="left"></div>
                         <div class="right">
-                            <span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
-                            <div class="count"><font color="#7f8c8d">7,135</font></div>
+                            <span class="count_top"><i class="fa fa-user"></i> @foreach ($abuabu as $item) {{ $item->name }}</span>
+                            <div class="count" id='scoreAbuabu'><font color="#7f8c8d" id='scoreBoardAbuabu'> {{ $item->score }} @endforeach</font></div>
                             <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
                         </div>
                     </div>
@@ -88,7 +88,15 @@
                 </div>
                 <!-- /top tiles -->
 
-    <div id='round1Merah'>
+    <div class="animated flipInY col-md-6 col-sm-8 col-xs-8 tile_stats_count" id='jam'>
+        <div class="left"></div>
+        <div class="right">
+            <div id="clock1" style="margin:2em;"></div>
+        </div>
+        <button type="submit" class="btn btn-primary" id='mulai'>Mulai Counter</button>
+    </div>                 
+
+    <div id='round4Biru'>
     <table align="center" class="test">
     	<tr bgcolor="#2980b9">
     		<td width="175" height="175" align="center" id="biru1" >
@@ -144,6 +152,22 @@
     </table>
     </div>
 
+    <div class="col-md-7 col-sm-7 col-xs-12">
+        <div class="x_panel">
+            <div id='simpanScore'>
+            <div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12">Bonus poin</label>
+                <div class="col-md-9 col-sm-9 col-xs-12">
+                    <input type="text" class="form-control" placeholder="Default Input" id='bonus'>
+                </div>
+                <button type="submit" class="btn btn-success" id='btnBonus'>+ Point </button>
+                <button type="submit" class="btn btn-primary" id='btnMinPoin'>- Point </button>
+                <button type="submit" class="btn btn-primary" id='btnPoinKembali'>Kembali </button>
+            </div>
+            <form method="post" ><div id='scoreTotal'></div> {!! csrf_field() !!}<button type="submit" class="btn btn-success">Simpan</button></form>
+            </div>
+        </div>
+    </div>
 
 </section>
 <style type="text/css">
@@ -157,7 +181,89 @@
         *border-collapse: expression('separate', cellSpacing = '10px');
     }
 </style>
+<script type="text/javascript">
+    $('#clock1').hide();
+    $('#simpanScore').hide();
 
+// post method
+    $('#document').ready(function(){
+        $('#scoreBiru').click(function(){
+            $('#jam').hide();
+            $('#round4Biru').hide();
+            $('#simpanScore').show();
+            var scoreBoard = $('#scoreBoardBiru').text();
+            scoreBoard = parseInt(scoreBoard);
+            $('#scoreTotal').hide();
+            $('#scoreTotal').html('<input name="score" value='+scoreBoard+'>');
+            // alert(scoreBoard);
+        });
+    });
+
+// tambah poin(bonus)
+     $('#document').ready(function(){
+        $('#btnBonus').click(function(){
+            var test = $('#bonus').val();
+            
+            var scoreBoard = $('#scoreBoardBiru').text();
+            scoreBoard = parseInt(scoreBoard)+parseInt(test);
+            // alert(kotak2Benar);
+            $('#scoreBiru').html('<font color="#2980b9" id="scoreBoardBiru" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#scoreTotal').html('<input name="score" value='+scoreBoard+'>');
+        });
+    });
+
+// kurangi poin
+     $('#document').ready(function(){
+        $('#btnMinPoin').click(function(){
+            var test = $('#bonus').val();
+            
+            var scoreBoard = $('#scoreBoardBiru').text();
+            scoreBoard = parseInt(scoreBoard)-parseInt(test);
+            // alert(kotak2Benar);
+            $('#scoreBiru').html('<font color="#2980b9" id="scoreBoardBiru" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#scoreTotal').html('<input name="score" value='+scoreBoard+'>');
+        });
+    });    
+
+// tombol kembali(dari ubah, tambah poin)
+     $('#document').ready(function(){
+        $('#btnPoinKembali').click(function(){
+            $('#simpanScore').hide();
+            $('#jam').show();
+            $('#round4Biru').show();
+        });
+    });    
+
+ // tombol mulai counter
+
+     $('#document').ready(function(){
+        $('#mulai').click(function(){
+        $('#mulai').hide();
+        $('#clock1').show();        
+
+        var clock;
+
+        clock = $('#clock1').FlipClock({
+            clockFace: 'MinuteCounter',
+            autoStart: true,
+            callbacks: {
+            }
+        });
+                
+        clock.setTime(120);
+        clock.setCountdown(true);
+        });
+    });
+
+// tampilkan tombol mulai setelah di hide
+    $('#document').ready(function(){
+        $('#clock1').click(function(){
+            $('#mulai').show();
+            $('#clock1').hide();
+        });
+    }); 
+
+</script>
 @stop
 @section('custom_foot')
     <script type="text/javascript">

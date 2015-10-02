@@ -323,7 +323,12 @@
             soal1Clck++;
             if(soal1Clck == 2){
                 $('#kuning1').css('background-color','#ecf0f1');
-           }              
+           } 
+           else if (soal1Clck >= 3)  {
+            // alert(soal1Clck);
+                $('#soalKuning1').remove();
+                $('#round1Kuning').show(); 
+           }                         
         });
     });
 
@@ -362,10 +367,15 @@
             alert('goJek');
             $('#round1Kuning').hide();
             $('#soalKuning2').show();
-            soal1Clck++;
-            if(soal1Clck == 2){
-                $('#kuning2').css('background-color','#ecf0f1');
-           }              
+            soal2Clck++;
+            if(soal2Clck == 2){
+                $('#kuning2').css('background-color','#ecf0f1');                  
+           }   
+           else if (soal2Clck >= 3)  {
+            // alert(soal1Clck);
+                $('#soalKuning2').remove();
+                $('#round1Kuning').show(); 
+           }                            
         });
     });
 
@@ -405,10 +415,15 @@
             alert('goJek');
             $('#round1Kuning').hide();
             $('#soalKuning3').show();
-            soal1Clck++;
-            if(soal1Clck == 2){
-                $('#kuning3').css('background-color','#ecf0f1');
-           }              
+            soa31Clck++;
+            if(soal3Clck == 2){
+                $('#kuning3').css('background-color','#ecf0f1');                
+           } 
+           else if (soal3Clck >= 3)  {
+            // alert(soal1Clck);
+                $('#soalKuning3').remove();
+                $('#round1Kuning').show(); 
+           }                                
         });
     });
 
@@ -448,10 +463,15 @@
             alert('goJek');
             $('#round1Kuning').hide();
             $('#soalKuning4').show();
-            soal1Clck++;
-            if(soal1Clck == 2){
+            soal4Clck++;
+            if(soal4Clck == 2){
                 $('#kuning4').css('background-color','#ecf0f1');
-           }              
+           }         
+           else if (soal4Clck >= 3)  {
+            // alert(soal1Clck);
+                $('#soalKuning4').remove();
+                $('#round1Kuning').show(); 
+           }                 
         });
     });
 
@@ -490,10 +510,15 @@
             alert('goJek');
             $('#round1Kuning').hide();
             $('#soalKuning5').show();
-            soal1Clck++;
-            if(soal1Clck == 2){
+            soal5Clck++;
+            if(soal5Clck == 2){
                 $('#kuning5').css('background-color','#ecf0f1');
            }              
+           else if (soal5Clck >= 3)  {
+            // alert(soal1Clck);
+                $('#soalKuning5').remove();
+                $('#round1Kuning').show(); 
+           }            
         });
     });
 
@@ -533,10 +558,15 @@
             alert('goJek');
             $('#round1Kuning').hide();
             $('#soalKuning6').show();
-            soal1Clck++;
-            if(soal1Clck == 2){
+            soal6Clck++;
+            if(soal6Clck == 2){
                 $('#kuning6').css('background-color','#ecf0f1');
            }              
+           else if (soal6Clck >= 3)  {
+            // alert(soal1Clck);
+                $('#soalKuning6').remove();
+                $('#round1Kuning').show(); 
+           }            
         });
     });
 
@@ -576,10 +606,15 @@
             alert('goJek');
             $('#round1Kuning').hide();
             $('#soalKuning7').show();
-            soal1Clck++;
-            if(soal1Clck == 2){
+            soal7Clck++;
+            if(soal7Clck == 2){
                 $('#kuning7').css('background-color','#ecf0f1');
-           }              
+           }       
+           else if (soal6Clck >= 3)  {
+            // alert(soal1Clck);
+                $('#soalKuning6').remove();
+                $('#round1Kuning').show(); 
+           }                   
         });
     });
 
@@ -619,10 +654,15 @@
             alert('goJek');
             $('#round1Kuning').hide();
             $('#soalKuning8').show();
-            soal1Clck++;
-            if(soal1Clck == 2){
+            soal8Clck++;
+            if(soal8Clck == 2){
                 $('#kuning8').css('background-color','#ecf0f1');
            }              
+           else if (soal8Clck >= 3)  {
+            // alert(soal1Clck);
+                $('#soalKuning8').remove();
+                $('#round1Kuning').show(); 
+           }            
         });
     });
 
@@ -661,10 +701,15 @@
             alert('goJek');
             $('#round1Kuning').hide();
             $('#soalKuning9').show();
-            soal1Clck++;
-            if(soal1Clck == 2){
+            soal9Clck++;
+            if(soal9Clck == 2){
                 $('#kuning9').css('background-color','#ecf0f1');
-           }              
+           }             
+           else if (soal9Clck >= 3)  {
+            // alert(soal1Clck);
+                $('#soalKuning9').remove();
+                $('#round1Kuning').show(); 
+           }             
         });
     });
 
@@ -741,6 +786,7 @@
         $('#btnPoinKembali').click(function(){
             $('#jam').show();
             $('#round1Kuning').show();
+            $('#simpanScore').hide();
         });
     });
 

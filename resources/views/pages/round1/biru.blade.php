@@ -383,13 +383,18 @@
       var soal1Clck = 0;
     $(document).ready(function(){
         $('#biru1').click(function(){
-            alert('goJek');
+            // alert('goJek');
             $('#round1Biru').hide();
             $('#soalBiru1').show();
             soal1Clck++;
             if(soal1Clck == 2){
                 $('#biru1').css('background-color','#ecf0f1');
            }              
+           else if (soal1Clck == 3)  {
+            // alert(soal1Clck);
+                $('#soalBiru1').remove();
+                $('#round1Biru').show(); 
+           }             
         });
     });
 
@@ -422,16 +427,21 @@
     });
 
 // soal no 2
-      var soal2Clck = 0;
+    var soal2Clck = 0;
     $(document).ready(function(){
         $('#biru2').click(function(){
-            alert('goJek');
+            // alert('goJek');
             $('#round1Biru').hide();
             $('#soalBiru2').show();
-            soal1Clck++;
-            if(soal1Clck == 2){
+            soal2lck++;
+            if(soal2lck == 2){
                 $('#biru2').css('background-color','#ecf0f1');
            }            
+           else if (soal2Clck >= 3)  {
+            // alert(soal1Clck);
+                $('#soalBiru2').remove();
+                $('#round1Biru').show(); 
+           }             
         });
     });
 
@@ -467,13 +477,18 @@
       var soal3Clck = 0;
     $(document).ready(function(){
         $('#biru3').click(function(){
-            alert('goJek');
+            // alert('goJek');
             $('#round1Biru').hide();
             $('#soalBiru3').show();
-            soal1Clck++;
-            if(soal1Clck == 2){
+            soal3Clck++;
+            if(soal3Clck == 2){
                 $('#biru3').css('background-color','#ecf0f1');
            }            
+           else if (soal3Clck >= 3)  {
+            // alert(soal1Clck);
+                $('#soalBiru3').remove();
+                $('#round1Biru').show(); 
+           }             
         });
     });
 
@@ -509,13 +524,18 @@
       var soal4Clck = 0;
     $(document).ready(function(){
         $('#biru4').click(function(){
-            alert('goJek');
+            // alert('goJek');
             $('#round1Biru').hide();
             $('#soalBiru4').show();
-            soal1Clck++;
-            if(soal1Clck == 2){
+            soal4Clck++;
+            if(soal4Clck == 2){
                 $('#biru4').css('background-color','#ecf0f1');
            }            
+           else if (soal4Clck >= 3)  {
+            // alert(soal1Clck);
+                $('#soalBiru4').remove();
+                $('#round1Biru').show(); 
+           }             
         });
     });
 
@@ -551,13 +571,18 @@
       var soal5Clck = 0;
     $(document).ready(function(){
         $('#biru5').click(function(){
-            alert('goJek');
+            // alert('goJek');
             $('#round1Biru').hide();
             $('#soalBiru5').show();
-            soal1Clck++;
-            if(soal1Clck == 2){
+            soal5Clck++;
+            if(soal5Clck == 2){
                 $('#biru5').css('background-color','#ecf0f1');
            }            
+           else if (soal5Clck >= 3)  {
+            // alert(soal1Clck);
+                $('#soalBiru5').remove();
+                $('#round1Biru').show(); 
+           }              
         });
     });
 
@@ -593,13 +618,18 @@
       var soal6Clck = 0;
     $(document).ready(function(){
         $('#biru6').click(function(){
-            alert('goJek');
+            // alert('goJek');
             $('#round1Biru').hide();
             $('#soalBiru6').show();
-            soal1Clck++;
-            if(soal1Clck == 2){
+            soal6Clck++;
+            if(soal6Clck == 2){
                 $('#biru6').css('background-color','#ecf0f1');
            }            
+           else if (soal6Clck >= 3)  {
+            // alert(soal1Clck);
+                $('#soalBiru6').remove();
+                $('#round1Biru').show(); 
+           }              
         });
     });
 
@@ -635,13 +665,18 @@
       var soal7Clck = 0;
     $(document).ready(function(){
         $('#biru7').click(function(){
-            alert('goJek');
+            // alert('goJek');
             $('#round1Biru').hide();
             $('#soalBiru7').show();
-            soal1Clck++;
-            if(soal1Clck == 2){
+            soal7Clck++;
+            if(soal7Clck == 2){
                 $('#biru7').css('background-color','#ecf0f1');
            }            
+           else if (soal7Clck >= 3)  {
+            // alert(soal1Clck);
+                $('#soalBiru7').remove();
+                $('#round1Biru').show(); 
+           }              
         });
     });
 
@@ -677,13 +712,18 @@
       var soal8Clck = 0;
     $(document).ready(function(){
         $('#biru8').click(function(){
-            alert('goJek');
+            // alert('goJek');
             $('#round1Biru').hide();
             $('#soalBiru8').show();
-            soal1Clck++;
-            if(soal1Clck == 2){
+            soal8Clck++;
+            if(soal8Clck == 2){
                 $('#biru8').css('background-color','#ecf0f1');
-           }            
+           }     
+           else if (soal8Clck >= 3)  {
+            // alert(soal1Clck);
+                $('#soalBiru8').remove();
+                $('#round1Biru').show(); 
+           }                     
         });
     });
 
@@ -718,13 +758,18 @@
       var soal9Clck = 0;
     $(document).ready(function(){
         $('#biru9').click(function(){
-            alert('goJek');
+            // alert('goJek');
             $('#round1Biru').hide();
             $('#soalBiru9').show();
-            soal1Clck++;
-            if(soal1Clck == 2){
+            soal9Clck++;
+            if(soal9Clck == 2){
                 $('#biru9').css('background-color','#ecf0f1');
            }            
+           else if (soal9Clck >= 3)  {
+            // alert(soal1Clck);
+                $('#soalBiru9').remove();
+                $('#round1Biru').show(); 
+           }              
         });
     });
 
@@ -801,6 +846,7 @@
         $('#btnPoinKembali').click(function(){
             $('#jam').show();
             $('#round1Biru').show();
+            $('#simpanScore').hide();            
         });
     });
 

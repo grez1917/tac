@@ -307,19 +307,39 @@
     $('#jawabanHijau8').hide();
     $('#soalHijau9').hide();
     $('#jawabanHijau9').hide();
-    $('#simpanScore').hide();      
+    $('#simpanScore').hide();
+    $('#scoreTotal').hide();
+    $('#clock1').hide(); 
 
 // soal no 1
     var soal1Clck = 0;
     $(document).ready(function(){
         $('#hijau1').click(function(){
-            alert('goJek');
+            alert('PENGANTAR AKUNTANSI 1');
             $('#round3Hijau').hide();
             $('#soalHijau1').show();
+
+           var clock;
+            $('#clock1').show();
+            clock = $('#clock1').FlipClock({
+                clockFace: 'MinuteCounter',
+                autoStart: true,
+                callbacks: {
+                }
+            });
+                    
+            clock.setTime(10);
+            clock.setCountdown(true);              
             soal1Clck++;
             if(soal1Clck == 2){
                 $('#hijau1').css('background-color','#ecf0f1');
-           }               
+           }   
+           else if (soal1Clck >= 3)  {
+            // alert(soal1Clck);
+                $('#clock1').hide();
+                $('#soalHijau1').remove();
+                $('#round3Hijau').show(); 
+           }             
         });
     });
 
@@ -331,7 +351,8 @@
             var scoreBoard = $('#scoreBoardHijau').text();
             scoreBoard = parseInt(scoreBoard)+10;
             // alert(kotak2Benar);
-            $('#scoreHijau').html('<font color="#c0392b" id="scoreBoardHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#scoreHijau').html('<font color="#2ecc71" id="scoreBoardHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#clock1').hide();              
         });
     });
 
@@ -340,6 +361,7 @@
             $('#soalHijau1').hide();
             $('#jawabanHijau1').hide();
             $('#round3Hijau').show();
+            $('#clock1').hide();              
         });
     });
 
@@ -348,6 +370,7 @@
             $('#soalHijau1').hide();
             $('#jawabanHijau1').hide();
             $('#round3Hijau').show();
+            $('#clock1').hide();              
         });
     });
 
@@ -355,13 +378,31 @@
     var soal2Clck = 0;
     $(document).ready(function(){
         $('#hijau2').click(function(){
-            alert('goJek');
+            alert('PENGANTAR AKUNTANSI 1');
             $('#round3Hijau').hide();
             $('#soalHijau2').show();
+
+           var clock;
+            $('#clock1').show();
+            clock = $('#clock1').FlipClock({
+                clockFace: 'MinuteCounter',
+                autoStart: true,
+                callbacks: {
+                }
+            });
+                    
+            clock.setTime(5);
+            clock.setCountdown(true);              
             soal2Clck++;
             if(soal2Clck == 2){
                 $('#hijau2').css('background-color','#ecf0f1');
-           }               
+           }            
+           else if (soal2Clck >= 3)  {
+            // alert(soal1Clck);
+                $('#clock1').hide();
+                $('#soalHijau2').remove();
+                $('#round3Hijau').show(); 
+           }                 
         });
     });
 
@@ -373,7 +414,8 @@
             var scoreBoard = $('#scoreBoardHijau').text();
             scoreBoard = parseInt(scoreBoard)+10;
             // alert(kotak2Benar);
-            $('#scoreHijau').html('<font color="#c0392b" id="scoreBoardHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#scoreHijau').html('<font color="#2ecc71" id="scoreBoardHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#clock1').hide();              
         });
     });
 
@@ -382,6 +424,7 @@
             $('#soalHijau2').hide();
             $('#jawabanHijau2').hide();
             $('#round3Hijau').show();
+            $('#clock1').hide();              
         });
     });
 
@@ -390,6 +433,7 @@
             $('#soalHijau2').hide();
             $('#jawabanHijau2').hide();
             $('#round3Hijau').show();
+            $('#clock1').hide();              
         });
     });
 
@@ -397,13 +441,31 @@
     var soal3Clck = 0;
     $(document).ready(function(){
         $('#hijau3').click(function(){
-            alert('goJek');
+            alert('PENGANTAR AKUNTANSI 2');
             $('#round3Hijau').hide();
             $('#soalHijau3').show();
+
+           var clock;
+            $('#clock1').show();
+            clock = $('#clock1').FlipClock({
+                clockFace: 'MinuteCounter',
+                autoStart: true,
+                callbacks: {
+                }
+            });
+                    
+            clock.setTime(10);
+            clock.setCountdown(true);              
             soal3Clck++;
             if(soal3Clck == 2){
                 $('#hijau3').css('background-color','#ecf0f1');
            }               
+           else if (soal3Clck >= 3)  {
+            // alert(soal1Clck);
+                $('#clock1').hide();
+                $('#soalHijau3').remove();
+                $('#round3Hijau').show(); 
+           }              
         });
     });
 
@@ -415,7 +477,8 @@
             var scoreBoard = $('#scoreBoardHijau').text();
             scoreBoard = parseInt(scoreBoard)+10;
             // alert(kotak2Benar);
-            $('#scoreHijau').html('<font color="#c0392b" id="scoreBoardHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#scoreHijau').html('<font color="#2ecc71" id="scoreBoardHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#clock1').hide();              
         });
     });
 
@@ -424,6 +487,7 @@
             $('#soalHijau3').hide();
             $('#jawabanHijau3').hide();
             $('#round3Hijau').show();
+            $('#clock1').hide();              
         });
     });
 
@@ -432,6 +496,7 @@
             $('#soalHijau3').hide();
             $('#jawabanHijau3').hide();
             $('#round3Hijau').show();
+            $('#clock1').hide();              
         });
     });
 
@@ -439,13 +504,31 @@
     var soal4Clck = 0;
     $(document).ready(function(){
         $('#hijau4').click(function(){
-            alert('goJek');
+            alert('PENGANTAR AKUNTANSI 2');
             $('#round3Hijau').hide();
             $('#soalHijau4').show();
+
+           var clock;
+            $('#clock1').show();
+            clock = $('#clock1').FlipClock({
+                clockFace: 'MinuteCounter',
+                autoStart: true,
+                callbacks: {
+                }
+            });
+                    
+            clock.setTime(5);
+            clock.setCountdown(true);              
             soal4Clck++;
             if(soal4Clck == 2){
                 $('#hijau4').css('background-color','#ecf0f1');
            }               
+           else if (soal4Clck >= 3)  {
+            // alert(soal1Clck);
+                $('#clock1').hide();
+                $('#soalHijau4').remove();
+                $('#round3Hijau').show(); 
+           }              
         });
     });
 
@@ -457,8 +540,9 @@
             var scoreBoard = $('#scoreBoardHijau').text();
             scoreBoard = parseInt(scoreBoard)+10;
             // alert(kotak2Benar);
-            $('#scoreHijau').html('<font color="#c0392b" id="scoreBoardHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
-        });
+            $('#scoreHijau').html('<font color="#2ecc71" id="scoreBoardHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#clock1').hide();             
+        });         
     });
 
     $('#document').ready(function(){
@@ -466,6 +550,7 @@
             $('#soalHijau4').hide();
             $('#jawabanHijau4').hide();
             $('#round3Hijau').show();
+            $('#clock1').hide();              
         });
     });
 
@@ -474,6 +559,7 @@
             $('#soalHijau4').hide();
             $('#jawabanHijau4').hide();
             $('#round3Hijau').show();
+            $('#clock1').hide();              
         });
     });
 
@@ -481,13 +567,31 @@
     var soal5Clck = 0;
     $(document).ready(function(){
         $('#hijau5').click(function(){
-            alert('goJek');
+            alert('EKONOMI MAKRO');
             $('#round3Hijau').hide();
             $('#soalHijau5').show();
+
+           var clock;
+            $('#clock1').show();
+            clock = $('#clock1').FlipClock({
+                clockFace: 'MinuteCounter',
+                autoStart: true,
+                callbacks: {
+                }
+            });
+                    
+            clock.setTime(10);
+            clock.setCountdown(true);              
             soal5Clck++;
             if(soal5Clck == 2){
                 $('#hijau5').css('background-color','#ecf0f1');
            }               
+           else if (soal5Clck >= 3)  {
+            // alert(soal1Clck);
+                $('#clock1').hide();
+                $('#soalHijau5').remove();
+                $('#round3Hijau').show(); 
+           }              
         });
     });
 
@@ -499,7 +603,8 @@
             var scoreBoard = $('#scoreBoardHijau').text();
             scoreBoard = parseInt(scoreBoard)+10;
             // alert(kotak2Benar);
-            $('#scoreHijau').html('<font color="#c0392b" id="scoreBoardHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#scoreHijau').html('<font color="#2ecc71" id="scoreBoardHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#clock1').hide();              
         });
     });
 
@@ -508,6 +613,7 @@
             $('#soalHijau5').hide();
             $('#jawabanHijau5').hide();
             $('#round3Hijau').show();
+            $('#clock1').hide();              
         });
     });
 
@@ -516,6 +622,7 @@
             $('#soalHijau5').hide();
             $('#jawabanHijau5').hide();
             $('#round3Hijau').show();
+            $('#clock1').hide();              
         });
     });
 
@@ -523,13 +630,31 @@
     var soal6Clck = 0;
     $(document).ready(function(){
         $('#hijau6').click(function(){
-            alert('goJek');
+            alert('EKONOMI MIKRO');
             $('#round3Hijau').hide();
             $('#soalHijau6').show();
+
+           var clock;
+            $('#clock1').show();
+            clock = $('#clock1').FlipClock({
+                clockFace: 'MinuteCounter',
+                autoStart: true,
+                callbacks: {
+                }
+            });
+                    
+            clock.setTime(5);
+            clock.setCountdown(true);              
             soal6Clck++;
             if(soal6Clck == 2){
                 $('#hijau6').css('background-color','#ecf0f1');
            }               
+           else if (soal6Clck >= 3)  {
+            // alert(soal1Clck);
+                $('#clock1').hide();
+                $('#soalHijau6').remove();
+                $('#round3Hijau').show(); 
+           }              
         });
     });
 
@@ -541,7 +666,8 @@
             var scoreBoard = $('#scoreBoardHijau').text();
             scoreBoard = parseInt(scoreBoard)+10;
             // alert(kotak2Benar);
-            $('#scoreHijau').html('<font color="#c0392b" id="scoreBoardHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#scoreHijau').html('<font color="#2ecc71" id="scoreBoardHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#clock1').hide();              
         });
     });
 
@@ -550,6 +676,7 @@
             $('#soalHijau6').hide();
             $('#jawabanHijau6').hide();
             $('#round3Hijau').show();
+            $('#clock1').hide();              
         });
     });
 
@@ -558,6 +685,7 @@
             $('#soalHijau6').hide();
             $('#jawabanHijau6').hide();
             $('#round3Hijau').show();
+            $('#clock1').hide();              
         });
     });
 
@@ -565,13 +693,31 @@
     var soal7Clck = 0;
     $(document).ready(function(){
         $('#hijau7').click(function(){
-            alert('goJek');
+            alert('PERPAJAKAN');
             $('#round3Hijau').hide();
             $('#soalHijau7').show();
+
+           var clock;
+            $('#clock1').show();
+            clock = $('#clock1').FlipClock({
+                clockFace: 'MinuteCounter',
+                autoStart: true,
+                callbacks: {
+                }
+            });
+                    
+            clock.setTime(10);
+            clock.setCountdown(true);              
             soal7Clck++;
             if(soal7Clck == 2){
                 $('#hijau7').css('background-color','#ecf0f1');
-           }               
+           }           
+           else if (soal7Clck >= 3)  {
+            // alert(soal1Clck);
+                $('#clock1').hide();
+                $('#soalHijau7').remove();
+                $('#round3Hijau').show(); 
+           }                  
         });
     });
 
@@ -583,7 +729,8 @@
             var scoreBoard = $('#scoreBoardHijau').text();
             scoreBoard = parseInt(scoreBoard)+10;
             // alert(kotak2Benar);
-            $('#scoreHijau').html('<font color="#c0392b" id="scoreBoardHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#scoreHijau').html('<font color="#2ecc71" id="scoreBoardHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#clock1').hide();              
         });
     });
 
@@ -592,6 +739,7 @@
             $('#soalHijau7').hide();
             $('#jawabanHijau7').hide();
             $('#round3Hijau').show();
+            $('#clock1').hide();              
         });
     });
 
@@ -600,6 +748,7 @@
             $('#soalHijau7').hide();
             $('#jawabanHijau7').hide();
             $('#round3Hijau').show();
+            $('#clock1').hide();              
         });
     });
 
@@ -607,13 +756,31 @@
     var soal8Clck = 0;
     $(document).ready(function(){
         $('#hijau8').click(function(){
-            alert('goJek');
+            alert('PERPAJAKAN');
             $('#round3Hijau').hide();
             $('#soalHijau8').show();
+
+           var clock;
+            $('#clock1').show();
+            clock = $('#clock1').FlipClock({
+                clockFace: 'MinuteCounter',
+                autoStart: true,
+                callbacks: {
+                }
+            });
+                    
+            clock.setTime(5);
+            clock.setCountdown(true);              
             soal8Clck++;
             if(soal8Clck == 2){
                 $('#hijau8').css('background-color','#ecf0f1');
            }               
+           else if (soal8Clck >= 3)  {
+            // alert(soal1Clck);
+                $('#clock1').hide();
+                $('#soalHijau8').remove();
+                $('#round3Hijau').show(); 
+           }              
         });
     });
 
@@ -625,7 +792,8 @@
             var scoreBoard = $('#scoreBoardHijau').text();
             scoreBoard = parseInt(scoreBoard)+10;
             // alert(kotak2Benar);
-            $('#scoreHijau').html('<font color="#c0392b" id="scoreBoardHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#scoreHijau').html('<font color="#2ecc71" id="scoreBoardHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#clock1').hide();              
         });
     });
 
@@ -634,6 +802,7 @@
             $('#soalHijau8').hide();
             $('#jawabanHijau8').hide();
             $('#round3Hijau').show();
+            $('#clock1').hide();              
         });
     });
 
@@ -642,6 +811,7 @@
             $('#soalHijau8').hide();
             $('#jawabanHijau8').hide();
             $('#round3Hijau').show();
+            $('#clock1').hide();              
         });
     });
 
@@ -649,13 +819,31 @@
     var soal9Clck = 0;
     $(document).ready(function(){
         $('#hijau9').click(function(){
-            alert('goJek');
+            alert('TEORI AKUNTANSI');
             $('#round3Hijau').hide();
             $('#soalHijau9').show();
+
+           var clock;
+            $('#clock1').show();
+            clock = $('#clock1').FlipClock({
+                clockFace: 'MinuteCounter',
+                autoStart: true,
+                callbacks: {
+                }
+            });
+                    
+            clock.setTime(5);
+            clock.setCountdown(true);              
             soal9Clck++;
             if(soal9Clck == 2){
                 $('#hijau9').css('background-color','#ecf0f1');
-           }               
+           }          
+           else if (soal9Clck >= 3)  {
+            // alert(soal1Clck);
+                $('#clock9').hide();
+                $('#soalHijau1').remove();
+                $('#round3Hijau').show(); 
+           }                   
         });
     });
 
@@ -667,7 +855,8 @@
             var scoreBoard = $('#scoreBoardHijau').text();
             scoreBoard = parseInt(scoreBoard)+10;
             // alert(kotak2Benar);
-            $('#scoreHijau').html('<font color="#c0392b" id="scoreBoardHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#scoreHijau').html('<font color="#2ecc71" id="scoreBoardHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#clock1').hide();              
         });
     });
 
@@ -676,6 +865,7 @@
             $('#soalHijau9').hide();
             $('#jawabanHijau9').hide();
             $('#round3Hijau').show();
+            $('#clock1').hide();              
         });
     });
 
@@ -684,6 +874,7 @@
             $('#soalHijau9').hide();
             $('#jawabanHijau9').hide();
             $('#round3Hijau').show();
+            $('#clock1').hide();              
         });
     });
 
@@ -693,7 +884,7 @@
             $('#jam').hide();
             $('#round3Hijau').hide();
             $('#simpanScore').show();
-            var scoreBoard = $('#scoreBoardHijau').text();
+            var scoreBoard = $('#scoreHijau').text();
             scoreBoard = parseInt(scoreBoard);
             $('#scoreTotal').hide();
             $('#scoreTotal').html('<input name="score" value='+scoreBoard+'>');
@@ -706,10 +897,10 @@
         $('#btnBonus').click(function(){
             var test = $('#bonus').val();
             
-            var scoreBoard = $('#scoreBoardHijau').text();
+            var scoreBoard = $('#scoreHijau').text();
             scoreBoard = parseInt(scoreBoard)+parseInt(test);
             // alert(kotak2Benar);
-            $('#score').html('<font color="#c0392b" id="scoreBoardHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#scoreHijau').html('<font color="#2ecc71" id="scoreHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
             $('#scoreTotal').html('<input name="score" value='+scoreBoard+'>');
         });
     });
@@ -719,10 +910,10 @@
         $('#btnMinPoin').click(function(){
             var test = $('#bonus').val();
             
-            var scoreBoard = $('#scoreBoardHijau').text();
+            var scoreBoard = $('#scoreHijau').text();
             scoreBoard = parseInt(scoreBoard)-parseInt(test);
             // alert(kotak2Benar);
-            $('#score').html('<font color="#c0392b" id="scoreBoardHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#scoreHijau').html('<font color="#2ecc71" id="scoreHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
             $('#scoreTotal').html('<input name="score" value='+scoreBoard+'>');
         });
     });    

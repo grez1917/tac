@@ -309,6 +309,11 @@
             if(soal1Clck == 2){
                 $('#hijau1').css('background-color','#ecf0f1');
            }   
+           else if (soal1Clck == 3)  {
+            // alert(soal1Clck);
+                $('#soalHijau1').remove();
+                $('#round1Hijau').show(); 
+           }            
         });
     });
 
@@ -351,6 +356,11 @@
             if(soal2Clck == 2){
                 $('#hijau2').css('background-color','#ecf0f1');
            }               
+           else if (soal2Clck == 3)  {
+            // alert(soal1Clck);
+                $('#soalHijau2').remove();
+                $('#round1Hijau').show(); 
+           }            
         });
     });
 
@@ -386,18 +396,18 @@
     var soal3Clck = 0;
     $(document).ready(function(){
         $('#hijau3').click(function(){
-            alert('goJek');
+            // alert('goJek');
             $('#round1Hijau').hide();
             $('#soalHijau3').show();
             soal3Clck++;
             if(soal3Clck == 2){
-            $('#hijau3').html('<img src="../assets/file/images/IMG_TAC.jpg" alt="" />');
-            $('#hijau3').css('background-color','#ecf0f1');
-            var scoreBoard = $('#scoreHijau').text();
-            scoreBoard = parseInt(scoreBoard)+10;
-            // alert(scoreBoard);
-            $('#scoreHijau').html('<font color="#2ecc71" id="scoreHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+                $('#hijau3').css('background-color','#ecf0f1');
            }               
+           else if (soal3Clck == 3)  {
+            // alert(soal1Clck);
+                $('#soalHijau3').remove();
+                $('#round1Hijau').show(); 
+           }            
         });
     });
 
@@ -405,6 +415,11 @@
         $('#benarSoalHijau3').click(function(){
             $('#jawabanHijau3').show();
             $('#hijau3').css('background-color','#ecf0f1');
+            $('#hijau3').html('<img src="../assets/file/images/IMG_TAC.jpg" alt="" />');
+            var scoreBoard = $('#scoreHijau').text();
+            scoreBoard = parseInt(scoreBoard)+10;
+            // alert(scoreBoard);
+            $('#scoreHijau').html('<font color="#2ecc71" id="scoreHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
         });
     });
 
@@ -428,13 +443,18 @@
     var soal4Clck = 0;
     $(document).ready(function(){
         $('#hijau4').click(function(){
-            alert('goJek');
+            // alert('goJek');
             $('#round1Hijau').hide();
             $('#soalHijau4').show();
             soal4Clck++;
             if(soal4Clck == 2){
                 $('#hijau4').css('background-color','#ecf0f1');
            }               
+           else if (soal4Clck == 3)  {
+            // alert(soal1Clck);
+                $('#soalHijau4').remove();
+                $('#round1Hijau').show(); 
+           }             
         });
     });
 
@@ -470,13 +490,18 @@
     var soal5Clck = 0;
     $(document).ready(function(){
         $('#hijau5').click(function(){
-            alert('goJek');
+            // alert('goJek');
             $('#round1Hijau').hide();
             $('#soalHijau5').show();
             soal5Clck++;
             if(soal5Clck == 2){
                 $('#hijau5').css('background-color','#ecf0f1');
            }               
+           else if (soal5Clck == 3)  {
+            // alert(soal1Clck);
+                $('#soalHijau5').remove();
+                $('#round1Hijau').show(); 
+           }             
         });
     });
 
@@ -512,13 +537,18 @@
     var soal6Clck = 0;
     $(document).ready(function(){
         $('#hijau6').click(function(){
-            alert('goJek');
+            // alert('goJek');
             $('#round1Hijau').hide();
             $('#soalHijau6').show();
             soal6Clck++;
             if(soal6Clck == 2){
                 $('#hijau6').css('background-color','#ecf0f1');
            }               
+           else if (soal6Clck == 3)  {
+            // alert(soal1Clck);
+                $('#soalHijau6').remove();
+                $('#round1Hijau').show(); 
+           }             
         });
     });
 
@@ -554,13 +584,18 @@
     var soal7Clck = 0;
     $(document).ready(function(){
         $('#hijau7').click(function(){
-            alert('goJek');
+            // alert('goJek');
             $('#round1Hijau').hide();
             $('#soalHijau7').show();
             soal7Clck++;
             if(soal7Clck == 2){
                 $('#hijau7').css('background-color','#ecf0f1');
            }               
+           else if (soal7Clck == 3)  {
+            // alert(soal1Clck);
+                $('#soalHijau7').remove();
+                $('#round1Hijau').show(); 
+           }             
         });
     });
 
@@ -596,13 +631,18 @@
     var soal8Clck = 0;
     $(document).ready(function(){
         $('#hijau8').click(function(){
-            alert('goJek');
+            // alert('goJek');
             $('#round1Hijau').hide();
             $('#soalHijau8').show();
             soal8Clck++;
             if(soal8Clck == 2){
                 $('#hijau8').css('background-color','#ecf0f1');
            }               
+           else if (soal8Clck == 3)  {
+            // alert(soal1Clck);
+                $('#soalHijau8').remove();
+                $('#round1Hijau').show(); 
+           }             
         });
     });
 
@@ -638,13 +678,18 @@
     var soal9Clck = 0;
     $(document).ready(function(){
         $('#hijau9').click(function(){
-            alert('goJek');
+            // alert('goJek');
             $('#round1Hijau').hide();
             $('#soalHijau9').show();
             soal9Clck++;
             if(soal9Clck == 2){
                 $('#hijau9').css('background-color','#ecf0f1');
            }               
+           else if (soal9Clck == 3)  {
+            // alert(soal1Clck);
+                $('#soalHijau9').remove();
+                $('#round1Hijau').show(); 
+           }             
         });
     });
 
@@ -720,6 +765,7 @@
         $('#btnPoinKembali').click(function(){
             $('#jam').show();
             $('#round1Hijau').show();
+            $('#simpanScore').hide();
         });
     });
 
