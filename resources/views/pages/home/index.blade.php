@@ -2,24 +2,29 @@
 @section('content')
 <section>
     <h1 align='center' id='round1'>Selamat Datang Peserta TAC 2015</h1>
-    
+
+    <div id='logo'>
+    <table align="center"  class="test">
+        <tr>
+            <td><img src="../public/assets/file/images/unair_300.jpg"></td>
+            <td><img src="../public/assets/file/images/IMG_300.jpg"></td>
+            <td><img src="../public/assets/file/images/TAC_300.jpg"></td>
+        </tr>
+    </table>
+
+
     <div id='timColour'>
     <table align="center"  class="test">
     	<tr >
     		<td bgcolor="#c0392b" width="225" height="225" align="center" id="tim1" onclick="javascript:location.href='{{ URL::to('round1/merah')}}'">
-    			test
     		</td>
             <td bgcolor="#2980b9" width="225" height="225" align="center" id="tim2" onclick="javascript:location.href='{{ URL::to('round1/biru')}}'">
-                test
             </td>
             <td bgcolor="#2ecc71" width="225" height="225" align="center" id="tim3" onclick="javascript:location.href='{{ URL::to('round1/hijau')}}'">
-                test
             </td>
             <td bgcolor="#f1c40f" width="225" height="225" align="center" id="tim4" onclick="javascript:location.href='{{ URL::to('round1/kuning')}}'">
-                test
             </td>
             <td bgcolor="#7f8c8d" width="225" height="225" align="center" id="tim5" onclick="javascript:location.href='{{ URL::to('round1/abuabu')}}'">
-                test
             </td>
     	</tr>
     </table>

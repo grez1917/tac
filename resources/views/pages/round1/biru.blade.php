@@ -17,7 +17,6 @@
                         <div class="right">
                             <span class="count_top"><i class="fa fa-user"></i>@foreach ($biru as $item) {{ $item->name }}</span>
                             <div class="count" id='scoreBiru'><font color="#2980b9" id='scoreBoardBiru'> {{ $item->score }} @endforeach</font></div>
-                            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
                         </div>
                     </div>
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
@@ -25,7 +24,6 @@
                         <div class="right">
                             <span class="count_top"><i class="fa fa-user"></i> @foreach ($hijau as $item) {{ $item->name }}</span>
                             <div class="count" id='scoreHijau'><font color="#2ecc71" id='scoreBoardHijau'>{{ $item->score }} @endforeach</font> </div>
-                            <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
                         </div>
                     </div>
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
@@ -33,7 +31,6 @@
                         <div class="right">
                             <span class="count_top"><i class="fa fa-user"></i> @foreach ($kuning as $item) {{ $item->name }}</span>
                             <div class="count" id="scoreKuning"><font color="#f1c40f" id='scoreBoardKuning'>{{ $item->score }} @endforeach</font></div>
-                            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
                         </div>
                     </div>
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
@@ -41,7 +38,6 @@
                         <div class="right">
                             <span class="count_top"><i class="fa fa-user"></i> @foreach ($abuabu as $item) {{ $item->name }}</span>
                             <div class="count" id='scoreAbuabu'><font color="#7f8c8d" id='scoreBoardAbuabu'> {{ $item->score }} @endforeach</font></div>
-                            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
                         </div>
                     </div>
 
@@ -433,8 +429,8 @@
             // alert('goJek');
             $('#round1Biru').hide();
             $('#soalBiru2').show();
-            soal2lck++;
-            if(soal2lck == 2){
+            soal2Clck++;
+            if(soal2Clck == 2){
                 $('#biru2').css('background-color','#ecf0f1');
            }            
            else if (soal2Clck >= 3)  {

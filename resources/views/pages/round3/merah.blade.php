@@ -1,103 +1,107 @@
 @extends('layouts.full')
 @section('content')
 <section>
-                <!-- top tiles -->
-                <div class="row tile_count" align="center">
-                    <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
-                        <div class="left"></div>
-                        <div class="right">
-                            <span class="count_top"><i class="fa fa-user"></i> @foreach ($merah as $item){{ $item->name }}</span>
-                            <div class="count" id='score'><font color="#c0392b" id='scoreMerah' val='0'>  {{ $item->score }}@endforeach</font></div>
-                            <span class="count_bottom"><i class="green"></i></span>
-                        </div>
-                    </div>
-                    
-                    <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
-                        <div class="left"></div>
-                        <div class="right">
-                            <span class="count_top"><i class="fa fa-user"></i>@foreach ($biru as $item) {{ $item->name }}</span>
-                            <div class="count"><font color="#2980b9"> {{ $item->score }} @endforeach</font></div>
-                            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-                        </div>
-                    </div>
-                    <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
-                        <div class="left"></div>
-                        <div class="right">
-                            <span class="count_top"><i class="fa fa-user"></i> @foreach ($hijau as $item) {{ $item->name }}</span>
-                            <div class="count"><font color="#2ecc71">{{ $item->score }} @endforeach</font> </div>
-                            <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
-                        </div>
-                    </div>
-                    <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
-                        <div class="left"></div>
-                        <div class="right">
-                            <span class="count_top"><i class="fa fa-user"></i> @foreach ($kuning as $item) {{ $item->name }}</span>
-                            <div class="count"><font color="#f1c40f">{{ $item->score }} @endforeach</font></div>
-                            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-                        </div>
-                    </div>
-                    <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
-                        <div class="left"></div>
-                        <div class="right">
-                            <span class="count_top"><i class="fa fa-user"></i> @foreach ($abuabu as $item) {{ $item->name }}</span>
-                            <div class="count"><font color="#7f8c8d"> {{ $item->score }} @endforeach</font></div>
-                            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-                        </div>
-                    </div>
+<!-- top tiles -->
+    <div class="row tile_count" align="center">
+        <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+            <div class="left"></div>
+            <div class="right">
+                <span class="count_top"><i class="fa fa-user"></i> @foreach ($merah as $item){{ $item->name }}</span>
+                <div class="count" id='scoreMerah'><font color="#c0392b" id='scoreBoardMerah' val='0'>  {{ $item->score }}@endforeach</font></div>
+                <span class="count_bottom"><i class="green"></i></span>
+            </div>
+        </div>
+        
+        <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+            <div class="left"></div>
+            <div class="right">
+                <span class="count_top"><i class="fa fa-user"></i>@foreach ($biru as $item) {{ $item->name }}</span>
+                <div class="count" id='scoreBiru'><font color="#2980b9" id='scoreBoardBiru'> {{ $item->score }} @endforeach</font></div>
+            </div>
+        </div>
+        <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+            <div class="left"></div>
+            <div class="right">
+                <span class="count_top"><i class="fa fa-user"></i> @foreach ($hijau as $item) {{ $item->name }}</span>
+                <div class="count" id='scoreHijau'><font color="#2ecc71" id='scoreBoardHijau'>{{ $item->score }} @endforeach</font> </div>
+            </div>
+        </div>
+        <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+            <div class="left"></div>
+            <div class="right">
+                <span class="count_top"><i class="fa fa-user"></i> @foreach ($kuning as $item) {{ $item->name }}</span>
+                <div class="count" id="scoreKuning"><font color="#f1c40f" id='scoreBoardKuning'>{{ $item->score }} @endforeach</font></div>
+            </div>
+        </div>
+        <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+            <div class="left"></div>
+            <div class="right">
+                <span class="count_top"><i class="fa fa-user"></i> @foreach ($abuabu as $item) {{ $item->name }}</span>
+                <div class="count" id='scoreAbuabu'><font color="#7f8c8d" id='scoreBoardAbuabu'> {{ $item->score }} @endforeach</font></div>
+            </div>
+        </div>
 
-                </div>
-                <!-- /top tiles -->
+    </div>
+    <!-- /top tiles -->
 
 <!-- jam/counter -->
         <div class="animated flipInY col-md-6 col-sm-8 col-xs-8 tile_stats_count" id='jam'>
             <div class="left"></div>
             <div class="right">
                 <div id="clock1" style="margin:2em;"></div>
+                <div id="clock2" style="margin:2em;"></div>
+                <div id="clock3" style="margin:2em;"></div>
+                <div id="clock4" style="margin:2em;"></div>  
+                <div id="clock5" style="margin:2em;"></div>  
+                <div id="clock6" style="margin:2em;"></div>  
+                <div id="clock7" style="margin:2em;"></div>  
+                <div id="clock8" style="margin:2em;"></div>  
+                <div id="clock9" style="margin:2em;"></div>                                                                                                                                                                                     
             </div>
         </div>   
 
     <div id='round3Merah'>
     <table align="center" class="test">
-    	<tr bgcolor="#c0392b">
-    		<td width="175" height="175" align="center" id="merah1" >
-    			<font color="#ecf0f1" size="24"><b>1</b></font>
-    		</td>
+        <tr bgcolor="#c0392b">
+            <td width="175" height="175" align="center" id="merah1" >
+                <font color="#ecf0f1" size="24"><b>1</b></font>
+            </td>
             <td width="175" height="175" align="center" id="merah2" >
                 <font color="#ecf0f1" size="24"><b>2</b></font>
             </td>
             <td width="175" height="175" align="center" id="merah3" >
                 <font color="#ecf0f1" size="24"><b>3</b></font>
             </td>
-    	</tr>
-    	<tr bgcolor="#c0392b">
-    		<td width="175" height="175" align="center" id="merah4" >
-    			<font color="#ecf0f1" size="24"><b>4</b></font>
-    		</td>
+        </tr>
+        <tr bgcolor="#c0392b">
+            <td width="175" height="175" align="center" id="merah4" >
+                <font color="#ecf0f1" size="24"><b>4</b></font>
+            </td>
             <td width="175" height="175" align="center" id="merah5" >
                 <font color="#ecf0f1" size="24"><b>5</b></font>
             </td>
             <td width="175" height="175" align="center" id="merah6" >
                 <font color="#ecf0f1" size="24"><b>6</b></font>
             </td>
-    	</tr>
-    	<tr bgcolor="#c0392b">
-    		<td width="175" height="175" align="center" id="merah7" >
-    			<font color="#ecf0f1" size="24"><b>7</b></font>
-    		</td>
+        </tr>
+        <tr bgcolor="#c0392b">
+            <td width="175" height="175" align="center" id="merah7" >
+                <font color="#ecf0f1" size="24"><b>7</b></font>
+            </td>
             <td width="175" height="175" align="center" id="merah8" >
                 <font color="#ecf0f1" size="24"><b>8</b></font>
             </td>
             <td width="175" height="175" align="center" id="merah9" >
                 <font color="#ecf0f1" size="24"><b>9</b></font>
             </td>
-    	</tr>
+        </tr>
     </table>
     </div>
 
 <div class="col-md-7 col-sm-7 col-xs-12">
     <div class="x_panel">
         <div id='soalMerah1' class="x_content">
-        	<h2>Berikut ini adalah transaksi pembelian yang dilakukan oleh Milito Company:</h2></br>
+            <h2>Berikut ini adalah transaksi pembelian yang dilakukan oleh Milito Company:</h2></br>
             <table class="table">
                 <thead>
                     <tr>
@@ -134,6 +138,8 @@
                 <button id='benarSoalMerah1' type="submit" class="btn btn-success">Benar</button>
                 <button id='salahSoalMerah1' type="submit" class="btn btn-primary">Salah</button>
                 <button id='pilihKembali1' type="submit" class="btn btn-success">Soal</button>
+                <button id='lempar1' type="submit" class="btn btn-primary">Lempar Soal</button>
+                <button id='counter1' type="submit" class="btn btn-success">Counter</button>                                 
         </div>
         <div id='jawabanMerah1' class="x_content">
             <h2>Jawaban:</h2></br>
@@ -168,6 +174,8 @@
                 <button id='benarSoalMerah2' type="submit" class="btn btn-success">Benar</button>
                 <button id='salahSoalMerah2' type="submit" class="btn btn-primary">Salah</button>
                 <button id='pilihKembali2' type="submit" class="btn btn-success">Soal</button>
+                <button id='lempar2' type="submit" class="btn btn-primary">Lempar Soal</button>
+                <button id='counter2' type="submit" class="btn btn-success">Counter</button> 
         </div>
         <div id='jawabanMerah2' class="x_content">
             <h2>Jawaban:</h2></br>
@@ -227,6 +235,8 @@
                 <button id='benarSoalMerah3' type="submit" class="btn btn-success">Benar</button>
                 <button id='salahSoalMerah3' type="submit" class="btn btn-primary">Salah</button>
                 <button id='pilihKembali3' type="submit" class="btn btn-success">Soal</button>
+                <button id='lempar3' type="submit" class="btn btn-primary">Lempar Soal</button>
+                <button id='counter3' type="submit" class="btn btn-success">Counter</button> 
         </div>
         <div id='jawabanMerah3' class="x_content">
             <h2>Jawaban:</h2></br>
@@ -234,10 +244,12 @@
         </div>
 
         <div id='soalMerah4' class="x_content" align="justify">
-            <h2>A potential liability that may be-come an actual liability in the future is called ….
+            <h2>A potential liability that may be-come an actual liability in the future is called ….</h2>
                 <button id='benarSoalMerah4' type="submit" class="btn btn-success">Benar</button>
                 <button id='salahSoalMerah4' type="submit" class="btn btn-primary">Salah</button>
                 <button id='pilihKembali4' type="submit" class="btn btn-success">Soal</button>
+                <button id='lempar4' type="submit" class="btn btn-primary">Lempar Soal</button>
+                <button id='counter4' type="submit" class="btn btn-success">Counter</button> 
         </div>
         <div id='jawabanMerah4' class="x_content">
             <h2>Jawaban:</h2></br>
@@ -254,6 +266,8 @@
                 <button id='benarSoalMerah5' type="submit" class="btn btn-success">Benar</button>
                 <button id='salahSoalMerah5' type="submit" class="btn btn-primary">Salah</button>
                 <button id='pilihKembali5' type="submit" class="btn btn-success">Soal</button>
+                <button id='lempar5' type="submit" class="btn btn-primary">Lempar Soal</button>
+                <button id='counter5' type="submit" class="btn btn-success">Counter</button> 
         </div>
         <div id='jawabanMerah5' class="x_content">
             <h2>Jawaban:</h2></br>
@@ -272,6 +286,8 @@
                 <button id='benarSoalMerah6' type="submit" class="btn btn-success">Benar</button>
                 <button id='salahSoalMerah6' type="submit" class="btn btn-primary">Salah</button>
                 <button id='pilihKembali6' type="submit" class="btn btn-success">Soal</button>
+                <button id='lempar6' type="submit" class="btn btn-primary">Lempar Soal</button>
+                <button id='counter6' type="submit" class="btn btn-success">Counter</button> 
         </div>
         <div id='jawabanMerah6' class="x_content">
             <h2>Jawaban:</h2></br>
@@ -283,6 +299,8 @@
                 <button id='benarSoalMerah7' type="submit" class="btn btn-success">Benar</button>
                 <button id='salahSoalMerah7' type="submit" class="btn btn-primary">Salah</button>
                 <button id='pilihKembali7' type="submit" class="btn btn-success">Soal</button>
+                <button id='lempar7' type="submit" class="btn btn-primary">Lempar Soal</button>
+                <button id='counter7' type="submit" class="btn btn-success">Counter</button> 
         </div>
         <div id='jawabanMerah7' class="x_content">
             <h2>Jawaban:</h2></br>
@@ -311,6 +329,8 @@
                 <button id='benarSoalMerah8' type="submit" class="btn btn-success">Benar</button>
                 <button id='salahSoalMerah8' type="submit" class="btn btn-primary">Salah</button>
                 <button id='pilihKembali8' type="submit" class="btn btn-success">Soal</button>
+                <button id='lempar8' type="submit" class="btn btn-primary">Lempar Soal</button>
+                <button id='counter8' type="submit" class="btn btn-success">Counter</button> 
         </div>
         <div id='jawabanMerah8' class="x_content">
             <h2>Jawaban:</h2></br>
@@ -322,6 +342,8 @@
                 <button id='benarSoalMerah9' type="submit" class="btn btn-success">Benar</button>
                 <button id='salahSoalMerah9' type="submit" class="btn btn-primary">Salah</button>
                 <button id='pilihKembali9' type="submit" class="btn btn-success">Soal</button>
+                <button id='lempar9' type="submit" class="btn btn-primary">Lempar Soal</button>
+                <button id='counter9' type="submit" class="btn btn-success">Counter</button> 
         </div>
         <div id='jawabanMerah9' class="x_content">
             <h2>Jawaban:</h2></br>
@@ -335,11 +357,53 @@
                 <input type="text" class="form-control" placeholder="Default Input" id='bonus'>
             </div>
             <button type="submit" class="btn btn-primary" id='btnBonus'>Bonus.. </button>
-            <button type="submit" class="btn btn-primary" id='btnMinPoin'>- point </button>
-            <button type="submit" class="btn btn-primary" id='btnPoinKembali'>kembali </button>
+            <button type="submit" class="btn btn-success" id='btnMinPoin'>- point </button>
+            <button type="submit" class="btn btn-primary" id='btnPoinKembali'>kembali</button>
         </div>
-        <form method="post" ><div id='scoreTotal'></div> {!! csrf_field() !!}<button type="submit" class="btn btn-success">Simpan</button></form>
+            <form method="post" >
+                <div id='scoreTotal'></div> 
+                <input name='idMerah' id='idMerah' value="1"></input>
+                <div id='scoreTotalMerah'></div>
+
+                <input name='idBiru' id='idBiru' value="2"></input>
+                <div id='scoreTotalBiru'></div>        
+
+                <input name='idHijau' id='idHijau' value="3"></input>
+                <div id='scoreTotalHijau'></div>       
+
+                <input name='idKuning' id='idKuning' value="4"></input>
+                <div id='scoreTotalKuning'></div>    
+
+                <input name='idAbuabu' id='idAbuabu' value="5"></input>
+                <div id='scoreTotalAbuabu'></div>
+                {!! csrf_field() !!}                                                                       
+                <button type="submit" class="btn btn-primary">Simpan</button>
+            </form>
         </div>
+
+        <div id='formScoreLempar'>
+        <select id="kotakNo" class="form-control" required>
+                <option value="merah1">Kotak 1 </option>
+                <option value="merah2">Kotak 2</option>
+                <option value="merah3">Kotak 3</option>
+                <option value="merah4">Kotak 4</option>
+                <option value="merah5">Kotak 5</option>
+                <option value="merah6">Kotak 6</option>
+                <option value="merah7">Kotak 7</option>
+                <option value="merah8">Kotak 8</option>
+                <option value="merah9">Kotak 9</option>                                                                                     
+        </select>
+        <select id="warnaId" class="form-control" required>
+                <option value="#2980b9">Biru</option>
+                <option value="#2ecc71">Hijau</option>
+                <option value="#f1c40f">Kuning</option>
+                <option value="#7f8c8d">Abu - Abu</option>
+        </select>
+
+        <button type="submit" class="btn btn-primary" id='btnPointLempar'>Benar</button></form>
+        <button type="submit" class="btn btn-success" id='btnPointLemparSalah'>Salah</button></form>
+        <button type="submit" class="btn btn-primary" id='btnKembaliPointLempar'>Kembali</button></form>
+        </div>        
 
     </div>
 </div>
@@ -358,7 +422,7 @@
 </style>
 
 <script type="text/javascript">
-	$('#soalMerah1').hide();
+    $('#soalMerah1').hide();
     $('#jawabanMerah1').hide();
     $('#soalMerah2').hide();
     $('#jawabanMerah2').hide();
@@ -377,15 +441,36 @@
     $('#soalMerah9').hide();
     $('#jawabanMerah9').hide();
     $('#simpanScore').hide();   
-    $('#clock1').hide();       
+    $('#clock1').hide(); 
+    $('#clock2').hide();
+    $('#clock3').hide();         
+    $('#clock4').hide(); 
+    $('#clock5').hide();
+    $('#clock6').hide(); 
+    $('#clock7').hide(); 
+    $('#clock8').hide();
+    $('#clock9').hide(); 
 
+    $('#idMerah').hide(); 
+    $('#idBiru').hide();   
+    $('#idHijau').hide();        
+    $('#idKuning').hide();   
+    $('#idAbuabu').hide();
+
+    $('#scoreTotalMerah').hide(); 
+    $('#scoreTotalBiru').hide();   
+    $('#scoreTotalHijau').hide();        
+    $('#scoreTotalKuning').hide();   
+    $('#scoreTotalAbuabu').hide();    
+    
+    $('#formScoreLempar').hide();  
 //soal no1
     var soal1Clck = 0;
-	$(document).ready(function(){
-		$('#merah1').click(function(){
-			alert('PENGANTAR AKUNTANSI 1');
-			$('#round3Merah').hide();
-			$('#soalMerah1').show();
+    $(document).ready(function(){
+        $('#merah1').click(function(){
+            alert('PENGANTAR AKUNTANSI 1');
+            $('#round3Merah').hide();
+            $('#soalMerah1').show();
 
            var clock;
             $('#clock1').show();
@@ -408,8 +493,8 @@
                 $('#soalMerah1').remove();
                 $('#round3Merah').show(); 
            }              
-		});
-	});
+        });
+    });
 
     $('#document').ready(function(){
         $('#benarSoalMerah1').click(function(){
@@ -419,7 +504,7 @@
             var scoreBoard = $('#scoreMerah').text();
             scoreBoard = parseInt(scoreBoard)+10;
             // alert(kotak2Benar);
-            $('#score').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#scoreMerah').html('<font color="#c0392b" id="scoreBoardMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
             $('#clock1').hide();             
         });
     });
@@ -433,14 +518,41 @@
         });
     });
 
-	$('#document').ready(function(){
-		$('#pilihKembali1').click(function(){
-			$('#soalMerah1').hide();
+    $('#document').ready(function(){
+        $('#pilihKembali1').click(function(){
+            $('#soalMerah1').hide();
             $('#jawabanMerah1').hide();
-			$('#round3Merah').show();
+            $('#round3Merah').show();
             $('#clock1').hide();
-		});
-	});
+        });
+    });
+
+    $('#document').ready(function(){
+        $('#counter1').click(function(){
+            var clock;
+            $('#clock1').show();
+            clock = $('#clock1').FlipClock({
+                clockFace: 'MinuteCounter',
+                autoStart: true,
+                callbacks: {
+                }
+            });
+                    
+            clock.setTime(10);
+            clock.setCountdown(true);               
+            soal1Clck++;    
+        });
+    });
+
+    $('#document').ready(function(){// tampilkan panel tambah poin soal lempar
+        $('#lempar1').click(function(){
+            $('#formScoreLempar').show();
+            $('#soalMerah1').hide();
+            $('#jawabanMerah1').hide();
+            $('#round3Merah').hide();
+             $('#clock1').hide();
+        });
+    });
 
 //soal no 2
     var soal2Clck = 0;
@@ -451,8 +563,8 @@
             $('#soalMerah2').show();
 
            var clock;
-            $('#clock1').show();
-            clock = $('#clock1').FlipClock({
+            $('#clock2').show();
+            clock = $('#clock2').FlipClock({
                 clockFace: 'MinuteCounter',
                 autoStart: true,
                 callbacks: {
@@ -482,7 +594,7 @@
             var scoreBoard = $('#scoreMerah').text();
             scoreBoard = parseInt(scoreBoard)+10;
             // alert(kotak2Benar);
-            $('#score').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#scoreMerah').html('<font color="#c0392b" id="scoreBoardMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
             $('#clock1').hide();             
         });
     });
@@ -492,7 +604,7 @@
             $('#soalMerah2').hide();
             $('#jawabanMerah2').hide();
             $('#round3Merah').show();
-            $('#clock1').hide();             
+            $('#clock2').hide();             
         });
     });
 
@@ -501,7 +613,34 @@
             $('#soalMerah2').hide();
             $('#jawabanMerah2').hide();
             $('#round3Merah').show();
-            $('#clock1').hide();             
+            $('#clock2').hide();             
+        });
+    });
+    
+    $('#document').ready(function(){
+        $('#counter2').click(function(){
+            var clock;
+            $('#clock2').show();
+            clock = $('#clock2').FlipClock({
+                clockFace: 'MinuteCounter',
+                autoStart: true,
+                callbacks: {
+                }
+            });
+                    
+            clock.setTime(5);
+            clock.setCountdown(true);               
+            soal1Clck++;    
+        });
+    });
+
+    $('#document').ready(function(){// tampilkan panel tambah poin soal lempar
+        $('#lempar2').click(function(){
+            $('#formScoreLempar').show();
+            $('#soalMerah2').hide();
+            $('#jawabanMerah2').hide();
+            $('#round3Merah').hide();
+             $('#clock2').hide();
         });
     });
 
@@ -514,8 +653,8 @@
             $('#soalMerah3').show();
 
            var clock;
-            $('#clock1').show();
-            clock = $('#clock1').FlipClock({
+            $('#clock3').show();
+            clock = $('#clock3').FlipClock({
                 clockFace: 'MinuteCounter',
                 autoStart: true,
                 callbacks: {
@@ -531,7 +670,7 @@
            }        
             else if (soal3Clck >= 3)  {
             // alert(soal1Clck);
-                $('#clock1').hide();
+                $('#clock3').hide();
                 $('#soalMerah3').remove();
                 $('#round3Merah').show(); 
            }                     
@@ -546,8 +685,8 @@
             var scoreBoard = $('#scoreMerah').text();
             scoreBoard = parseInt(scoreBoard)+10;
             // alert(kotak2Benar);
-            $('#score').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
-            $('#clock1').hide();             
+            $('#scoreMerah').html('<font color="#c0392b" id="scoreBoardMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#clock3').hide();             
         });
     });
 
@@ -556,7 +695,7 @@
             $('#soalMerah3').hide();
             $('#jawabanMerah3').hide();
             $('#round3Merah').show();
-            $('#clock1').hide();             
+            $('#clock3').hide();             
         });
     });
 
@@ -565,9 +704,37 @@
             $('#soalMerah3').hide();
             $('#jawabanMerah3').hide();
             $('#round3Merah').show();
-            $('#clock1').hide();             
+            $('#clock3').hide();             
         });
     });
+    $('#document').ready(function(){
+        $('#counter3').click(function(){
+            var clock;
+            $('#clock3').show();
+            clock = $('#clock3').FlipClock({
+                clockFace: 'MinuteCounter',
+                autoStart: true,
+                callbacks: {
+                }
+            });
+                    
+            clock.setTime(10);
+            clock.setCountdown(true);               
+            soal1Clck++;    
+        });
+    });
+
+    $('#document').ready(function(){// tampilkan panel tambah poin soal lempar
+        $('#lempar3').click(function(){
+            $('#formScoreLempar').show();
+            $('#soalMerah3').hide();
+            $('#jawabanMerah3').hide();
+            $('#round3Merah').hide();
+             $('#clock3').hide();
+        });
+    });
+    
+    
 //soal no 4
     var soal4Clck = 0;
     $(document).ready(function(){
@@ -577,8 +744,8 @@
             $('#soalMerah4').show();
 
            var clock;
-            $('#clock1').show();
-            clock = $('#clock1').FlipClock({
+            $('#clock4').show();
+            clock = $('#clock4').FlipClock({
                 clockFace: 'MinuteCounter',
                 autoStart: true,
                 callbacks: {
@@ -590,11 +757,11 @@
 
             soal4Clck++;
             if(soal4Clck == 2){
-                $('#merah4').css('background-color','#ecf0f1');
+                $('#merah4').css('background-color','#ecf0f4');
            }              
            else if (soal4Clck >= 3)  {
-            // alert(soal1Clck);
-                $('#clock1').hide();
+            // alert(soal4Clck);
+                $('#clock4').hide();
                 $('#soalMerah4').remove();
                 $('#round3Merah').show(); 
            }    
@@ -605,12 +772,12 @@
         $('#benarSoalMerah4').click(function(){
             $('#jawabanMerah4').show();
             $('#merah4').html('<img src="../assets/file/images/IMG_TAC.jpg" alt="" />');
-            $('#merah4').css('background-color','#ecf0f1');
+            $('#merah4').css('background-color','#ecf0f4');
             var scoreBoard = $('#scoreMerah').text();
             scoreBoard = parseInt(scoreBoard)+10;
             // alert(kotak2Benar);
-            $('#score').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
-            $('#clock1').hide();             
+            $('#scoreMerah').html('<font color="#c0392b" id="scoreBoardMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#clock4').hide();             
         });
     });
 
@@ -619,7 +786,7 @@
             $('#soalMerah4').hide();
             $('#jawabanMerah4').hide();
             $('#round3Merah').show();
-            $('#clock1').hide();             
+            $('#clock4').hide();             
         });
     });
 
@@ -628,12 +795,39 @@
             $('#soalMerah4').hide();
             $('#jawabanMerah4').hide();
             $('#round3Merah').show();
-            $('#clock1').hide();             
+            $('#clock4').hide();             
+        });
+    });
+    
+    $('#document').ready(function(){
+        $('#counter4').click(function(){
+            var clock;
+            $('#clock4').show();
+            clock = $('#clock4').FlipClock({
+                clockFace: 'MinuteCounter',
+                autoStart: true,
+                callbacks: {
+                }
+            });
+                    
+            clock.setTime(5);
+            clock.setCountdown(true);               
+            soal4Clck++;    
+        });
+    });
+
+    $('#document').ready(function(){// tampilkan panel tambah poin soal lempar
+        $('#lempar4').click(function(){
+            $('#formScoreLempar').show();
+            $('#soalMerah4').hide();
+            $('#jawabanMerah4').hide();
+            $('#round4Merah').hide();
+             $('#clock4').hide();
         });
     });
 
 //soal no 5
-    var soal5Clck = 0;
+     var soal5Clck = 0;
     $(document).ready(function(){
         $('#merah5').click(function(){
             alert('EKONOMI MAKRO');
@@ -641,8 +835,8 @@
             $('#soalMerah5').show();
 
            var clock;
-            $('#clock1').show();
-            clock = $('#clock1').FlipClock({
+            $('#clock5').show();
+            clock = $('#clock5').FlipClock({
                 clockFace: 'MinuteCounter',
                 autoStart: true,
                 callbacks: {
@@ -658,7 +852,7 @@
            }     
             else if (soal5Clck >= 3)  {
             // alert(soal1Clck);
-                $('#clock1').hide();
+                $('#clock5').hide();
                 $('#soalMerah5').remove();
                 $('#round3Merah').show(); 
            }                        
@@ -673,8 +867,8 @@
             var scoreBoard = $('#scoreMerah').text();
             scoreBoard = parseInt(scoreBoard)+10;
             // alert(kotak2Benar);
-            $('#score').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
-            $('#clock1').hide();             
+            $('#scoreMerah').html('<font color="#c0392b" id="scoreBoardMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#clock5').hide();             
         });
     });
 
@@ -683,7 +877,7 @@
             $('#soalMerah5').hide();
             $('#jawabanMerah5').hide();
             $('#round3Merah').show();
-            $('#clock1').hide();             
+            $('#clock5').hide();             
         });
     });
 
@@ -692,9 +886,38 @@
             $('#soalMerah5').hide();
             $('#jawabanMerah5').hide();
             $('#round3Merah').show();
-            $('#clock1').hide();             
+            $('#clock5').hide();             
         });
     });
+    
+    $('#document').ready(function(){
+        $('#counter5').click(function(){
+            var clock;
+            $('#clock5').show();
+            clock = $('#clock5').FlipClock({
+                clockFace: 'MinuteCounter',
+                autoStart: true,
+                callbacks: {
+                }
+            });
+                    
+            clock.setTime(10);
+            clock.setCountdown(true);               
+            soal1Clck++;    
+        });
+    });
+
+    $('#document').ready(function(){// tampilkan panel tambah poin soal lempar
+        $('#lempar5').click(function(){
+            $('#formScoreLempar').show();
+            $('#soalMerah5').hide();
+            $('#jawabanMerah5').hide();
+            $('#round5Merah').hide();
+             $('#clock5').hide();
+        });
+    });
+    
+    
 //soal no 6
     var soal6Clck = 0;
     $(document).ready(function(){
@@ -704,8 +927,8 @@
             $('#soalMerah6').show();
 
            var clock;
-            $('#clock1').show();
-            clock = $('#clock1').FlipClock({
+            $('#clock6').show();
+            clock = $('#clock6').FlipClock({
                 clockFace: 'MinuteCounter',
                 autoStart: true,
                 callbacks: {
@@ -721,10 +944,37 @@
            }               
            else if (soal6Clck >= 3)  {
             // alert(soal1Clck);
-                $('#clock1').hide();
+                $('#clock6').hide();
                 $('#soalMerah6').remove();
                 $('#round3Merah').show(); 
            }   
+        });
+    });
+    
+    $('#document').ready(function(){
+        $('#counter6').click(function(){
+            var clock;
+            $('#clock6').show();
+            clock = $('#clock6').FlipClock({
+                clockFace: 'MinuteCounter',
+                autoStart: true,
+                callbacks: {
+                }
+            });
+                    
+            clock.setTime(5);
+            clock.setCountdown(true);               
+            soal1Clck++;    
+        });
+    });
+
+    $('#document').ready(function(){// tampilkan panel tambah poin soal lempar
+        $('#lempar6').click(function(){
+            $('#formScoreLempar').show();
+            $('#soalMerah6').hide();
+            $('#jawabanMerah6').hide();
+            $('#round6Merah').hide();
+             $('#clock6').hide();
         });
     });
 
@@ -736,8 +986,8 @@
             var scoreBoard = $('#scoreMerah').text();
             scoreBoard = parseInt(scoreBoard)+10;
             // alert(kotak2Benar);
-            $('#score').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
-            $('#clock1').hide();             
+            $('#scoreMerah').html('<font color="#c0392b" id="scoreBoardMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#clock6').hide();             
         });
     });
 
@@ -746,7 +996,7 @@
             $('#soalMerah6').hide();
             $('#jawabanMerah6').hide();
             $('#round3Merah').show();
-            $('#clock1').hide();             
+            $('#clock6').hide();             
         });
     });
 
@@ -755,7 +1005,7 @@
             $('#soalMerah6').hide();
             $('#jawabanMerah6').hide();
             $('#round3Merah').show();
-            $('#clock1').hide();             
+            $('#clock6').hide();             
         });
     });
 
@@ -768,8 +1018,8 @@
             $('#soalMerah7').show();
 
            var clock;
-            $('#clock1').show();
-            clock = $('#clock1').FlipClock({
+            $('#clock7').show();
+            clock = $('#clock7').FlipClock({
                 clockFace: 'MinuteCounter',
                 autoStart: true,
                 callbacks: {
@@ -785,7 +1035,7 @@
            }             
            else if (soal7Clck >= 3)  {
             // alert(soal1Clck);
-                $('#clock1').hide();
+                $('#clock7').hide();
                 $('#soalMerah7').remove();
                 $('#round3Merah').show(); 
            }     
@@ -800,8 +1050,8 @@
             var scoreBoard = $('#scoreMerah').text();
             scoreBoard = parseInt(scoreBoard)+10;
             // alert(kotak2Benar);
-            $('#score').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
-            $('#clock1').hide();             
+            $('#scoreMerah').html('<font color="#c0392b" id="scoreBoardMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#clock7').hide();             
         });
     });
 
@@ -810,7 +1060,7 @@
             $('#soalMerah7').hide();
             $('#jawabanMerah7').hide();
             $('#round3Merah').show();
-            $('#clock1').hide();             
+            $('#clock7').hide();             
         });
     });
 
@@ -819,7 +1069,34 @@
             $('#soalMerah7').hide();
             $('#jawabanMerah7').hide();
             $('#round3Merah').show();
-            $('#clock1').hide();             
+            $('#clock7').hide();             
+        });
+    });
+    
+    $('#document').ready(function(){
+        $('#counter7').click(function(){
+            var clock;
+            $('#clock7').show();
+            clock = $('#clock7').FlipClock({
+                clockFace: 'MinuteCounter',
+                autoStart: true,
+                callbacks: {
+                }
+            });
+                    
+            clock.setTime(10);
+            clock.setCountdown(true);               
+            soal1Clck++;    
+        });
+    });
+
+    $('#document').ready(function(){// tampilkan panel tambah poin soal lempar
+        $('#lempar7').click(function(){
+            $('#formScoreLempar').show();
+            $('#soalMerah7').hide();
+            $('#jawabanMerah7').hide();
+            $('#round7Merah').hide();
+             $('#clock7').hide();
         });
     });
 
@@ -832,8 +1109,8 @@
             $('#soalMerah8').show();
 
            var clock;
-            $('#clock1').show();
-            clock = $('#clock1').FlipClock({
+            $('#clock8').show();
+            clock = $('#clock8').FlipClock({
                 clockFace: 'MinuteCounter',
                 autoStart: true,
                 callbacks: {
@@ -849,7 +1126,7 @@
            }          
            else if (soal8Clck >= 3)  {
             // alert(soal1Clck);
-                $('#clock1').hide();
+                $('#clock8').hide();
                 $('#soalMerah8').remove();
                 $('#round3Merah').show(); 
            }        
@@ -864,9 +1141,9 @@
             var scoreBoard = $('#scoreMerah').text();
             scoreBoard = parseInt(scoreBoard)+10;
             // alert(kotak2Benar);
-            $('#score').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
-            $('#clock1').hide(); 
-                                    $('#clock1').hide(); 
+            $('#scoreMerah').html('<font color="#c0392b" id="scoreBoardMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#clock8').hide(); 
+            $('#clock8').hide(); 
         });
     });
 
@@ -875,7 +1152,7 @@
             $('#soalMerah8').hide();
             $('#jawabanMerah8').hide();
             $('#round3Merah').show();
-            $('#clock1').hide();             
+            $('#clock8').hide();             
         });
     });
 
@@ -887,17 +1164,44 @@
         });
     });
 
+    $('#document').ready(function(){
+        $('#counter8').click(function(){
+            var clock;
+            $('#clock8').show();
+            clock = $('#clock8').FlipClock({
+                clockFace: 'MinuteCounter',
+                autoStart: true,
+                callbacks: {
+                }
+            });
+                    
+            clock.setTime(5);
+            clock.setCountdown(true);               
+            soal1Clck++;    
+        });
+    });
+
+    $('#document').ready(function(){// tampilkan panel tambah poin soal lempar
+        $('#lempar8').click(function(){
+            $('#formScoreLempar').show();
+            $('#soalMerah8').hide();
+            $('#jawabanMerah8').hide();
+            $('#round8Merah').hide();
+             $('#clock8').hide();
+        });
+    });
+
 // soal no 9
     var soal9Clck = 0;
     $(document).ready(function(){
-        $('#TEORI AKUNTANSI').click(function(){
-            alert('goJek');
+        $('#merah9').click(function(){
+            alert('TEORI AKUNTANSI');
             $('#round3Merah').hide();
             $('#soalMerah9').show();
 
            var clock;
-            $('#clock1').show();
-            clock = $('#clock1').FlipClock({
+            $('#clock9').show();
+            clock = $('#clock9').FlipClock({
                 clockFace: 'MinuteCounter',
                 autoStart: true,
                 callbacks: {
@@ -913,7 +1217,7 @@
            }               
            else if (soal9Clck >= 3)  {
             // alert(soal1Clck);
-                $('#clock1').hide();
+                $('#clock9').hide();
                 $('#soalMerah9').remove();
                 $('#round3Merah').show(); 
            }   
@@ -928,8 +1232,8 @@
             var scoreBoard = $('#scoreMerah').text();
             scoreBoard = parseInt(scoreBoard)+10;
             // alert(kotak2Benar);
-            $('#score').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
-            $('#clock1').hide();             
+            $('#scoreMerah').html('<font color="#c0392b" id="scoreBoardMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#clock9').hide();             
         });
     });
 
@@ -938,7 +1242,7 @@
             $('#soalMerah9').hide();
             $('#jawabanMerah9').hide();
             $('#round3Merah').show();
-            $('#clock1').hide();             
+            $('#clock9').hide();             
         });
     });
 
@@ -947,21 +1251,82 @@
             $('#soalMerah9').hide();
             $('#jawabanMerah9').hide();
             $('#round3Merah').show();
-            $('#clock1').hide();             
+            $('#clock9').hide();             
+        });
+    });
+    
+    $('#document').ready(function(){
+        $('#counter9').click(function(){
+            var clock;
+            $('#clock9').show();
+            clock = $('#clock9').FlipClock({
+                clockFace: 'MinuteCounter',
+                autoStart: true,
+                callbacks: {
+                }
+            });
+                    
+            clock.setTime(10);
+            clock.setCountdown(true);               
+            soal1Clck++;    
+        });
+    });
+
+    $('#document').ready(function(){// tampilkan panel tambah poin soal lempar
+        $('#lempar9').click(function(){
+            $('#formScoreLempar').show();
+            $('#soalMerah9').hide();
+            $('#jawabanMerah9').hide();
+            $('#round9Merah').hide();
+             $('#clock9').hide();
         });
     });
 
 // post method
     $('#document').ready(function(){
-        $('#score').click(function(){
+        $('#scoreMerah').click(function(){
             $('#jam').hide();
             $('#round3Merah').hide();
             $('#simpanScore').show();
             var scoreBoard = $('#scoreMerah').text();
             scoreBoard = parseInt(scoreBoard);
             $('#scoreTotal').hide();
-            $('#scoreTotal').html('<input name="score" value='+scoreBoard+'>');
-            alert(scoreBoard);
+            // $('#scoreTotal').html('<input name="score1" value='+scoreBoard+'>');
+                // alert(scoreBoard);
+
+                var scoreBoard1 = $('#scoreMerah').text();
+                scoreBoard1 = parseInt(scoreBoard1);
+                // alert(scoreBoard1);
+                $('#scoreMerah').html('<font color="#c0392b" id="scoreBoardMerah" val="'+scoreBoard1+'">'+scoreBoard1+'</font>');
+                $('#scoreTotalMerah').html('<input name="score1" value='+scoreBoard1+'>');
+
+                //Biru 
+                var scoreBoard2 = $('#scoreBiru').text();                    
+                scoreBoard2 = parseInt(scoreBoard2);
+                // alert(kotak2Benar);
+                $('#scoreBiru').html('<font color="#2980b9" id="scoreBoardBiru" val="'+scoreBoard2+'">'+scoreBoard2+'</font>');
+                $('#scoreTotalBiru').html('<input name="score2" value='+scoreBoard2+'>');
+
+                // Hijau
+                var scoreBoard3 = $('#scoreHijau').text();
+                scoreBoard3 = parseInt(scoreBoard3);
+                // alert(kotak2Benar);
+                $('#scoreHijau').html('<font color="#2ecc71" id="scoreBoardHijau" val="'+scoreBoard3+'">'+scoreBoard3+'</font>');
+                $('#scoreTotalHijau').html('<input name="score3" value='+scoreBoard3+'>');    
+
+                // Kuning 
+                var scoreBoard4 = $('#scoreKuning').text();
+                scoreBoard4 = parseInt(scoreBoard4);
+                // alert(kotak2Benar);
+                $('#scoreKuning').html('<font color="#f1c40f" id="scoreBoardKuning" val="'+scoreBoard4+'">'+scoreBoard4+'</font>');
+                $('#scoreTotalKuning').html('<input name="score4" value='+scoreBoard4+'>');
+
+                // Abuabu
+                var scoreBoard5 = $('#scoreAbuabu').text();
+                scoreBoard5 = parseInt(scoreBoard5);
+                // alert(scoreBoard5);
+                $('#scoreAbuabu').html('<font color="#7f8c8d" id="scoreBoardAbuabu" val="'+scoreBoard5+'">'+scoreBoard5+'</font>');
+                $('#scoreTotalAbuabu').html('<input name="score5" value='+scoreBoard5+'>');     
         });
     });
 
@@ -973,8 +1338,8 @@
             var scoreBoard = $('#scoreMerah').text();
             scoreBoard = parseInt(scoreBoard)+parseInt(test);
             // alert(kotak2Benar);
-            $('#score').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
-            $('#scoreTotal').html('<input name="score" value='+scoreBoard+'>');
+            $('#score').html('<font color="#c0392b" id="scoreBoardMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#scoreTotal').html('<input name="score1" value='+scoreBoard+'>');
         });
     });
 
@@ -986,8 +1351,8 @@
             var scoreBoard = $('#scoreMerah').text();
             scoreBoard = parseInt(scoreBoard)-parseInt(test);
             // alert(kotak2Benar);
-            $('#score').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
-            $('#scoreTotal').html('<input name="score" value='+scoreBoard+'>');
+            $('#score').html('<font color="#c0392b" id="scoreBoardMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#scoreTotal').html('<input name="score1" value='+scoreBoard+'>');
         });
     });    
 
@@ -1000,6 +1365,107 @@
         });
     });
 
+// tombol kembali(dari tambah point soal yang dilempar)
+    $('#document').ready(function(){
+        $('#btnKembaliPointLempar').click(function(){
+            $('#round3Merah').show();
+            $('#formScoreLempar').hide();
+        });
+    });
+
+// worstcase jika salah dan soal hanya dibuka hanya 1 kali btnPointLemparSalah
+    $('#document').ready(function(){
+        $('#btnPointLemparSalah').click(function(){
+            var kotak = $('#kotakNo').val();
+            var no = kotak.substr(5,6);
+            // alert(no);
+
+            $('#soalMerah'+no).remove();
+            $('#round3Merah').show(); 
+            $('#'+kotak).css('background-color','#ecf0f1');
+            $('#formScoreLempar').hide();            
+        });
+    });
+
+// Tambah point soal yang dilempar
+    $(document).ready(function(){
+        $('#btnPointLempar').click(function(){
+            var warna = $('#warnaId').val();
+            var kotak = $('#kotakNo').val();
+            $('#'+kotak).html('<img src="../assets/file/images/IMG_TAC.jpg" alt="" />');
+            $('#'+kotak).css('background-color','#ecf0f1');
+
+            // alert(warna);
+                if ( warna == '#c0392b'){
+                    var scoreBoard = $('#scoreMerah').text();
+                    scoreBoard = parseInt(scoreBoard)+20;
+                    alert(scoreBoard);
+                    $('#scoreMerah').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+                    $('#scoreTotalMerah').html('<input name="score1" id="score1" value='+scoreBoard+'>');                    
+                    $('#'+kotak).css('background-color', warna);
+                }
+                // biru
+                else if( warna == '#2980b9'){
+                    // alert('kucing');
+                    var scoreBoardmerah = $('#scoreMerah').text();
+                    scoreBoardmerah = parseInt(scoreBoardmerah)+20;
+                    $('#scoreMerah').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoardmerah+'">'+scoreBoardmerah+'</font>');
+                    $('#scoreTotalMerah').html('<input name="score1" id="score1" value='+scoreBoardmerah+'>'); 
+                    // alert(scoreBoardmerah);
+                    var scoreBoardbiru = $('#scoreBiru').text();                    
+                    scoreBoardbiru = parseInt(scoreBoardbiru)+10;
+                    // alert(scoreBoardbiru);
+                    $('#scoreBiru').html('<font color="#2980b9" id="scoreBiru" val="'+scoreBoardbiru+'">'+scoreBoardbiru+'</font>');
+                    $('#scoreTotalBiru').html('<input name="score2" id="score2" value='+scoreBoardbiru+'>');                       
+                    $('#'+kotak).css('background-color', warna); 
+
+                }
+                // hijau
+                else if ( warna == '#2ecc71'){
+                    // alert('kucing');
+                    var scoreBoardmerah = $('#scoreMerah').text();
+                    scoreBoardmerah = parseInt(scoreBoardmerah)+20;
+                    $('#scoreMerah').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoardmerah+'">'+scoreBoardmerah+'</font>');
+                    $('#scoreTotalMerah').html('<input name="score1" id="score1" value='+scoreBoardmerah+'>');     
+                                    
+                    var scoreBoardhijau = $('#scoreHijau').text();
+                    scoreBoardhijau = parseInt(scoreBoardhijau)+10;
+                    // alert(kotak2Benar);
+                    $('#scoreHijau').html('<font color="#2ecc71" id="scoreHijau" val="'+scoreBoardhijau+'">'+scoreBoardhijau+'</font>');
+                    $('#scoreTotalHijau').html('<input name="score3" id="score3" value='+scoreBoardhijau+'>');                       
+                    $('#'+kotak).css('background-color', warna);                  
+                }
+                // kuning
+                else if ( warna == '#f1c40f'){
+                    var scoreBoardmerah = $('#scoreMerah').text();
+                    scoreBoardmerah = parseInt(scoreBoardmerah)+20;
+                    $('#scoreMerah').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoardmerah+'">'+scoreBoardmerah+'</font>');
+                    $('#scoreTotalMerah').html('<input name="score1" id="score1" value='+scoreBoardmerah+'>'); 
+
+                    var scoreBoardkuning = $('#scoreKuning').text();
+                    scoreBoardkuning = parseInt(scoreBoardkuning)+10;
+                    // alert(kotak2Benar);
+                    $('#scoreKuning').html('<font color="#f1c40f" id="scoreKuning" val="'+scoreBoardkuning+'">'+scoreBoardkuning+'</font>');
+                    $('#scoreTotalKuning').html('<input name="score4" id="score4" value='+scoreBoardkuning+'>');                       
+                    $('#'+kotak).css('background-color', warna);
+                }
+                // abuabu
+                else{
+                    var scoreBoardmerah = $('#scoreMerah').text();
+                    scoreBoardmerah = parseInt(scoreBoardmerah)+10;
+                    $('#scoreMerah').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoardmerah+'">'+scoreBoardmerah+'</font>');
+                    $('#scoreTotalMerah').html('<input name="score1" id="score1" value='+scoreBoardmerah+'>'); 
+
+                    // alert('kucing');
+                    var scoreBoardabuabu = $('#scoreAbuabu').text();
+                    scoreBoardabuabu = parseInt(scoreBoardabuabu)+10;
+                    // alert(scoreBoardabuabu);
+                    $('#scoreAbuabu').html('<font color="#7f8c8d" id="scoreAbuabu" val="'+scoreBoardabuabu+'">'+scoreBoardabuabu+'</font>');
+                    $('#scoreTotalAbuabu').html('<input name="score5" id="score5" value='+scoreBoardabuabu+'>');                       
+                    $('#'+kotak).css('background-color', warna);                    
+                }            
+        });
+    });
 // counter/jam
     var clock;
 

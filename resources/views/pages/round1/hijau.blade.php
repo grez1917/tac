@@ -17,7 +17,6 @@
                         <div class="right">
                             <span class="count_top"><i class="fa fa-user"></i>@foreach ($biru as $item) {{ $item->name }}</span>
                             <div class="count" id='scoreBiru'><font color="#2980b9" id='scoreBoardBiru'> {{ $item->score }} @endforeach</font></div>
-                            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
                         </div>
                     </div>
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
@@ -25,7 +24,6 @@
                         <div class="right">
                             <span class="count_top"><i class="fa fa-user"></i> @foreach ($hijau as $item) {{ $item->name }}</span>
                             <div class="count" id='scoreHijau'><font color="#2ecc71" id='scoreBoardHijau'>{{ $item->score }} @endforeach</font> </div>
-                            <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
                         </div>
                     </div>
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
@@ -33,7 +31,6 @@
                         <div class="right">
                             <span class="count_top"><i class="fa fa-user"></i> @foreach ($kuning as $item) {{ $item->name }}</span>
                             <div class="count" id="scoreKuning"><font color="#f1c40f" id='scoreBoardKuning'>{{ $item->score }} @endforeach</font></div>
-                            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
                         </div>
                     </div>
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
@@ -41,7 +38,6 @@
                         <div class="right">
                             <span class="count_top"><i class="fa fa-user"></i> @foreach ($abuabu as $item) {{ $item->name }}</span>
                             <div class="count" id='scoreAbuabu'><font color="#7f8c8d" id='scoreBoardAbuabu'> {{ $item->score }} @endforeach</font></div>
-                            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
                         </div>
                     </div>
 
@@ -309,7 +305,7 @@
             if(soal1Clck == 2){
                 $('#hijau1').css('background-color','#ecf0f1');
            }   
-           else if (soal1Clck == 3)  {
+           else if (soal1Clck >= 3)  {
             // alert(soal1Clck);
                 $('#soalHijau1').remove();
                 $('#round1Hijau').show(); 
@@ -356,7 +352,7 @@
             if(soal2Clck == 2){
                 $('#hijau2').css('background-color','#ecf0f1');
            }               
-           else if (soal2Clck == 3)  {
+           else if (soal2Clck >= 3)  {
             // alert(soal1Clck);
                 $('#soalHijau2').remove();
                 $('#round1Hijau').show(); 
@@ -403,7 +399,7 @@
             if(soal3Clck == 2){
                 $('#hijau3').css('background-color','#ecf0f1');
            }               
-           else if (soal3Clck == 3)  {
+           else if (soal3Clck >= 3)  {
             // alert(soal1Clck);
                 $('#soalHijau3').remove();
                 $('#round1Hijau').show(); 
@@ -450,7 +446,7 @@
             if(soal4Clck == 2){
                 $('#hijau4').css('background-color','#ecf0f1');
            }               
-           else if (soal4Clck == 3)  {
+           else if (soal4Clck >= 3)  {
             // alert(soal1Clck);
                 $('#soalHijau4').remove();
                 $('#round1Hijau').show(); 
@@ -497,7 +493,7 @@
             if(soal5Clck == 2){
                 $('#hijau5').css('background-color','#ecf0f1');
            }               
-           else if (soal5Clck == 3)  {
+           else if (soal5Clck >= 3)  {
             // alert(soal1Clck);
                 $('#soalHijau5').remove();
                 $('#round1Hijau').show(); 
@@ -544,7 +540,7 @@
             if(soal6Clck == 2){
                 $('#hijau6').css('background-color','#ecf0f1');
            }               
-           else if (soal6Clck == 3)  {
+           else if (soal6Clck >= 3)  {
             // alert(soal1Clck);
                 $('#soalHijau6').remove();
                 $('#round1Hijau').show(); 
@@ -591,7 +587,7 @@
             if(soal7Clck == 2){
                 $('#hijau7').css('background-color','#ecf0f1');
            }               
-           else if (soal7Clck == 3)  {
+           else if (soal7Clck >= 3)  {
             // alert(soal1Clck);
                 $('#soalHijau7').remove();
                 $('#round1Hijau').show(); 
@@ -615,7 +611,7 @@
         $('#salahSoalHijau7').click(function(){
             $('#soalHijau7').hide();
             $('#jawabanHijau7').hide();
-            $('#round3Hijau').show();
+            $('#round1Hijau').show();
         });
     });
 
@@ -623,7 +619,7 @@
         $('#pilihKembali7').click(function(){
             $('#soalHijau7').hide();
             $('#jawabanHijau7').hide();
-            $('#round3Hijau').show();
+            $('#round1Hijau').show();
         });
     });
 
@@ -638,7 +634,7 @@
             if(soal8Clck == 2){
                 $('#hijau8').css('background-color','#ecf0f1');
            }               
-           else if (soal8Clck == 3)  {
+           else if (soal8Clck >= 3)  {
             // alert(soal1Clck);
                 $('#soalHijau8').remove();
                 $('#round1Hijau').show(); 
@@ -685,7 +681,7 @@
             if(soal9Clck == 2){
                 $('#hijau9').css('background-color','#ecf0f1');
            }               
-           else if (soal9Clck == 3)  {
+           else if (soal9Clck >= 3)  {
             // alert(soal1Clck);
                 $('#soalHijau9').remove();
                 $('#round1Hijau').show(); 

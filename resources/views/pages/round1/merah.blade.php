@@ -21,7 +21,6 @@
                         <div class="right">
                             <span class="count_top"><i class="fa fa-user"></i>@foreach ($biru as $item) {{ $item->name }}</span>
                             <div class="count"><font color="#2980b9"> {{ $item->score }} @endforeach</font></div>
-                            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
                         </div>
                     </div>
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
@@ -29,7 +28,6 @@
                         <div class="right">
                             <span class="count_top"><i class="fa fa-user"></i> @foreach ($hijau as $item) {{ $item->name }}</span>
                             <div class="count"><font color="#2ecc71">{{ $item->score }} @endforeach</font> </div>
-                            <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
                         </div>
                     </div>
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
@@ -37,7 +35,6 @@
                         <div class="right">
                             <span class="count_top"><i class="fa fa-user"></i> @foreach ($kuning as $item) {{ $item->name }}</span>
                             <div class="count"><font color="#f1c40f">{{ $item->score }} @endforeach</font></div>
-                            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
                         </div>
                     </div>
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
@@ -45,7 +42,6 @@
                         <div class="right">
                             <span class="count_top"><i class="fa fa-user"></i> @foreach ($abuabu as $item) {{ $item->name }}</span>
                             <div class="count"><font color="#7f8c8d"> {{ $item->score }} @endforeach</font></div>
-                            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
                         </div>
                     </div>
 

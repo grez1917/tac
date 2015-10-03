@@ -114,6 +114,7 @@
     </div>
 </div>
 
+
 <!-- tombol ubah warna nilai dan simpan -->
 <div class="col-md-7 col-sm-8 col-xs-8" id='tblPanel'>
     <div class="x_panel">
@@ -178,6 +179,7 @@
                 <option value="#7f8c8d">Abu - Abu</option>
             </select>
             <button id='pilihWarna' value="1" class="btn btn-success">Rubah Warna</button>
+            <button type="submit" class="btn btn-primary" id='bonus'>Bonus</button>                       
 
             <form method="post" >
                 <div id='scoreTotal'></div> 
@@ -201,13 +203,27 @@
     </div>
 </div>
 
+<!-- Bonus Point -->
+<div class="col-md-7 col-sm-8 col-xs-8" id='formBonusPoint'>
+    <div class="x_panel">
+                <select id="bonusWarnaId" class="form-control" required>
+                    <option value="#c0392b">Merah</option>
+                    <option value="#2980b9">Biru</option>
+                    <option value="#2ecc71">Hijau</option>
+                    <option value="#f1c40f">Kuning</option>
+                    <option value="#7f8c8d">Abu - Abu</option>
+                </select>
+                <button id='btnBonusPoin' class="btn btn-success">Bonus Point</button>
+                <button id='btnBonusPoinKembali' value="1" class="btn btn-success">Selesai</button>
+    </div>
+</div>
 
     <div id='round5'>
     <table align="center" class="test">
-    	<tr bgcolor="">
-    		<td width="50" height="50" align="center" id="merah1" >
-    			<font color="black" size="18"><b>1</b></font>
-    		</td>
+        <tr bgcolor="">
+            <td width="50" height="50" align="center" id="merah1" >
+                <font color="black" size="18"><b>1</b></font>
+            </td>
             <td width="50" height="50" align="center" id="merah2" >
                 <font color="black" size="18"><b>2</b></font>
             </td>
@@ -215,7 +231,7 @@
                 <font color="black" size="18"><b>3</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah4" >
-                <a id="example2" href="../resources/assets/images/2_b.jpg"><font color="black" size="18"><b>4</b></font></a>
+                <font color="black" size="18"><b>4</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah5" >
                 <font color="black" size="18"><b>5</b></font>
@@ -226,13 +242,13 @@
             <td width="50" height="50" align="center" id="merah7" >
                 <font color="black" size="18"><b>7</b></font>
             </td>
-    	</tr>
-    	<tr bgcolor="">
-    		<td width="50" height="50" align="center" id="merah8" >
-    			<font color="black" size="18"><b>8</b></font>
-    		</td>
+        </tr>
+        <tr bgcolor="">
+            <td width="50" height="50" align="center" id="merah8" >
+                <font color="black" size="18"><b>8</b></font>
+            </td>
             <td width="50" height="50" align="center" id="merah9" >
-                <a id="example2" href="../resources/assets/images/megusta.png"><font color="black" size="18"><b>9</b></font></a>
+                <font color="black" size="18"><b>9</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah10" >
                 <font color="black" size="18"><b>10</b></font>
@@ -241,7 +257,7 @@
                 <font color="black" size="18"><b>11</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah12" >
-                <a id="example2" href="../resources/assets/images/megusta.png"><font color="black" size="18"><b>12</b></font></a>
+                <font color="black" size="18"><b>12</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah13" >
                 <font color="black" size="18"><b>13</b></font>
@@ -249,13 +265,13 @@
             <td width="50" height="50" align="center" id="merah14" >
                 <font color="black" size="18"><b>14</b></font>
             </td>
-    	</tr>
+        </tr>
         <tr bgcolor="">
             <td width="50" height="50" align="center" id="merah15" >
                 <font color="black" size="18"><b>15</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah16" >
-                <a id="example2" href="../resources/assets/images/megusta.png"><font color="black" size="18"><b>16</b></font></a>
+                <font color="black" size="18"><b>16</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah17" >
                 <font color="black" size="18"><b>17</b></font>
@@ -264,7 +280,7 @@
                 <font color="black" size="18"><b>18</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah19" >
-                <a id="example2" href="../resources/assets/images/megusta.png"><font color="black" size="18"><b>19</b></font></a>
+                <font color="black" size="18"><b>19</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah20" >
                 <font color="black" size="18"><b>20</b></font>
@@ -278,7 +294,7 @@
                 <font color="black" size="18"><b>22</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah23" >
-                <a id="example2" href="../resources/assets/images/megusta.png"><font color="black" size="18"><b>23</b></font></a>
+                <font color="black" size="18"><b>23</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah24" >
                 <font color="black" size="18"><b>24</b></font>
@@ -287,7 +303,7 @@
                 <font color="black" size="18"><b>25</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah26" >
-                <a id="example2" href="../resources/assets/images/megusta.png"><font color="black" size="18"><b>26</b></font></a>
+                <font color="black" size="18"><b>26</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah27" >
                 <font color="black" size="18"><b>27</b></font>
@@ -301,7 +317,7 @@
                 <font color="black" size="18"><b>29</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah30" >
-                <a id="example2" href="../resources/assets/images/megusta.png"><font color="black" size="18"><b>30</b></font></a>
+                <font color="black" size="18"><b>30</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah31" >
                 <font color="black" size="18"><b>31</b></font>
@@ -310,7 +326,7 @@
                 <font color="black" size="18"><b>32</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah33" >
-                <a id="example2" href="../resources/assets/images/megusta.png"><font color="black" size="18"><b>33</b></font></a>
+                <font color="black" size="18"><b>33</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah34" >
                 <font color="black" size="18"><b>34</b></font>
@@ -324,7 +340,7 @@
                 <font color="black" size="18"><b>36</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah37" >
-                <a id="example2" href="../resources/assets/images/megusta.png"><font color="black" size="18"><b>37</b></font></a>
+                <font color="black" size="18"><b>37</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah38" >
                 <font color="black" size="18"><b>38</b></font>
@@ -333,7 +349,7 @@
                 <font color="black" size="18"><b>39</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah40" >
-                <a id="example2" href="../resources/assets/images/megusta.png"><font color="black" size="18"><b>40</b></font></a>
+                <font color="black" size="18"><b>40</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah41" >
                 <font color="black" size="18"><b>41</b></font>
@@ -347,7 +363,7 @@
                 <font color="black" size="18"><b>43</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah44" >
-                <a id="example2" href="../resources/assets/images/megusta.png"><font color="black" size="18"><b>44</b></font></a>
+                <font color="black" size="18"><b>44</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah45" >
                 <font color="black" size="18"><b>45</b></font>
@@ -356,7 +372,7 @@
                 <font color="black" size="18"><b>46</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah47" >
-                <a id="example2" href="../resources/assets/images/megusta.png"><font color="black" size="18"><b>47</b></font></a>
+                <font color="black" size="18"><b>47</b></font>
             </td>
             <td width="50" height="50" align="center" id="merah48" >
                 <font color="black" size="18"><b>48</b></font>
@@ -1361,14 +1377,14 @@
     $('#idKuning').hide();   
     $('#idAbuabu').hide();     
 
-
+    $('#formBonusPoint').hide();
     $('#formMinPoint').hide();
 
 // memberi warna pada kotak
     $(document).ready(function(){
             $('#pilihWarna').click(function(){
 
-                // untuk memastikan tidak salah update
+                // untuk memastikan untuk tidak salah update
                 // Merah
                 var scoreBoard1 = $('#scoreMerah').text();
                 scoreBoard1 = parseInt(scoreBoard1);
@@ -1535,10 +1551,92 @@
             });
         });
 
+// tombol bonus click
+    $(document).ready(function(){
+            $('#bonus').click(function(){
+                $('#tblPanel').hide(); 
+                $('#formBonusPoint').show();
+            });
+    });
+
+// tombol kembali dari bonus point
+    $(document).ready(function(){
+            $('#btnBonusPoinKembali').click(function(){
+                $('#tblPanel').show(); 
+                $('#formBonusPoint').hide();
+            });
+    });
+
+// bonus point / +30
+    $(document).ready(function(){
+            $('#btnBonusPoin').click(function(){
+                var warna = $('#bonusWarnaId').val();
+                // alert(warna);
+                // merah
+                if ( warna == '#c0392b'){
+                    var scoreBoard = $('#scoreMerah').text();
+                    scoreBoard = parseInt(scoreBoard)+30;
+                    alert(scoreBoard);
+                    $('#scoreMerah').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+                    $('#scoreTotalMerah').html('<input name="score1" id="score1" value='+scoreBoard+'>');
+                    $('#score1').hide(); 
+                    $('#formMinPoint').hide();                 
+                    $('#round5').show();                 
+                }
+                // biru
+                else if( warna == '#2980b9'){
+                    // alert('kucing');
+                    var scoreBoard = $('#scoreBiru').text();                    
+                    scoreBoard = parseInt(scoreBoard)+30;
+                    // alert(kotak2Benar);
+                    $('#scoreBiru').html('<font color="#2980b9" id="scoreBiru" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+                    $('#scoreTotalBiru').html('<input name="score2" id="score2" value='+scoreBoard+'>');
+                    $('#score2').hide();                          
+                    $('#formMinPoint').hide();                 
+                    $('#round5').show();                                                        
+                }
+                // hijau
+                else if ( warna == '#2ecc71'){
+                    // alert('kucing');
+                    var scoreBoard = $('#scoreHijau').text();
+                    scoreBoard = parseInt(scoreBoard)+30;
+                    // alert(kotak2Benar);
+                    $('#scoreHijau').html('<font color="#2ecc71" id="scoreHijau" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+                    $('#scoreTotalHijau').html('<input name="score3" id="score3" value='+scoreBoard+'>');
+                    $('#score3').hide();                       
+                    $('#formMinPoint').hide();                
+                    $('#round5').show();                                                          
+                }
+                // kuning
+                else if ( warna == '#f1c40f'){                    
+                    var scoreBoard = $('#scoreKuning').text();
+                    scoreBoard = parseInt(scoreBoard)+30;
+                    // alert(kotak2Benar);
+                    $('#scoreKuning').html('<font color="#f1c40f" id="scoreKuning" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+                    $('#scoreTotalKuning').html('<input name="score4" id="score4" value='+scoreBoard+'>');
+                    $('#score4').hide();                     
+                    $('#formMinPoint').hide();                
+                    $('#round5').show();                                            
+                }
+                // abuabu
+                else{
+                    // alert('kucing');
+                    var scoreBoard = $('#scoreAbuabu').text();
+                    scoreBoard = parseInt(scoreBoard)+30;
+                    // alert(scoreBoard);
+                    $('#scoreAbuabu').html('<font color="#7f8c8d" id="scoreAbuabu" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+                    $('#scoreTotalAbuabu').html('<input name="score5" id="score5" value='+scoreBoard+'>');
+                    $('#score5').hide();                     
+                    $('#formMinPoint').hide();                
+                    $('#round5').show();                                                              
+                }                
+            });
+        });
+
 // soal 1
         $(document).ready(function(){
             $('#merah1').click(function(){ 
-                alert('goJek');
+                alert('PENGANTAR AKUNTANSI 2');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal1').show();   
@@ -1571,7 +1669,7 @@
 // soal no 2
         $(document).ready(function(){
             $('#merah2').click(function(){ 
-                alert('goJek');
+                alert('PENGANTAR AKUNTANSI 2');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal2').show();   
@@ -1604,7 +1702,7 @@
         // soal no 3
         $(document).ready(function(){
             $('#merah3').click(function(){ 
-                alert('goJek');
+                alert('PENGANTAR AKUNTANSI 2');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal3').show();   
@@ -1638,7 +1736,7 @@
         // soal no 4
         $(document).ready(function(){
             $('#merah4').click(function(){ 
-                alert('goJek');
+                alert('Perpajakan');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal4').show();   
@@ -1671,7 +1769,7 @@
         // soal no 5
         $(document).ready(function(){
             $('#merah5').click(function(){ 
-                alert('goJek');
+                alert('PENGANTAR AKUNTANSI 1');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal5').show();   
@@ -1704,7 +1802,7 @@
         // soal no 6
         $(document).ready(function(){
             $('#merah6').click(function(){ 
-                alert('goJek');
+                alert('TEORI AKUNTANSI');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal6').show();   
@@ -1737,7 +1835,7 @@
         // soal no 7
         $(document).ready(function(){
             $('#merah7').click(function(){ 
-                alert('goJek');
+                alert('TEORI AKUNTANSI');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal7').show();   
@@ -1770,7 +1868,7 @@
         // soal no 8
         $(document).ready(function(){
             $('#merah8').click(function(){ 
-                alert('goJek');
+                alert('PENGANTAR AKUNTANSI 2');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal8').show();   
@@ -1803,7 +1901,7 @@
         // soal no 9
         $(document).ready(function(){
             $('#merah9').click(function(){ 
-                alert('goJek');
+                alert('PENGANTANTAR AKUNTANSI 1');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal9').show();   
@@ -1836,7 +1934,7 @@
         // soal no 10
         $(document).ready(function(){
             $('#merah10').click(function(){ 
-                alert('goJek');
+                alert('PENGANTAR AKUNTANSI 1');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal10').show();   
@@ -1869,7 +1967,7 @@
         // soal no 11
         $(document).ready(function(){
             $('#merah11').click(function(){ 
-                alert('goJek');
+                alert('PERPAJAKAN');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal11').show();   
@@ -1902,7 +2000,7 @@
         // soal no 12
         $(document).ready(function(){
             $('#merah12').click(function(){ 
-                alert('goJek');
+                alert('PENGANTAR AKUNTANSI 1');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal12').show();   
@@ -1935,7 +2033,7 @@
         // soal no 13
         $(document).ready(function(){
             $('#merah13').click(function(){ 
-                alert('goJek');
+                alert('EKONOMI MIKRO');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal13').show();   
@@ -1968,7 +2066,7 @@
         // soal no 14
         $(document).ready(function(){
             $('#merah14').click(function(){ 
-                alert('goJek');
+                alert('PERPAJAKAN');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal14').show();   
@@ -2001,7 +2099,7 @@
         // soal no 15
         $(document).ready(function(){
             $('#merah15').click(function(){ 
-                alert('goJek');
+                alert('TEORI AKUNTANSI');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal15').show();   
@@ -2034,7 +2132,7 @@
         // soal no 16
         $(document).ready(function(){
             $('#merah16').click(function(){ 
-                alert('goJek');
+                alert('EKONOMI MIKRO');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal16').show();   
@@ -2067,7 +2165,7 @@
         // soal no 17
         $(document).ready(function(){
             $('#merah17').click(function(){ 
-                alert('goJek');
+                alert('PENGANTAR AKUNTANSI 1');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal17').show();   
@@ -2100,7 +2198,7 @@
         // soal no 18
         $(document).ready(function(){
             $('#merah18').click(function(){ 
-                alert('goJek');
+                alert('TEORI AKUNTANSI');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal18').show();   
@@ -2133,7 +2231,7 @@
         // soal no 19
         $(document).ready(function(){
             $('#merah19').click(function(){ 
-                alert('goJek');
+                alert('PENGANTAR AKUNTANSI');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal19').show();   
@@ -2166,7 +2264,7 @@
         // soal no 20
         $(document).ready(function(){
             $('#merah20').click(function(){ 
-                alert('goJek');
+                alert('EKONOMI MAKRO');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal20').show();   
@@ -2199,7 +2297,7 @@
         // soal no 21
         $(document).ready(function(){
             $('#merah21').click(function(){ 
-                alert('goJek');
+                alert('PENGANTAR AKUNTANSI 1');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal21').show();   
@@ -2232,7 +2330,7 @@
         // soal no 22
         $(document).ready(function(){
             $('#merah22').click(function(){ 
-                alert('goJek');
+                alert('EKONOMI MIKRO');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal22').show();   
@@ -2265,7 +2363,7 @@
         // soal no 23
         $(document).ready(function(){
             $('#merah23').click(function(){ 
-                alert('goJek');
+                alert('PENGANTAR AKUNTANSI 2');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal23').show();   
@@ -2298,7 +2396,7 @@
         // soal no 24
         $(document).ready(function(){
             $('#merah24').click(function(){ 
-                alert('goJek');
+                alert('PERPAJAKAN');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal24').show();   
@@ -2331,7 +2429,7 @@
         // soal no 25
         $(document).ready(function(){
             $('#merah25').click(function(){ 
-                alert('goJek');
+                alert('PERPAJAKAN');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal25').show();   
@@ -2364,7 +2462,7 @@
         // soal no 26
         $(document).ready(function(){
             $('#merah26').click(function(){ 
-                alert('goJek');
+                alert('EKONOMI MIKRO');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal26').show();   
@@ -2397,7 +2495,7 @@
         // soal no 27
         $(document).ready(function(){
             $('#merah27').click(function(){ 
-                alert('goJek');
+                alert('PENGANTAR AKUNTANSI 2');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal27').show();   
@@ -2430,7 +2528,7 @@
         // soal no 28
         $(document).ready(function(){
             $('#merah28').click(function(){ 
-                alert('goJek');
+                alert('EKONOMI MAKRO');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal28').show();   
@@ -2463,7 +2561,7 @@
         // soal no 29
         $(document).ready(function(){
             $('#merah29').click(function(){ 
-                alert('goJek');
+                alert('TEORI AKUNTANSI');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal29').show();   
@@ -2496,7 +2594,7 @@
         // soal no 30
         $(document).ready(function(){
             $('#merah30').click(function(){ 
-                alert('goJek');
+                alert('PERPAJAKAN');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal30').show();   
@@ -2529,7 +2627,7 @@
         // soal no 31
         $(document).ready(function(){
             $('#merah31').click(function(){ 
-                alert('goJek');
+                alert('PENGANTAR AKUNTANSI 1');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal31').show();   
@@ -2562,7 +2660,7 @@
         // soal no 32
         $(document).ready(function(){
             $('#merah32').click(function(){ 
-                alert('goJek');
+                alert('PERPAJAKAN');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal32').show();   
@@ -2595,7 +2693,7 @@
         // soal no 33
         $(document).ready(function(){
             $('#merah33').click(function(){ 
-                alert('goJek');
+                alert('PENGANTAR AKUNTANSI 2');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal33').show();   
@@ -2628,7 +2726,7 @@
         // soal no 34
         $(document).ready(function(){
             $('#merah34').click(function(){ 
-                alert('goJek');
+                alert('PENGANTAR AKUNTANSI 2');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal34').show();   
@@ -2661,7 +2759,7 @@
         // soal no 35
         $(document).ready(function(){
             $('#merah35').click(function(){ 
-                alert('goJek');
+                alert('PENGANTAR AKUNTANSI 1');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal35').show();   
@@ -2694,7 +2792,7 @@
         // soal no 36
         $(document).ready(function(){
             $('#merah36').click(function(){ 
-                alert('goJek');
+                alert('TEORI AKUNTANSI');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal36').show();   
@@ -2727,7 +2825,7 @@
         // soal no 37
         $(document).ready(function(){
             $('#merah37').click(function(){ 
-                alert('goJek');
+                alert('TEORI AKUNTANSI');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal37').show();   
@@ -2760,7 +2858,7 @@
         // soal no 38
         $(document).ready(function(){
             $('#merah38').click(function(){ 
-                alert('goJek');
+                alert('EKONOMI MIKRO');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal38').show();   
@@ -2793,7 +2891,7 @@
         // soal no 39
         $(document).ready(function(){
             $('#merah39').click(function(){ 
-                alert('goJek');
+                alert('PERPAJAKAN');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal39').show();   
@@ -2826,7 +2924,7 @@
         // soal no 40
         $(document).ready(function(){
             $('#merah40').click(function(){ 
-                alert('goJek');
+                alert('PENGANTAR AKUNTANSI 1');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal40').show();   
@@ -2859,7 +2957,7 @@
         // soal no 41
         $(document).ready(function(){
             $('#merah41').click(function(){ 
-                alert('goJek');
+                alert('EKONOMI MIKRO');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal41').show();   
@@ -2892,7 +2990,7 @@
         // soal no 42
         $(document).ready(function(){
             $('#merah42').click(function(){ 
-                alert('goJek');
+                alert('EKONOMI MIKRO');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal42').show();   
@@ -2925,7 +3023,7 @@
         // soal no 43
         $(document).ready(function(){
             $('#merah43').click(function(){ 
-                alert('goJek');
+                alert('PENGANTAR AKUNTANSI 1');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal43').show();   
@@ -2958,7 +3056,7 @@
         // soal no 44
         $(document).ready(function(){
             $('#merah44').click(function(){ 
-                alert('goJek');
+                alert('EKONOMI MIKRO');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal44').show();   
@@ -2991,7 +3089,7 @@
         // soal no 45
         $(document).ready(function(){
             $('#merah45').click(function(){ 
-                alert('goJek');
+                alert('PERPAJAKAN');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal45').show();   
@@ -3024,7 +3122,7 @@
         // soal no 46
         $(document).ready(function(){
             $('#merah46').click(function(){ 
-                alert('goJek');
+                alert('PENGANTAR AKUNTANSI 2');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal46').show();   
@@ -3057,7 +3155,7 @@
         // soal no 47
         $(document).ready(function(){
             $('#merah47').click(function(){ 
-                alert('goJek');
+                alert('PERPAJAKAN');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal47').show();   
@@ -3090,7 +3188,7 @@
         // soal no 48
         $(document).ready(function(){
             $('#merah48').click(function(){ 
-                alert('goJek');
+                alert('PENGANTAR AKUNTANSI 1');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal48').show();   
@@ -3123,7 +3221,7 @@
         // soal no 49
         $(document).ready(function(){
             $('#merah49').click(function(){ 
-                alert('goJek');
+                alert('EKONOMI MAKRO');
                 $('#tblPanel').hide();          
                 $('#round5').hide();
                 $('#soal49').show();   
@@ -3167,7 +3265,7 @@
             }
         });
                 
-        clock.setTime(900);
+        clock.setTime(1020);
         clock.setCountdown(true);
     });   
 </script>

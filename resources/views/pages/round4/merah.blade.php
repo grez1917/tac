@@ -41,52 +41,49 @@
 
 @section('content')
 <section>
-                <!-- top tiles -->
-                <div class="row tile_count" align="center">
-                    <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
-                        <div class="left"></div>
-                        <div class="right">
-                            <span class="count_top"><i class="fa fa-user"></i> @foreach ($merah as $item){{ $item->name }}</span>
-                            <div class="count" id='score'><font color="#c0392b" id='scoreMerah' val='0'>  {{ $item->score }}@endforeach</font></div>
-                            <span class="count_bottom"><i class="green"></i></span>
-                        </div>
-                    </div>
-                    
-                    <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
-                        <div class="left"></div>
-                        <div class="right">
-                            <span class="count_top"><i class="fa fa-user"></i>@foreach ($biru as $item) {{ $item->name }}</span>
-                            <div class="count"><font color="#2980b9"> {{ $item->score }} @endforeach</font></div>
-                            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-                        </div>
-                    </div>
-                    <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
-                        <div class="left"></div>
-                        <div class="right">
-                            <span class="count_top"><i class="fa fa-user"></i> @foreach ($hijau as $item) {{ $item->name }}</span>
-                            <div class="count"><font color="#2ecc71">{{ $item->score }} @endforeach</font> </div>
-                            <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
-                        </div>
-                    </div>
-                    <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
-                        <div class="left"></div>
-                        <div class="right">
-                            <span class="count_top"><i class="fa fa-user"></i> @foreach ($kuning as $item) {{ $item->name }}</span>
-                            <div class="count"><font color="#f1c40f">{{ $item->score }} @endforeach</font></div>
-                            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-                        </div>
-                    </div>
-                    <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
-                        <div class="left"></div>
-                        <div class="right">
-                            <span class="count_top"><i class="fa fa-user"></i> @foreach ($abuabu as $item) {{ $item->name }}</span>
-                            <div class="count"><font color="#7f8c8d"> {{ $item->score }} @endforeach</font></div>
-                            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-                        </div>
-                    </div>
+<!-- top tiles -->
+    <div class="row tile_count" align="center">
+        <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+            <div class="left"></div>
+            <div class="right">
+                <span class="count_top"><i class="fa fa-user"></i> @foreach ($merah as $item){{ $item->name }}</span>
+                <div class="count" id='scoreMerah'><font color="#c0392b" id='scoreBoardMerah' val='0'>  {{ $item->score }}@endforeach</font></div>
+                <span class="count_bottom"><i class="green"></i></span>
+            </div>
+        </div>
+        
+        <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+            <div class="left"></div>
+            <div class="right">
+                <span class="count_top"><i class="fa fa-user"></i>@foreach ($biru as $item) {{ $item->name }}</span>
+                <div class="count" id='scoreBiru'><font color="#2980b9" id='scoreBoardBiru'> {{ $item->score }} @endforeach</font></div>
+            </div>
+        </div>
+        <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+            <div class="left"></div>
+            <div class="right">
+                <span class="count_top"><i class="fa fa-user"></i> @foreach ($hijau as $item) {{ $item->name }}</span>
+                <div class="count" id='scoreHijau'><font color="#2ecc71" id='scoreBoardHijau'>{{ $item->score }} @endforeach</font> </div>
+            </div>
+        </div>
+        <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+            <div class="left"></div>
+            <div class="right">
+                <span class="count_top"><i class="fa fa-user"></i> @foreach ($kuning as $item) {{ $item->name }}</span>
+                <div class="count" id="scoreKuning"><font color="#f1c40f" id='scoreBoardKuning'>{{ $item->score }} @endforeach</font></div>
+            </div>
+        </div>
+        <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
+            <div class="left"></div>
+            <div class="right">
+                <span class="count_top"><i class="fa fa-user"></i> @foreach ($abuabu as $item) {{ $item->name }}</span>
+                <div class="count" id='scoreAbuabu'><font color="#7f8c8d" id='scoreBoardAbuabu'> {{ $item->score }} @endforeach</font></div>
+            </div>
+        </div>
 
-                </div>
-                <!-- /top tiles -->
+    </div>
+    <!-- /top tiles -->
+
 <!-- jam/counter -->
         <div class="animated flipInY col-md-6 col-sm-8 col-xs-8 tile_stats_count" id='jam'>
             <div class="left"></div>
@@ -94,6 +91,29 @@
                 <div id="clock1" style="margin:2em;"></div>
             </div>
             <button type="submit" class="btn btn-primary" id='mulai'>Mulai Counter</button>
+            <select id="kotakNo" class="form-control" required>
+                <option value="merah1">Kotak 1 </option>
+                <option value="merah2">Kotak 2</option>
+                <option value="merah3">Kotak 3</option>
+                <option value="merah4">Kotak 4</option>
+                <option value="merah5">Kotak 5</option>
+                <option value="merah6">Kotak 6</option>
+                <option value="merah7">Kotak 7</option>
+                <option value="merah8">Kotak 8</option>
+                <option value="merah9">Kotak 9</option>
+                <option value="merah10">Kotak 10</option>
+                <option value="merah11">Kotak 11</option>
+                <option value="merah12">Kotak 12</option>
+                <option value="merah13">Kotak 13</option>
+                <option value="merah14">Kotak 14</option>
+                <option value="merah15">Kotak 15</option>                                                                                     
+            </select>
+            <select id="jawabanVal" class="form-control" required>
+                <option value="benar">Benar</option>
+                <option value="salah">Salah</option>
+            </select>
+            </br>
+            <button type="submit" class="btn btn-success" id='btnRubah'>Pilih</button>              
         </div> 
 
 
@@ -101,53 +121,53 @@
     <table align="center" class="test">
     	<tr bgcolor="#c0392b">
     		<td width="175" height="175" align="center" id="merah1" >
-    			<a id="example2" href="../assets/file/images/01 ADAM SMITH.jpg" title="ADAM SMITH"><font color="#ecf0f1" size="24"><b>1</b></font></a>
+    			<a id="example2" href="../assets/file/images/01 ADAM SMITH.jpg"><font color="#ecf0f1" size="24"><b>1</b></font></a>
     		</td>
             <td width="175" height="175" align="center" id="merah2" >
-                <a id="example2" href="../assets/file/images/02 HERNANDO DE SOTO.jpg" title="HERNANDO DE SOTO"><font color="#ecf0f1" size="24"><b>2</b></font></a>
+                <a id="example2" href="../assets/file/images/02 HERNANDO DE SOTO.jpg"><font color="#ecf0f1" size="24"><b>2</b></font></a>
             </td>
             <td width="175" height="175" align="center" id="merah3" >
-                <a id="example2" href="../assets/file/images/03 DAVID RICHARDO.jpg" title="DAVID RICHARDO"><font color="#ecf0f1" size="24"><b>3</b></font></a>
+                <a id="example2" href="../assets/file/images/03 DAVID RICHARDO.jpg"><font color="#ecf0f1" size="24"><b>3</b></font></a>
             </td>
             <td width="175" height="175" align="center" id="merah4" >
-                <a id="example2" href="../assets/file/images/04 JOAN VIOLET ROBINSON.jpg" title="JOAN VIOLET ROBINSON"><font color="#ecf0f1" size="24"><b>4</b></font></a>
+                <a id="example2" href="../assets/file/images/04 JOAN VIOLET ROBINSON.jpg"><font color="#ecf0f1" size="24"><b>4</b></font></a>
             </td>
             <td width="175" height="175" align="center" id="merah5" >
-                <a id="example2" href="../assets/file/images/05 JOHN MAYNARD KEYNES.jpg" title="JOHN MAYNARD KEYNES"><font color="#ecf0f1" size="24"><b>5</b></font></a>
+                <a id="example2" href="../assets/file/images/05 JOHN MAYNARD KEYNES.jpg"><font color="#ecf0f1" size="24"><b>5</b></font></a>
             </td>
     	</tr>
     	<tr bgcolor="#c0392b">
     		<td width="175" height="175" align="center" id="merah6" >
-    			<a id="example2" href="../assets/file/images/06 PAUL ORMEROD.jpg" title="PAUL ORMEROD"><font color="#ecf0f1" size="24"><b>6</b></font></a>
+    			<a id="example2" href="../assets/file/images/06 PAUL ORMEROD.jpg"><font color="#ecf0f1" size="24"><b>6</b></font></a>
     		</td>
             <td width="175" height="175" align="center" id="merah7" >
-                <a id="example2" href="../assets/file/images/07 IRVING FISHER.jpg" title="IRVING FISHER"><font color="#ecf0f1" size="24"><b>7</b></font></a>
+                <a id="example2" href="../assets/file/images/07 IRVING FISHER.jpg"><font color="#ecf0f1" size="24"><b>7</b></font></a>
             </td>
             <td width="175" height="175" align="center" id="merah8" >
-                <a id="example2" href="../assets/file/images/08 ROBERT A. MUNDELL.jpg" title="ROBERT A. MUNDELL"><font color="#ecf0f1" size="24"><b>8</b></font></a>
+                <a id="example2" href="../assets/file/images/08 ROBERT A. MUNDELL.jpg"><font color="#ecf0f1" size="24"><b>8</b></font></a>
             </td>
             <td width="175" height="175" align="center" id="merah9" >
-                <a id="example2" href="../assets/file/images/09 MILTON FRIEDMAN.jpg" title="MILTON FRIEDMAN"><font color="#ecf0f1" size="24"><b>9</b></font></a>
+                <a id="example2" href="../assets/file/images/09 MILTON FRIEDMAN.jpg"><font color="#ecf0f1" size="24"><b>9</b></font></a>
             </td>
             <td width="175" height="175" align="center" id="merah10" >
-                <a id="example2" href="../assets/file/images/10 FRANCOIS QUESNAY.jpg" title="FRANCOIS QUESNAY"><font color="#ecf0f1" size="24"><b>10</b></font></a>
+                <a id="example2" href="../assets/file/images/10 FRANCOIS QUESNAY.jpg"><font color="#ecf0f1" size="24"><b>10</b></font></a>
             </td>            
     	</tr>
     	<tr bgcolor="#c0392b">
     		<td width="175" height="175" align="center" id="merah11" >
-    			<a id="example2" href="../assets/file/images/11 JOHN LOCKE.jpg" title="JOHN LOCKE"><font color="#ecf0f1" size="24"><b>11</b></font></a>
+    			<a id="example2" href="../assets/file/images/11 JOHN LOCKE.jpg"><font color="#ecf0f1" size="24"><b>11</b></font></a>
     		</td>
             <td width="175" height="175" align="center" id="merah12" >
-                <a id="example2" href="../assets/file/images/12 THOMAS ROBERT MALTHUS.jpg" title="THOMAS ROBERT MALTHUS"><font color="#ecf0f1" size="24"><b>12</b></font></a>
+                <a id="example2" href="../assets/file/images/12 THOMAS ROBERT MALTHUS.jpg"><font color="#ecf0f1" size="24"><b>12</b></font></a>
             </td>
             <td width="175" height="175" align="center" id="merah13" >
-                <a id="example2" href="../assets/file/images/13 JOHN STUART MILL.jpg" title="JOHN STUART MILL"><font color="#ecf0f1" size="24"><b>13</b></font></a>
+                <a id="example2" href="../assets/file/images/13 JOHN STUART MILL.jpg"><font color="#ecf0f1" size="24"><b>13</b></font></a>
             </td>
             <td width="175" height="175" align="center" id="merah14" >
-                <a id="example2" href="../assets/file/images/14 DAVID HUME.jpg" title="DAVID HUME"><font color="#ecf0f1" size="24"><b>14</b></font></a>
+                <a id="example2" href="../assets/file/images/14 DAVID HUME.jpg"><font color="#ecf0f1" size="24"><b>14</b></font></a>
             </td>
             <td width="175" height="175" align="center" id="merah15" >
-                <a id="example2" href="../assets/file/images/15 DR. M. UMER CHAPRA.jpg" title="DR. M. UMER CHAPRA"><font color="#ecf0f1" size="24"><b>15</b></font></a>
+                <a id="example2" href="../assets/file/images/15 DR. M. UMER CHAPRA.jpg"><font color="#ecf0f1" size="24"><b>15</b></font></a>
             </td>
     	</tr>
     </table>
@@ -184,11 +204,36 @@
 </style>
 <script type="text/javascript">
     $('#clock1').hide();
-    $('#simpanScore').hide();     
+    $('#simpanScore').hide();   
+    $('#kotakNo').hide();
+    $('#jawabanVal').hide();
+    $('#btnRubah').hide();      
+
+// Rubah warna pada kotak
+    $('#document').ready(function(){
+        $('#btnRubah').click(function(){
+            var nomorKotak = $('#kotakNo').val();
+            var jawaban = $('#jawabanVal').val();
+            if(jawaban == 'benar')
+            {
+                $('#'+nomorKotak).html('<img src="../assets/file/images/IMG_TAC - Copy.jpg" alt="" />');
+                $('#'+nomorKotak).css('background-color','#ecf0f1');
+                var scoreBoard = $('#scoreMerah').text();
+                scoreBoard = parseInt(scoreBoard)+5;
+                // alert(scoreBoard);
+                $('#scoreMerah').html('<font color="#c0392b" id="scoreBoardMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');                
+            }
+            else if(jawaban == 'salah')
+            {
+                $('#'+nomorKotak).css('background-color','#ecf0f1');
+            }
+        });
+    }); 
+
 
 // post method
     $('#document').ready(function(){
-        $('#score').click(function(){
+        $('#scoreMerah').click(function(){
             $('#jam').hide();
             $('#round4Merah').hide();
             $('#simpanScore').show();
@@ -207,7 +252,7 @@
             var scoreBoard = $('#scoreMerah').text();
             scoreBoard = parseInt(scoreBoard)+parseInt(test);
             // alert(kotak2Benar);
-            $('#score').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#scoreMerah').html('<font color="#c0392b" id="scoreBoardMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
             $('#scoreTotal').html('<input name="score" value='+scoreBoard+'>');
         });
     });
@@ -220,7 +265,7 @@
             var scoreBoard = $('#scoreMerah').text();
             scoreBoard = parseInt(scoreBoard)-parseInt(test);
             // alert(kotak2Benar);
-            $('#score').html('<font color="#c0392b" id="scoreMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
+            $('#scoreMerah').html('<font color="#c0392b" id="scoreBoardMerah" val="'+scoreBoard+'">'+scoreBoard+'</font>');
             $('#scoreTotal').html('<input name="score" value='+scoreBoard+'>');
         });
     });    
@@ -239,7 +284,10 @@
      $('#document').ready(function(){
         $('#mulai').click(function(){
         $('#mulai').hide();
-        $('#clock1').show();        
+        $('#clock1').show();
+        $('#kotakNo').show();
+        $('#jawabanVal').show();
+        $('#btnRubah').show();                
 
         var clock;
 
@@ -260,6 +308,9 @@
         $('#clock1').click(function(){
             $('#mulai').show();
             $('#clock1').hide();
+            $('#kotakNo').hide();
+            $('#jawabanVal').hide();
+            $('#btnRubah').hide();
         });
     });
 

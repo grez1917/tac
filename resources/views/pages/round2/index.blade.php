@@ -1,8 +1,56 @@
 @extends('layouts.full')
+
+@section('head')
+<section>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <title>FancyBox 1.3.4 | Demonstration</title>
+    <script type="text/javascript" src="{{ URL::to('assets/gentelella/js/fancybox/jquery.min.js') }}"></script>
+    <script>
+        !window.jQuery && document.write('<script src="jquery-1.4.3.min.js"><\/script>');
+    </script>
+    <script type="text/javascript" src="{{ URL::to('assets/gentelella/js/fancybox/jquery.mousewheel-3.0.4.pack.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::to('assets/gentelella/js/fancybox/jquery.fancybox-1.3.4.pack.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ URL::to('assets/gentelella/css/fancybox/jquery.fancybox-1.3.4.css') }}" media="screen" />
+    <script type="text/javascript">
+        $(document).ready(function() {
+            /*
+            *   Examples - images
+            */
+
+            $("a#example1").fancybox();
+
+            $("#benar").fancybox({
+                'overlayShow'   : false,
+                'transitionIn'  : 'elastic',
+                'transitionOut' : 'elastic',
+                'onComplete': function() { 
+                    jQuery("#fancybox-wrap, #fancybox-overlay").delay(2000).fadeOut(); 
+                  } 
+            });
+
+            $("#salah").fancybox({
+                'overlayShow'   : false,
+                'transitionIn'  : 'elastic',
+                'transitionOut' : 'elastic',
+                'onComplete': function() { 
+                    jQuery("#fancybox-wrap, #fancybox-overlay").delay(2000).fadeOut(); 
+                  } 
+            });            
+
+            $("a#example3").fancybox({
+                'transitionIn'  : 'none',
+                'transitionOut' : 'none'    
+            });
+
+        });
+    </script>
+</section>
+@stop
+
 @section('content')
 <section>
 <!-- top tiles -->
- <!-- top tiles -->
                 <div class="row tile_count" align="center">
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
                         <div class="left"></div>
@@ -18,7 +66,6 @@
                         <div class="right">
                             <span class="count_top"><i class="fa fa-user"></i>@foreach ($biru as $item) {{ $item->name }}</span>
                             <div class="count" id='scoreBiru'><font color="#2980b9" id='scoreBoardBiru'> {{ $item->score }} @endforeach</font></div>
-                            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
                         </div>
                     </div>
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
@@ -26,7 +73,6 @@
                         <div class="right">
                             <span class="count_top"><i class="fa fa-user"></i> @foreach ($hijau as $item) {{ $item->name }}</span>
                             <div class="count" id='scoreHijau'><font color="#2ecc71" id='scoreBoardHijau'>{{ $item->score }} @endforeach</font> </div>
-                            <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
                         </div>
                     </div>
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
@@ -34,7 +80,6 @@
                         <div class="right">
                             <span class="count_top"><i class="fa fa-user"></i> @foreach ($kuning as $item) {{ $item->name }}</span>
                             <div class="count" id="scoreKuning"><font color="#f1c40f" id='scoreBoardKuning'>{{ $item->score }} @endforeach</font></div>
-                            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
                         </div>
                     </div>
                     <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
@@ -42,7 +87,6 @@
                         <div class="right">
                             <span class="count_top"><i class="fa fa-user"></i> @foreach ($abuabu as $item) {{ $item->name }}</span>
                             <div class="count" id='scoreAbuabu'><font color="#7f8c8d" id='scoreBoardAbuabu'> {{ $item->score }} @endforeach</font></div>
-                            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
                         </div>
                     </div>
 
@@ -79,8 +123,8 @@
                         <div class="left"></div>
                         <div class="right">
                             <button id='soal' type="submit" class="btn btn-primary">Tampilkan Soal</button>
-                            <button id='benar' type="submit" class="btn btn-success">Benar</button>
-                            <button id='salah' type="submit" class="btn btn-primary">Salah</button>
+                            <button id='benar' type="submit" class="btn btn-success" href="../public/assets/file/images/TAC_600x600.jpg">Benar</button>
+                            <button id='salah' type="submit" class="btn btn-primary" href="../public/assets/file/images/X.png">Salah</button>
                         </div>
                     </div>
                     <div class="animated flipInY col-md-6 col-sm-8 col-xs-8 tile_stats_count" id='jam'>

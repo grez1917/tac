@@ -57,7 +57,6 @@
             <div class="right">
                 <span class="count_top"><i class="fa fa-user"></i>@foreach ($biru as $item) {{ $item->name }}</span>
                 <div class="count" id='scoreBiru'><font color="#2980b9" id='scoreBoardBiru'> {{ $item->score }} @endforeach</font></div>
-                <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
             </div>
         </div>
         <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
@@ -65,7 +64,6 @@
             <div class="right">
                 <span class="count_top"><i class="fa fa-user"></i> @foreach ($hijau as $item) {{ $item->name }}</span>
                 <div class="count" id='scoreHijau'><font color="#2ecc71" id='scoreBoardHijau'>{{ $item->score }} @endforeach</font> </div>
-                <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
             </div>
         </div>
         <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
@@ -73,7 +71,6 @@
             <div class="right">
                 <span class="count_top"><i class="fa fa-user"></i> @foreach ($kuning as $item) {{ $item->name }}</span>
                 <div class="count" id="scoreKuning"><font color="#f1c40f" id='scoreBoardKuning'>{{ $item->score }} @endforeach</font></div>
-                <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
             </div>
         </div>
         <div class="animated flipInY col-md-2 col-sm-4 col-xs-4 tile_stats_count">
@@ -81,7 +78,6 @@
             <div class="right">
                 <span class="count_top"><i class="fa fa-user"></i> @foreach ($abuabu as $item) {{ $item->name }}</span>
                 <div class="count" id='scoreAbuabu'><font color="#7f8c8d" id='scoreBoardAbuabu'> {{ $item->score }} @endforeach</font></div>
-                <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
             </div>
         </div>
 
@@ -95,59 +91,84 @@
             <div id="clock1" style="margin:2em;"></div>
         </div>
         <button type="submit" class="btn btn-primary" id='mulai'>Mulai Counter</button>
-    </div> 
+        <select id="kotakNo" class="form-control" required>
+            <option value="abuabu1">Kotak 1 </option>
+            <option value="abuabu2">Kotak 2</option>
+            <option value="abuabu3">Kotak 3</option>
+            <option value="abuabu4">Kotak 4</option>
+            <option value="abuabu5">Kotak 5</option>
+            <option value="abuabu6">Kotak 6</option>
+            <option value="abuabu7">Kotak 7</option>
+            <option value="abuabu8">Kotak 8</option>
+            <option value="abuabu9">Kotak 9</option>
+            <option value="abuabu10">Kotak 10</option>
+            <option value="abuabu11">Kotak 11</option>
+            <option value="abuabu12">Kotak 12</option>
+            <option value="abuabu13">Kotak 13</option>
+            <option value="abuabu14">Kotak 14</option>
+            <option value="abuabu15">Kotak 15</option>                                                                                     
+        </select>
+        <select id="jawabanVal" class="form-control" required>
+            <option value="benar">Benar</option>
+            <option value="salah">Salah</option>
+        </select>
+        </br>
+        <button type="submit" class="btn btn-success" id='btnRubah'>Pilih</button>        
+    </div>
+
+
 
     <div id='round4Abuabu'>
     <table align="center" class="test">
     	<tr bgcolor="#7f8c8d">
-    		<td width="175" height="175" align="center" id="merah1" >
-    			<a id="example2" href="../assets/file/images/61 LLOYD BLANKFEIN.jpg" title="LLOYD BLANKFEIN"><font color="#f39c12" size="24"><b>1</b></font></a>
+    		<td width="175" height="175" align="center" id="abuabu1" >
+    			<a id="example2" href="../assets/file/images/61 LLOYD BLANKFEIN.jpg"><font color="#f39c12" size="24"><b>1</b></font></a>
     		</td>
-            <td width="175" height="175" align="center" id="merah2" >
-                <a id="example2" href="../assets/file/images/62 LI KA-SHING.jpg" title="LI KA-SHING"><font color="#f39c12" size="24"><b>2</b></font></a>
+            <td width="175" height="175" align="center" id="abuabu2" >
+                <a id="example2" href="../assets/file/images/62 LI KA-SHING.jpg"><font color="#f39c12" size="24"><b>2</b></font></a>
             </td>
-            <td width="175" height="175" align="center" id="merah3" >
-                <a id="example2" href="../assets/file/images/63 DOUG MCMILLON.jpg" title="DOUG MCMILLON"><font color="#f39c12" size="24"><b>3</b></font></a>
+            <td width="175" height="175" align="center" id="abuabu3" >
+                <a id="example2" href="../assets/file/images/63 DOUG MCMILLON.jpg"><font color="#f39c12" size="24"><b>3</b></font></a>
             </td>
-            <td width="175" height="175" align="center" id="merah4" >
-                <a id="example2" href="../assets/file/images/64 JACK MA.jpg" title="JACK MA"><font color="#f39c12" size="24"><b>4</b></font></a>
+            <td width="175" height="175" align="center" id="abuabu4" >
+                <a id="example2" href="../assets/file/images/64 JACK MA.jpg"><font color="#f39c12" size="24"><b>4</b></font></a>
             </td>
-            <td width="175" height="175" align="center" id="merah5" >
-                <a id="example2" href="../assets/file/images/65 RUPERT MURDOCH.jpg" title="RUPERT MURDOCH"><font color="#f39c12" size="24"><b>5</b></font></a>
+            <td width="175" height="175" align="center" id="abuabu5" >
+                <a id="example2" href="../assets/file/images/65 RUPERT MURDOCH.jpg"><font color="#f39c12" size="24"><b>5</b></font></a>
             </td>
     	</tr>
     	<tr bgcolor="#7f8c8d">
-    		<td width="175" height="175" align="center" id="merah6" >
-    			<a id="example2" href="../assets/file/images/66 CHRISTINE LAGARDE.jpg" title="CHRISTINE LAGARDE"><font color="#f39c12" size="24"><b>6</b></font></a>
+    		<td width="175" height="175" align="center" id="abuabu6" >
+    			<a id="example2" href="../assets/file/images/66 CHRISTINE LAGARDE.jpg"><font color="#f39c12" size="24"><b>6</b></font></a>
     		</td>
-            <td width="175" height="175" align="center" id="merah7" >
-                <a id="example2" href="../assets/file/images/67 AKIO TOYODA.jpg" title="AKIO TOYODA"><font color="#f39c12" size="24"><b>7</b></font></a>
+            <td width="175" height="175" align="center" id="abuabu7" >
+                <a id="example2" href="../assets/file/images/67 AKIO TOYODA.jpg"><font color="#f39c12" size="24"><b>7</b></font></a>
             </td>
-            <td width="175" height="175" align="center" id="merah8" >
-                <a id="example2" href="../assets/file/images/68 MUKESH AMBANI.jpg" title="MUKESH AMBANI"><font color="#f39c12" size="24"><b>8</b></font></a>
+            <td width="175" height="175" align="center" id="abuabu8" >
+                <a id="example2" href="../assets/file/images/68 MUKESH AMBANI.jpg"><font color="#f39c12" size="24"><b>8</b></font></a>
             </td>
-            <td width="175" height="175" align="center" id="merah9" >
-                <a id="example2" href="../assets/file/images/69 MASAYOSHI SON.jpg" title="MASAYOSHI SON"><font color="#f39c12" size="24"><b>9</b></font></a>
+            <td width="175" height="175" align="center" id="abuabu9" >
+                <a id="example2" href="../assets/file/images/69 MASAYOSHI SON.jpg"><font color="#f39c12" size="24"><b>9</b></font></a>
             </td>
-            <td width="175" height="175" align="center" id="merah10" >
-                <a id="example2" href="../assets/file/images/70 LARRY FINK.jpg" title="LARRY FINK"><font color="#f39c12" size="24"><b>10</b></font></a>
+            <td width="175" height="175" align="center" id="abuabu10" >
+                <a id="example2" href="../assets/file/images/70 LARRY FINK.jpg"><font color="#f39c12" size="24"><b>10</b></font></a>
             </td>            
     	</tr>
     	<tr bgcolor="#7f8c8d">
-    		<td width="175" height="175" align="center" id="merah11" >
-    			<a id="example2" href="../assets/file/images/71 IGOR SECHIN.jpg" title="IGOR SECHIN"><font color="#f39c12" size="24"><b>11</b></font></a>
+    		<td width="175" height="175" align="center" id="abuabu11" >
+    			<a id="example2" href="../assets/file/images/71 IGOR SECHIN.jpg"><font color="#f39c12" size="24"><b>11</b></font></a>
     		</td>
-            <td width="175" height="175" align="center" id="merah12" >
-                <a id="example2" href="../assets/file/images/72 MARY BARRA.jpg" title="MARY BARRA"><font color="#f39c12" size="24"><b>12</b></font></a>
+            <td width="175" height="175" align="center" id="abuabu12" >
+                <a id="example2" href="../assets/file/images/72 MARY BARRA.jpg"><font color="#f39c12" size="24"><b>12</b></font></a>
             </td>
-            <td width="175" height="175" align="center" id="merah13" >
-                <a id="example2" href="../assets/file/images/73 ALIKO DANGOTE.jpg" title="ALIKO DANGOTE"><font color="#f39c12" size="24"><b>13</b></font></a>
+            <td width="175" height="175" align="center" id="abuabu13" >
+                <a id="example2" href="../assets/file/images/73 ALIKO DANGOTE.jpg"><font color="#f39c12" size="24"><b>13</b></font></a>
             </td>
-            <td width="175" height="175" align="center" id="merah14" >
-                <a id="example2" href="../assets/file/images/74 SATYA NADELLA.jpg" title="SATYA NADELLA"><font color="#f39c12" size="24"><b>14</b></font></a>
+            <td width="175" height="175" align="center" id="abuabu14" >
+                <a id="example2" href="../assets/file/images/74 SATYA NADELLA.jpg"><font color="#f39c12" size="24"><b>14</b></font></a>
             </td>
-            <td width="175" height="175" align="center" id="merah15" >
-                <a id="example2" href="../assets/file/images/75 ALISHER USMANOV.jpg" title="ALISHER USMANOV"><font color="#f39c12" size="24"><b>15</b></font></a>
+            <td width="175" height="175" align="center" id="abuabu15" >
+                <a id="example2" href="../assets/file/images/75 ALISHER USMANOV.jpg"><font color="#f39c12" size="24"><b>15</b></font></a>
             </td>
     	</tr>
     </table>
@@ -185,6 +206,30 @@
 <script type="text/javascript">
     $('#clock1').hide();
     $('#simpanScore').hide();
+    $('#kotakNo').hide();
+    $('#jawabanVal').hide();
+    $('#btnRubah').hide();
+
+// Rubah warna pada kotak
+    $('#document').ready(function(){
+        $('#btnRubah').click(function(){
+            var nomorKotak = $('#kotakNo').val();
+            var jawaban = $('#jawabanVal').val();
+            if(jawaban == 'benar')
+            {
+                $('#'+nomorKotak).html('<img src="../assets/file/images/IMG_TAC - Copy.jpg" alt="" />');
+                $('#'+nomorKotak).css('background-color','#ecf0f1');
+                var scoreBoard = $('#scoreAbuabu').text();
+                scoreBoard = parseInt(scoreBoard)+5;
+                // alert(scoreBoard);
+                $('#scoreAbuabu').html('<font color="#7f8c8d" id="scoreBoardAbuabu" val="'+scoreBoard+'">'+scoreBoard+'</font>');                
+            }
+            else if(jawaban == 'salah')
+            {
+                $('#'+nomorKotak).css('background-color','#ecf0f1');
+            }
+        });
+    });
 
 // post method
     $('#document').ready(function(){
@@ -192,11 +237,11 @@
             $('#jam').hide();
             $('#round4Abuabu').hide();
             $('#simpanScore').show();
-            var scoreBoard = $('#scoreBoardAbuabu').text();
+            var scoreBoard = $('#scoreAbuabu').text();
             scoreBoard = parseInt(scoreBoard);
             $('#scoreTotal').hide();
             $('#scoreTotal').html('<input name="score" value='+scoreBoard+'>');
-            alert(scoreBoard);
+            // alert(scoreBoard);
         });
     });
 
@@ -240,7 +285,9 @@
         $('#mulai').click(function(){
         $('#mulai').hide();
         $('#clock1').show();        
-
+        $('#kotakNo').show();
+        $('#jawabanVal').show();
+        $('#btnRubah').show();
         var clock;
 
         clock = $('#clock1').FlipClock({
@@ -260,6 +307,9 @@
         $('#clock1').click(function(){
             $('#mulai').show();
             $('#clock1').hide();
+            $('#kotakNo').hide();
+            $('#jawabanVal').hide();
+            $('#btnRubah').hide();
         });
     });     
 

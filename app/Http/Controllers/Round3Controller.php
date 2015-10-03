@@ -39,8 +39,28 @@ class Round3Controller extends Controller
         elseif (Request::isMethod('post')) 
         {
 
-            $contact = Peserta::find(1);
-            $contact->update(Input::all());
+            $input = Input::all();
+            $idMerah = $input['idMerah'];
+            $scoreTotalMerah = $input['score1'];
+
+            $idBiru = $input['idBiru'];
+            $scoreTotalBiru = $input['score2'];
+
+            $idHijau = $input['idHijau'];
+            $scoreTotalHijau = $input['score3'];
+
+            $idKuning = $input['idKuning'];
+            $scoreTotalKuning = $input['score4'];    
+
+            $idAbuabu = $input['idAbuabu'];
+            $scoreTotalAbuabu = $input['score5'];
+
+            // dd($input);                                
+            $scoreMerah = Peserta::where('id', '=', $idMerah)->update(['score' => $scoreTotalMerah]);
+            $scoreBiru = Peserta::where('id', '=', $idBiru)->update(['score' => $scoreTotalBiru]);
+            $scoreHijau = Peserta::where('id', '=', $idHijau)->update(['score' => $scoreTotalHijau]);
+            $scoreKuning = Peserta::where('id', '=', $idKuning)->update(['score' => $scoreTotalKuning]);
+            $scoreAbuabu = Peserta::where('id', '=', $idAbuabu)->update(['score' => $scoreTotalAbuabu]);  
 
             return redirect('round3/merah');
         }
@@ -65,8 +85,28 @@ class Round3Controller extends Controller
         elseif (Request::isMethod('post')) 
         {
 
-            $contact = Peserta::find(2);
-            $contact->update(Input::all());
+            $input = Input::all();
+            $idMerah = $input['idMerah'];
+            $scoreTotalMerah = $input['score1'];
+
+            $idBiru = $input['idBiru'];
+            $scoreTotalBiru = $input['score2'];
+
+            $idHijau = $input['idHijau'];
+            $scoreTotalHijau = $input['score3'];
+
+            $idKuning = $input['idKuning'];
+            $scoreTotalKuning = $input['score4'];    
+
+            $idAbuabu = $input['idAbuabu'];
+            $scoreTotalAbuabu = $input['score5'];
+
+            // dd($input);                                
+            $scoreMerah = Peserta::where('id', '=', $idMerah)->update(['score' => $scoreTotalMerah]);
+            $scoreBiru = Peserta::where('id', '=', $idBiru)->update(['score' => $scoreTotalBiru]);
+            $scoreHijau = Peserta::where('id', '=', $idHijau)->update(['score' => $scoreTotalHijau]);
+            $scoreKuning = Peserta::where('id', '=', $idKuning)->update(['score' => $scoreTotalKuning]);
+            $scoreAbuabu = Peserta::where('id', '=', $idAbuabu)->update(['score' => $scoreTotalAbuabu]);  
 
             return redirect('round3/biru');
         }
@@ -90,8 +130,28 @@ class Round3Controller extends Controller
         elseif (Request::isMethod('post')) 
         {
 
-            $contact = Peserta::find(3);
-            $contact->update(Input::all());
+            $input = Input::all();
+            $idMerah = $input['idMerah'];
+            $scoreTotalMerah = $input['score1'];
+
+            $idBiru = $input['idBiru'];
+            $scoreTotalBiru = $input['score2'];
+
+            $idHijau = $input['idHijau'];
+            $scoreTotalHijau = $input['score3'];
+
+            $idKuning = $input['idKuning'];
+            $scoreTotalKuning = $input['score4'];    
+
+            $idAbuabu = $input['idAbuabu'];
+            $scoreTotalAbuabu = $input['score5'];
+
+            // dd($input);                                
+            $scoreMerah = Peserta::where('id', '=', $idMerah)->update(['score' => $scoreTotalMerah]);
+            $scoreBiru = Peserta::where('id', '=', $idBiru)->update(['score' => $scoreTotalBiru]);
+            $scoreHijau = Peserta::where('id', '=', $idHijau)->update(['score' => $scoreTotalHijau]);
+            $scoreKuning = Peserta::where('id', '=', $idKuning)->update(['score' => $scoreTotalKuning]);
+            $scoreAbuabu = Peserta::where('id', '=', $idAbuabu)->update(['score' => $scoreTotalAbuabu]);  
 
             return redirect('round3/hijau');
         }
@@ -115,8 +175,28 @@ class Round3Controller extends Controller
         elseif (Request::isMethod('post')) 
         {
 
-            $contact = Peserta::find(4);
-            $contact->update(Input::all());
+            $input = Input::all();
+            $idMerah = $input['idMerah'];
+            $scoreTotalMerah = $input['score1'];
+
+            $idBiru = $input['idBiru'];
+            $scoreTotalBiru = $input['score2'];
+
+            $idHijau = $input['idHijau'];
+            $scoreTotalHijau = $input['score3'];
+
+            $idKuning = $input['idKuning'];
+            $scoreTotalKuning = $input['score4'];    
+
+            $idAbuabu = $input['idAbuabu'];
+            $scoreTotalAbuabu = $input['score5'];
+
+            // dd($input);                                
+            $scoreMerah = Peserta::where('id', '=', $idMerah)->update(['score' => $scoreTotalMerah]);
+            $scoreBiru = Peserta::where('id', '=', $idBiru)->update(['score' => $scoreTotalBiru]);
+            $scoreHijau = Peserta::where('id', '=', $idHijau)->update(['score' => $scoreTotalHijau]);
+            $scoreKuning = Peserta::where('id', '=', $idKuning)->update(['score' => $scoreTotalKuning]);
+            $scoreAbuabu = Peserta::where('id', '=', $idAbuabu)->update(['score' => $scoreTotalAbuabu]);  
             // dd($contact);
             return redirect('round3/kuning');
         }
@@ -140,8 +220,28 @@ class Round3Controller extends Controller
         elseif (Request::isMethod('post')) 
         {
 
-            $contact = Peserta::find(5);
-            $contact->update(Input::all());
+            $input = Input::all();
+            $idMerah = $input['idMerah'];
+            $scoreTotalMerah = $input['score1'];
+
+            $idBiru = $input['idBiru'];
+            $scoreTotalBiru = $input['score2'];
+
+            $idHijau = $input['idHijau'];
+            $scoreTotalHijau = $input['score3'];
+
+            $idKuning = $input['idKuning'];
+            $scoreTotalKuning = $input['score4'];    
+
+            $idAbuabu = $input['idAbuabu'];
+            $scoreTotalAbuabu = $input['score5'];
+
+            // dd($input);                                
+            $scoreMerah = Peserta::where('id', '=', $idMerah)->update(['score' => $scoreTotalMerah]);
+            $scoreBiru = Peserta::where('id', '=', $idBiru)->update(['score' => $scoreTotalBiru]);
+            $scoreHijau = Peserta::where('id', '=', $idHijau)->update(['score' => $scoreTotalHijau]);
+            $scoreKuning = Peserta::where('id', '=', $idKuning)->update(['score' => $scoreTotalKuning]);
+            $scoreAbuabu = Peserta::where('id', '=', $idAbuabu)->update(['score' => $scoreTotalAbuabu]);  
 
             return redirect('round3/abuabu');
         }
